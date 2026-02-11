@@ -478,6 +478,12 @@
         if (navToggle && navLinks) {
             navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
         }
+
+        // Force dark nav on non-hero pages
+        const header = document.querySelector('.header');
+        if (header && !document.querySelector('.hero')) {
+            header.classList.add('scrolled');
+        }
     </script>
 </body>
 </html>

@@ -57,6 +57,13 @@
         var header = document.querySelector('.header');
         if (!header) return;
 
+        // Pages without a hero section always get dark nav text
+        var hasHero = !!document.querySelector('.hero');
+        if (!hasHero) {
+            header.classList.add('scrolled');
+            return;
+        }
+
         function checkScroll() {
             if (window.scrollY > 80) {
                 header.classList.add('scrolled');
