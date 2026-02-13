@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Survey Results - February 12, 2026 | Nobodies Collective</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .survey-summary { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .survey-summary strong { display: block; margin-bottom: 0.5rem; }
+        .barrio-group { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; }
+        .barrio-group h4 { margin: 0 0 0.75rem 0; font-size: 1.05rem; }
+        .barrio-group p { margin: 0 0 0.5rem 0; font-size: 0.95rem; line-height: 1.6; }
+        .barrio-group .barrio-list { color: var(--color-text-muted); font-size: 0.9rem; }
+        blockquote { border-left: 3px solid var(--color-accent); margin: 1.5rem 0; padding: 1rem 1.5rem; background: var(--color-bg-secondary); border-radius: 0 8px 8px 0; }
+        blockquote p { margin: 0 0 0.5rem 0; font-style: italic; }
+        blockquote cite { font-style: normal; font-size: 0.85rem; color: var(--color-text-muted); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .stat-card { background: var(--color-bg-secondary); padding: 1.25rem; border-radius: 8px; text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 700; color: var(--color-accent); display: block; }
+        .stat-label { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 0.25rem; }
+
+        /* Donut chart */
+        .chart-section { display: flex; align-items: center; gap: 2.5rem; margin: 2rem 0; flex-wrap: wrap; }
+        .donut-wrap { flex-shrink: 0; }
+        .donut-wrap svg { display: block; }
+        .chart-legend { flex: 1; min-width: 200px; }
+        .legend-item { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.95rem; }
+        .legend-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+        .legend-label { flex: 1; }
+        .legend-value { font-weight: 700; min-width: 3ch; text-align: right; }
+        .legend-people { color: var(--color-text-muted); font-size: 0.85rem; min-width: 9ch; text-align: right; }
+
+        /* Horizontal bar charts */
+        .bar-chart { margin: 1.5rem 0; }
+        .bar-row { display: flex; align-items: center; margin-bottom: 0.6rem; gap: 0.75rem; }
+        .bar-label { font-size: 0.85rem; min-width: 160px; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .bar-track { flex: 1; height: 24px; background: var(--color-bg-secondary); border-radius: 4px; overflow: hidden; position: relative; }
+        .bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 0.75rem; font-weight: 600; color: #fff; min-width: fit-content; transition: width 0.6s ease; }
+        .bar-fill-yes { background: #2ecc71; }
+        .bar-fill-mixed { background: #f39c12; }
+        .bar-fill-dk { background: #95a5a6; }
+        .bar-fill-no { background: #e74c3c; }
+        .bar-number { font-size: 0.8rem; color: var(--color-text-muted); min-width: 3ch; text-align: right; }
+
+        /* People breakdown stacked bar */
+        .stacked-bar-wrap { margin: 1.5rem 0; }
+        .stacked-bar { display: flex; height: 40px; border-radius: 6px; overflow: hidden; }
+        .stacked-segment { display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600; color: #fff; transition: width 0.6s ease; }
+        .stacked-labels { display: flex; margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-muted); }
+        .stacked-labels span { text-align: center; }
+
+        /* Reasons chart */
+        .reasons-chart { margin: 1.5rem 0; }
+        .reason-row { margin-bottom: 1rem; }
+        .reason-label { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.35rem; }
+        .reason-bar-track { height: 28px; background: var(--color-bg-secondary); border-radius: 5px; overflow: hidden; }
+        .reason-bar-fill { height: 100%; background: linear-gradient(90deg, #e67e22, #f39c12); border-radius: 5px; display: flex; align-items: center; padding-left: 10px; font-size: 0.8rem; color: #fff; font-weight: 600; }
+
+        /* Timeline */
+        .timeline-chart { margin: 1.5rem 0; position: relative; }
+        .timeline-track { display: flex; align-items: stretch; min-height: 80px; border-left: 3px solid var(--color-border); margin-left: 1rem; }
+        .timeline-month { flex: 1; padding: 0 1rem; border-right: 1px dashed var(--color-border); }
+        .timeline-month:last-child { border-right: none; }
+        .timeline-month-label { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-text); }
+        .timeline-barrios { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .timeline-tag { font-size: 0.7rem; background: var(--color-bg-secondary); border: 1px solid var(--color-border); padding: 0.2rem 0.5rem; border-radius: 3px; white-space: nowrap; }
+
+        @media (max-width: 600px) {
+            .chart-section { flex-direction: column; align-items: flex-start; }
+            .bar-label { min-width: 100px; font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="logo">Nobodies</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#principles">Principles</a></li>
+                <li><a href="/#event">Event</a></li>
+                <li><a href="/#join">Join</a></li>
+                <li><a href="/transparency.html">Transparency</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Barrio Survey Results</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> February 12, 2026</span>
+                        <span><strong>Presented at:</strong> Community Meeting</span>
+                    </div>
+                </div>
+
+                <div class="survey-summary">
+                    <strong>~106 responses from barrio leads and camp members across 42+ barrios</strong>
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">
+                        This survey was conducted to assess community commitment for a potential 2026 event.
+                        Individual respondent names have been removed; barrio names are included for transparency.
+                    </p>
+                </div>
+
+                <div class="meeting-content">
+
+                    <h2>The Big Picture</h2>
+
+                    <!-- Donut chart + legend -->
+                    <div class="chart-section">
+                        <div class="donut-wrap">
+                            <!-- Donut: 24 yes (55.8%), 9 mixed (20.9%), 9 dk (20.9%), 1 no (2.3%) -->
+                            <!-- circumference = 2*pi*70 = 439.82 -->
+                            <svg width="200" height="200" viewBox="0 0 200 200">
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="#e8e8e8" stroke-width="30"/>
+                                <!-- YES: 24/44 = 54.5% = 239.9 of 439.82 -->
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="#2ecc71" stroke-width="30"
+                                    stroke-dasharray="239.9 199.92" stroke-dashoffset="110" transform="rotate(-90 100 100)"/>
+                                <!-- Mixed: 9/44 = 20.5% = 90.0 -->
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="#f39c12" stroke-width="30"
+                                    stroke-dasharray="90.0 349.82" stroke-dashoffset="-129.9" transform="rotate(-90 100 100)"/>
+                                <!-- Don't Know: 10/44 = 22.7% = 100.0 -->
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="#95a5a6" stroke-width="30"
+                                    stroke-dasharray="100.0 339.82" stroke-dashoffset="-219.9" transform="rotate(-90 100 100)"/>
+                                <!-- No: 1/44 = 2.3% = 10.0 -->
+                                <circle cx="100" cy="100" r="70" fill="none" stroke="#e74c3c" stroke-width="30"
+                                    stroke-dasharray="10.0 429.82" stroke-dashoffset="-319.9" transform="rotate(-90 100 100)"/>
+                                <!-- Center text -->
+                                <text x="100" y="93" text-anchor="middle" font-size="28" font-weight="700" fill="#333">44</text>
+                                <text x="100" y="115" text-anchor="middle" font-size="12" fill="#888">barrios</text>
+                            </svg>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #2ecc71;"></span>
+                                <span class="legend-label">Definite YES</span>
+                                <span class="legend-value">24</span>
+                                <span class="legend-people">~900 ppl</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #f39c12;"></span>
+                                <span class="legend-label">Mixed</span>
+                                <span class="legend-value">9</span>
+                                <span class="legend-people">~370 ppl</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #95a5a6;"></span>
+                                <span class="legend-label">Don&rsquo;t Know</span>
+                                <span class="legend-value">10</span>
+                                <span class="legend-people">~378 ppl</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot" style="background: #e74c3c;"></span>
+                                <span class="legend-label">No</span>
+                                <span class="legend-value">1</span>
+                                <span class="legend-people">~15 ppl</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>&ldquo;Mixed&rdquo; barrios are those where different members gave different answers within the same barrio. In an optimistic reading, mixed barrios count as YES; in a pessimistic reading, they count as DON&rsquo;T KNOW.</p>
+
+                    <!-- People stacked bar -->
+                    <h3>People Breakdown (estimated)</h3>
+                    <div class="stacked-bar-wrap">
+                        <div class="stacked-bar">
+                            <!-- 900/1663=54.1%, 370/1663=22.2%, 378/1663=22.7%, 15/1663=0.9% -->
+                            <div class="stacked-segment bar-fill-yes" style="width: 54.1%;">~900</div>
+                            <div class="stacked-segment" style="width: 22.2%; background: #f39c12;">~370</div>
+                            <div class="stacked-segment" style="width: 22.7%; background: #95a5a6;">~378</div>
+                            <div class="stacked-segment bar-fill-no" style="width: 0.9%;"></div>
+                        </div>
+                        <div class="stacked-labels">
+                            <span style="width: 54.1%;">YES</span>
+                            <span style="width: 22.2%;">Mixed</span>
+                            <span style="width: 22.7%;">Don&rsquo;t Know</span>
+                            <span style="width: 0.9%;"></span>
+                        </div>
+                    </div>
+
+                    <p>An additional ~225 people are in 5 uncertain barrios where only a single member responded and no lead was identified.</p>
+
+                    <h2>Barrio Breakdown</h2>
+
+                    <h3>24 Definite YES Barrios (~900 people)</h3>
+                    <p>All confirmed by leads. Strong base of committed camps across a wide range of sizes.</p>
+                    <div class="bar-chart">
+                        <div class="bar-row"><span class="bar-label">Garden of Joy</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 100%;">120</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Werkhaus</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 54%;">65</div></div></div>
+                        <div class="bar-row"><span class="bar-label">EYAO</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 42%;">50</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Glowy Owl</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 42%;">50</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Ran&rsquo;Dome</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 37.5%;">45</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Bread &amp; Tomato</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 37.5%;">45</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Barrio del Sol</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 21%;">25</div></div></div>
+                        <div class="bar-row"><span class="bar-label">JamHouse</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 21%;">25</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Shenanicamp</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 21%;">25</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Peach Please</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 20%;">24</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Belly Town</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 19%;">23</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Mercurial Retrogrades</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 19%;">23</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Planet Resilium</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 17%;">20</div></div></div>
+                        <div class="bar-row"><span class="bar-label">+ others</span><div class="bar-track"><div class="bar-fill bar-fill-yes" style="width: 25%; opacity: 0.6;">Cwtch &amp; more</div></div></div>
+                    </div>
+
+                    <h3>9 Mixed Barrios (~370 people)</h3>
+                    <div class="bar-chart">
+                        <div class="bar-row"><span class="bar-label">sssh</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 100%;">60</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Kosmozoo</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 75%;">45</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Yes!</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 75%;">45</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Oasis Playground</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 75%;">45</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Costume Camp</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 67%;">40</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Hyperflow</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 58%;">35</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Chuchichaschtli</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 58%;">35</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Olive Odyssey</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 58%;">35</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Come &amp; Play</span><div class="bar-track"><div class="bar-fill bar-fill-mixed" style="width: 50%;">30</div></div></div>
+                    </div>
+
+                    <h3>10 Don&rsquo;t Know + 1 No (~393 people)</h3>
+                    <div class="bar-chart">
+                        <div class="bar-row"><span class="bar-label">&Uuml;bertown</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 90%;">65</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Curious Creatures</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 100%;">72</div></div></div>
+                        <div class="bar-row"><span class="bar-label">MoonCows</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 83%;">60</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Le Gratin</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 62.5%;">45</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Wonderever</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 55.5%;">40</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Sheepy Ship</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 48.6%;">35</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Mirage</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 41.7%;">30</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Dusty Dreamers</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 27.8%;">20</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Dust &amp; Glow</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 8.3%;">6</div></div></div>
+                        <div class="bar-row"><span class="bar-label">Why Not?</span><div class="bar-track"><div class="bar-fill bar-fill-dk" style="width: 6.9%;">5</div></div></div>
+                        <div class="bar-row"><span class="bar-label">IAGA</span><div class="bar-track"><div class="bar-fill bar-fill-no" style="width: 20.8%;">15 (NO)</div></div></div>
+                    </div>
+
+                    <h2>Why Barrios are Undecided</h2>
+
+                    <div class="reasons-chart">
+                        <div class="reason-row">
+                            <div class="reason-label">Lead Shortage / Burnout</div>
+                            <div class="reason-bar-track"><div class="reason-bar-fill" style="width: 100%;">6 barrios</div></div>
+                        </div>
+                        <div class="reason-row">
+                            <div class="reason-label">Event Uncertainty (Self-Fulfilling Cycle)</div>
+                            <div class="reason-bar-track"><div class="reason-bar-fill" style="width: 67%;">4 barrios</div></div>
+                        </div>
+                        <div class="reason-row">
+                            <div class="reason-label">Fatigue / Break Year Desire</div>
+                            <div class="reason-bar-track"><div class="reason-bar-fill" style="width: 50%;">3 barrios</div></div>
+                        </div>
+                        <div class="reason-row">
+                            <div class="reason-label">Logistics / Infrastructure</div>
+                            <div class="reason-bar-track"><div class="reason-bar-fill" style="width: 50%;">3 barrios</div></div>
+                        </div>
+                        <div class="reason-row">
+                            <div class="reason-label">People Going to Other Events</div>
+                            <div class="reason-bar-track"><div class="reason-bar-fill" style="width: 50%;">3 events</div></div>
+                        </div>
+                    </div>
+
+                    <h3>1. Lead Shortage / Burnout</h3>
+                    <p>Affected barrios include MoonCows, Le Gratin, Wonderever, IAGA, Curious Creatures, and Costume Camp. Common theme: difficulty finding people to step up and take on leadership roles.</p>
+
+                    <h3>2. Event Uncertainty (Self-Fulfilling Cycle)</h3>
+                    <p>Barrios such as Why Not?, Costume Camp, Oasis Playground, and Chuchichaschtli reported that uncertainty about whether the event will happen is itself making it harder to commit. As one respondent put it: &ldquo;Uncertainty made it easier for fence-sitters to say no.&rdquo;</p>
+
+                    <h3>3. Fatigue / Break Year Desire</h3>
+                    <p>Some members of Sheepy Ship, Curious Creatures, and Chuchichaschtli expressed a desire for a break year. One respondent noted this was &ldquo;unrelated to association changes.&rdquo;</p>
+
+                    <h3>4. Logistics / Infrastructure</h3>
+                    <p>Practical barriers for specific camps: Kosmozoo lost their tent (~&euro;6,000 replacement; electricity dependent on &Uuml;bertown), Dust &amp; Glow (broken van), Dusty Dreamers (need 10+ people to be viable). &Uuml;bertown&rsquo;s lead expressed strong reservations about event viability but noted: &ldquo;We don&rsquo;t want to leave you without a power grid; so we will try to make that happen in the very least.&rdquo;</p>
+
+                    <h3>5. People Going to Other Events</h3>
+                    <p>Some core members are being drawn to other events (WTSS, Borderlands, Burning Man), reducing the pool of available participants.</p>
+
+                    <h2>Community Voices: The Skip Year Debate</h2>
+
+                    <h3>Against Skipping</h3>
+
+                    <blockquote>
+                        <p>&ldquo;Skipping a year will lose a lot of participants. Keeping our annual pilgrimage to the desert a &lsquo;habit&rsquo; gives most stability.&rdquo;</p>
+                        <cite>&mdash; Here &amp; Meow</cite>
+                    </blockquote>
+
+                    <blockquote>
+                        <p>&ldquo;If this happens, I&rsquo;d like it to be 100%. When Nowhere was cancelled due to COVID it was a lot of wasted work.&rdquo;</p>
+                        <cite>&mdash; sssh</cite>
+                    </blockquote>
+
+                    <blockquote>
+                        <p>&ldquo;No way of changing our minds... we are going Nowhere yes o yes!!!&rdquo;</p>
+                    </blockquote>
+
+                    <h3>For Skipping / Caution</h3>
+
+                    <blockquote>
+                        <p>&ldquo;Long term viability is paramount. A skip year can hurt short term, but long term can be healthy. Combined with new land in 2027, it could be THE revival of Nowhere.&rdquo;</p>
+                        <cite>&mdash; Curious Creatures</cite>
+                    </blockquote>
+
+                    <blockquote>
+                        <p>&ldquo;Don&rsquo;t risk burning people too hard. Regrouping and coming back next year with more energy and fresh land is also an option.&rdquo;</p>
+                        <cite>&mdash; Oasis Playground</cite>
+                    </blockquote>
+
+                    <blockquote>
+                        <p>&ldquo;It seems crazy to take such a bold and risky attempt to run an event especially when we are just on the precipice of being able to do so much more cheaply on our own land. I&rsquo;d urge that the implications for the event as a whole if it has to cancel any time between now and gate opening are taken fully into consideration. [...] The longevity of the event is orders of magnitude more important than making sure it doesn&rsquo;t skip a year.&rdquo;</p>
+                        <cite>&mdash; &Uuml;bertown</cite>
+                    </blockquote>
+
+                    <h2>Questions from the Community</h2>
+
+                    <h3>Questions Needing Answers</h3>
+                    <ul>
+                        <li>&ldquo;What&rsquo;s holding us back? This was never transparently communicated.&rdquo;</li>
+                        <li>&ldquo;Will there be power on site?&rdquo;</li>
+                        <li>&ldquo;What&rsquo;s the plan for electricity if &Uuml;bertown doesn&rsquo;t attend?&rdquo;</li>
+                        <li>&ldquo;How will container fees change?&rdquo;</li>
+                        <li>&ldquo;Are there gonna be low-income tickets?&rdquo;</li>
+                        <li>&ldquo;What financial commitments (deposits on infrastructure, permits) is the organisation committed to, and what are the implications if the event needs to cancel?&rdquo;</li>
+                        <li>&ldquo;Updated barrio guide with expectations and requirements?&rdquo;</li>
+                    </ul>
+
+                    <h3>Decision Deadlines from Barrios</h3>
+                    <div class="timeline-chart">
+                        <div class="timeline-track">
+                            <div class="timeline-month">
+                                <div class="timeline-month-label">End of February</div>
+                                <div class="timeline-barrios">
+                                    <span class="timeline-tag">Why Not?</span>
+                                    <span class="timeline-tag">Here &amp; Meow</span>
+                                    <span class="timeline-tag">Glowy Owl</span>
+                                    <span class="timeline-tag">Kosmozoo</span>
+                                    <span class="timeline-tag">Curious Creatures</span>
+                                </div>
+                            </div>
+                            <div class="timeline-month">
+                                <div class="timeline-month-label">March</div>
+                                <div class="timeline-barrios">
+                                    <span class="timeline-tag">MoonCows</span>
+                                    <span class="timeline-tag">Wonderever</span>
+                                    <span class="timeline-tag">Charming Chickpeas</span>
+                                    <span class="timeline-tag">Kosmozoo</span>
+                                    <span class="timeline-tag">Oasis Playground</span>
+                                    <span class="timeline-tag">Barrio del Sol</span>
+                                </div>
+                            </div>
+                            <div class="timeline-month">
+                                <div class="timeline-month-label">April+</div>
+                                <div class="timeline-barrios">
+                                    <span class="timeline-tag">Costume Camp</span>
+                                    <span class="timeline-tag">Dust &amp; Glow</span>
+                                    <span class="timeline-tag">Mirage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote>
+                        <p>&ldquo;People need to take time off and are afraid to get stuck with holidays that don&rsquo;t fit any other burn dates.&rdquo;</p>
+                        <cite>&mdash; Glitch</cite>
+                    </blockquote>
+
+                    <h2>Key Takeaways</h2>
+                    <ol>
+                        <li><strong>The solid base is strong.</strong> 24 barrios (~900 people) are unambiguously YES. Only 1 said NO.</li>
+                        <li><strong>The swing group is persuadable.</strong> 9 mixed barrios (~370 people) mostly need event certainty and clear communications.</li>
+                        <li><strong>Biggest risk: self-fulfilling prophecy.</strong> Uncertainty causes people to commit elsewhere, which increases uncertainty. Multiple respondents explicitly flagged this dynamic.</li>
+                        <li><strong>Key infrastructure dependencies.</strong> &Uuml;bertown (~65 people), which provides the power grid for multiple camps, has not yet committed as a barrio but has indicated willingness to help with power infrastructure regardless.</li>
+                        <li><strong>The community loves the event.</strong> Strong expressions of gratitude and support from many respondents. Even undecided camps are rooting for the event to happen.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nobodies Collective</span>
+                    <p>A Spanish non-profit cultural association</p>
+                    <p class="footer-address">Glorieta de Bilbao 1, 3 Derecha<br>28004 Madrid, Spain</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <a href="/#about">About</a>
+                    <a href="/#principles">Principles</a>
+                    <a href="/#event">Event</a>
+                    <a href="/#join">Get Involved</a>
+                    <a href="/transparency.html">Transparency</a>
+                    <a href="/estatutos.html">Estatutos</a>
+                </div>
+                <div class="footer-connect">
+                    <h4>Connect</h4>
+                    <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a>
+                    <a href="https://t.me/nobodiescollective" target="_blank">Telegram</a>
+                    <a href="mailto:hello@nobodies.team">hello@nobodies.team</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Asociacion Nobodies Collective</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
