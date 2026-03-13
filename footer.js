@@ -32,6 +32,7 @@
                         '<a href="' + prefix + '/estatutos.html">Estatutos</a>' +
                         '<a href="' + prefix + '/transparency.html">Transparency</a>' +
                         '<a href="' + prefix + '/faq.html">FAQ</a>' +
+                        '<a href="' + prefix + '/code-of-conduct.html">Code of Conduct</a>' +
                     '</div>' +
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +
