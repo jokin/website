@@ -52,7 +52,7 @@
             <div class="hero-content container">
                 <p class="hero-tag">Happening July 7-12th, 2026 in Monegros</p>
                 <h1>Elsewhere<br>Burn</h1>
-                <p class="hero-location">Tickets are now on sale! Public sale coming soon</p>
+                <p class="hero-location">Public ticket sale coming soon. Subscribe to be the first to know.</p>
                 <div class="hero-newsletter" id="mlb2-hero" >
                     <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
                         <div class="hero-newsletter-row">
@@ -102,40 +102,72 @@
             </div>
         </section>
 
-        <section class="newsletter">
+        <section class="tickets" id="tickets" aria-labelledby="tickets-heading">
             <div class="container">
-                <h2>Get News about Elsewhere</h2>
-                <p>We'll email you when ticket sales open, and about ways to participate.</p>
-
-                <div id="mlb2-36155024" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-36155024">
-                    <div class="ml-form-align-center">
-                        <div class="ml-form-embedWrapper embedForm">
-                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
-                                    <div class="ml-form-formContent">
-                                        <div class="ml-form-fieldRow ml-last-item">
-                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" name="ml-submit" value="1">
-                                    <div class="ml-form-embedSubmit">
-                                        <button type="submit" class="primary">Subscribe</button>
-                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                            <div class="ml-form-embedSubmitLoad"></div>
-                                            <span class="sr-only">Loading...</span>
-                                        </button>
-                                    </div>
-                                    <input type="hidden" name="anticsrf" value="true">
-                                </form>
-                            </div>
-                            <div class="ml-form-successBody row-success" style="display: none">
-                                <div class="ml-form-successContent">
-                                    <p>Thanks for subscribing!</p>
-                                </div>
-                            </div>
+                <div class="ticket-hero">
+                    <div class="ticket-hero-text anim anim-fade-up">
+                        <h2 id="tickets-heading">Tickets</h2>
+                        <div class="ticket-intro">
+                            <p class="ticket-intro-lead">Elsewhere runs on ticket income.</p>
+                            <p>Tickets pay for the infrastructure that makes the city possible.</p>
+                            <p>The idea is simple:<br>If you can pay more, you help someone else come.</p>
                         </div>
+                    </div>
+                    <div class="ticket-hero-image anim anim-fade-up">
+                        <img src="images/Ticket.png" alt="Elsewhere Burn ticket, Admit One, 7-12 July, Monegros Desert, Spain" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="ticket-row-top">
+                    <div class="ticket-box ticket-box-collab anim anim-slide-left">
+                        <h3>NCA Collaborators &amp; Members</h3>
+                        <p class="ticket-box-question">Are you part of the Nobodies Collective Association?</p>
+                        <p>If you are in the Humans app, you should already have received an email with your ticket link and discount code.</p>
+                        <p class="ticket-box-sub">To use your discount code, apply it at the "Details" step of the checkout.</p>
+                    </div>
+                    <div class="ticket-box anim anim-slide-right">
+                        <h3>Standard</h3>
+                        <p>Standard tickets are released in waves.</p>
+                        <p class="ticket-box-sub">The public ticket announcement will be sent to newsletter subscribers.</p>
+                    </div>
+                </div>
+
+                <div class="ticket-row-bottom">
+                    <div class="ticket-box anim anim-slide-left">
+                        <h3>Low-income</h3>
+                        <p>For people who otherwise could not attend.</p>
+                        <p class="ticket-box-sub">A limited number of low-income tickets are planned. Details will be announced soon.</p>
+                    </div>
+                    <div class="ticket-box ticket-vip anim anim-fade-up">
+                        <h3>VIP</h3>
+                        <p class="ticket-vip-subtitle">Voluntarily Inflated Price</p>
+                        <p>VIP tickets cost more on purpose.</p>
+                        <p>Not for perks.</p>
+                        <p>Not for luxury.</p>
+                        <p>Just to help someone else come.</p>
+                        <p>If you can afford it, this helps subsidize low-income tickets and fund more art.</p>
+                    </div>
+                    <div class="ticket-box ticket-youth anim anim-slide-right">
+                        <h3>Children &amp; Youth</h3>
+                        <p>Children under 14 can attend with an optional donation to art grants.</p>
+                        <p>Youth tickets are available for participants aged 14 to 18.</p>
+                        <p>These tickets must be purchased by a parent or legal guardian alongside their own ticket.</p>
+                    </div>
+                </div>
+
+                <div class="ticket-subscribe anim anim-fade-up">
+                    <p>Subscribe to receive the public ticket announcement and other important updates.</p>
+                    <form class="ml-block-form ticket-subscribe-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank" novalidate>
+                        <div class="ticket-subscribe-row">
+                            <label for="ticket-email" class="sr-only">Email address</label>
+                            <input id="ticket-email" aria-label="Email address" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                            <input type="hidden" name="ml-submit" value="1">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                    <div class="ticket-subscribe-success" role="alert" aria-live="polite" style="display: none">
+                        <p>Thanks! You will receive the announcement by email.</p>
                     </div>
                 </div>
             </div>
@@ -256,26 +288,7 @@
             <div class="container">
                 <h2>Join Elsewhere</h2>
 
-                <div class="ticket-card anim anim-fade-up">
-                    <div class="ticket-card-header">
-                        <span class="ticket-card-icon">🎟️</span>
-                        <div>
-                            <strong>Want a Ticket?</strong>
-                            <p>Volunteer sale is live! Public sale coming soon. Sign up to be notified.</p>
-                        </div>
-                    </div>
-                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
-                        <div class="ticket-card-row">
-                            <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
-                            <input type="hidden" name="ml-submit" value="1">
-                            <button type="submit" class="btn btn-primary">Notify Me</button>
-                        </div>
-                        <input type="hidden" name="anticsrf" value="true">
-                    </form>
-                    <div class="ticket-card-success" style="display: none">
-                        <p>Thanks for subscribing!</p>
-                    </div>
-                </div>
+                <p class="join-tickets-ref">Participation at Elsewhere requires a ticket. See the <a href="#tickets">Tickets section</a> for current pricing and availability.</p>
 
                 <div class="join-grid">
                     <div class="join-card join-card-active anim anim-slide-left">
@@ -315,7 +328,7 @@
                     <div class="governance-item anim anim-slide-left">
                         <h4>Event Participants</h4>
                         <p>Anyone attending Elsewhere. Participants can also pick up volunteer shifts to help make the event happen.</p>
-                        <a href="#join" class="btn btn-primary btn-sm">Get a Ticket</a>
+                        <a href="#tickets" class="btn btn-primary btn-sm">Get a Ticket</a>
                     </div>
                     <div class="governance-item anim anim-slide-right">
                         <h4>Collaborators</h4>
@@ -352,17 +365,63 @@
             </div>
         </section>
 
+        <section class="newsletter">
+            <div class="container">
+                <h2>Get News about Elsewhere</h2>
+                <p>Subscribe to receive the public ticket sale announcement and other important updates.</p>
+
+                <div id="mlb2-36155024" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-36155024">
+                    <div class="ml-form-align-center">
+                        <div class="ml-form-embedWrapper embedForm">
+                            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post" target="_blank">
+                                    <div class="ml-form-formContent">
+                                        <div class="ml-form-fieldRow ml-last-item">
+                                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                                                <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ml-submit" value="1">
+                                    <div class="ml-form-embedSubmit">
+                                        <button type="submit" class="primary">Subscribe</button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                            <div class="ml-form-embedSubmitLoad"></div>
+                                            <span class="sr-only">Loading...</span>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="anticsrf" value="true">
+                                </form>
+                            </div>
+                            <div class="ml-form-successBody row-success" style="display: none">
+                                <div class="ml-form-successContent">
+                                    <p>Thanks for subscribing!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <script>
             function ml_webform_success_36155024() {
                 var $ = ml_jQuery || jQuery;
                 $('.ml-subscribe-form-36155024 .row-success').show();
                 $('.ml-subscribe-form-36155024 .row-form').hide();
-                // Also handle hero newsletter form
+                // Hero newsletter form
                 var heroSuccess = document.querySelector('.hero-newsletter-success');
                 var heroForm = document.querySelector('.hero-newsletter form');
                 if (heroSuccess && heroForm) {
                     heroForm.style.display = 'none';
                     heroSuccess.style.display = 'block';
+                }
+                // Tickets section subscribe form
+                var ticketsSuccess = document.querySelector('.ticket-subscribe-success');
+                var ticketsForm = document.querySelector('.ticket-subscribe-form');
+                if (ticketsSuccess && ticketsForm) {
+                    ticketsForm.style.display = 'none';
+                    ticketsSuccess.style.display = 'block';
                 }
             }
         </script>
