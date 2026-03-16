@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCA Board Meeting Minutes - March 12, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .meeting-content blockquote {
+            margin: 1.25rem 0;
+            padding: 0.75rem 1rem;
+            border-left: 4px solid var(--color-border);
+            background: var(--color-bg-secondary);
+            color: var(--color-text);
+        }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .note-box {
+            margin: 1.25rem 0 2rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>NCA Board Meeting Minutes</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 12 March 2026, 18:56 CET</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Attendees:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Michelle T, Victor P, Pepe C (legal counsel)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Tax Treatment of Contributions</h2>
+                        <p>Peter D proposed a method to ensure that voluntary contributions beyond the ticket price are not subject to tax, with only the ticket price portion being taxed. The approach is being checked with the accountants for confirmation.</p>
+
+                        <h2>2. System Integration Update</h2>
+                        <p>Daniela M S reported on progress aligning the &ldquo;fist&rdquo; and &ldquo;humans&rdquo; platforms visually. Single sign-on between the two was discussed but deemed technically challenging due to the different technology stacks involved. Email functionality was identified as the next priority for the sign-in flow.</p>
+
+                        <h2>3. Individual Matter</h2>
+                        <p>The board received an update on an ongoing individual matter. A formal decision has been communicated to the individual. The board agreed to maintain its position and engage minimally. Relevant members of the community are also working on developing clear policies and procedures to handle similar cases in the future.</p>
+
+                        <h2>4. Statutes Amendment</h2>
+                        <p>The board reviewed proposed statute amendments prepared by Pepe C, covering provisions for electronic voting and electronic meetings, along with corrections to cross-references and language refinement. The vote was deferred to Monday to allow an absent board member to participate.</p>
+
+                        <h2>5. Container Assets</h2>
+                        <p>The board received a legal update on arrangements for event infrastructure. A 12-month license agreement has been agreed in principle, with final inventory pending. Geographic restrictions apply. Details are restricted.</p>
+
+                        <h2>6. Bank Account</h2>
+                        <p>The bank account opening process continues to progress. Identity documentation has been submitted. The board expects the account to be operational soon.</p>
+
+                        <h2>7. Ticketing Launch</h2>
+                        <p>The board decided to launch public ticket sales on Saturday. Key points:</p>
+                        <ul>
+                            <li>Code of Conduct is ready; Terms &amp; Conditions and Privacy Policy need final review</li>
+                            <li>A member discount will be offered via voucher code</li>
+                            <li>The ticketing team will use dedicated email accounts</li>
+                            <li>Testing is planned for Friday</li>
+                        </ul>
+
+                        <h2>8. Event Name</h2>
+                        <p>The board confirmed the event name &ldquo;Elsewhere&rdquo; for public announcement, subject to pending trademark clearance. The operational need for ticket sales was prioritised.</p>
+
+                        <h2>9. Community Meeting Planning</h2>
+                        <p>The board reviewed the agenda for the community meeting following the board session, covering legal updates, name announcement, system updates, recruitment, ticketing, and communications.</p>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Pablo V</td><td>Grant Daniel T ticketing platform access</td><td>ASAP</td></tr>
+                                <tr><td>Pepe C</td><td>Chase accountants daily re: trademark clearance for &ldquo;Elsewhere&rdquo;</td><td>Ongoing</td></tr>
+                                <tr><td>Pepe C</td><td>Finalise T&amp;Cs and Privacy Policy</td><td>Before Saturday</td></tr>
+                                <tr><td>Board</td><td>Vote on statutes amendments</td><td>Monday</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordinate dedicated ticketing email accounts</td><td>Before launch</td></tr>
+                                <tr><td>Victor P / team</td><td>Final review and testing of ticket setup</td><td>Friday</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes generated with AI assistance from Gemini meeting notes. Sanitised for public record.</em></p>
+                    </div>
+                </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Asistentes:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Michelle T, Victor P, Pepe C (asesor legal)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Tratamiento Fiscal de las Contribuciones</h2>
+                        <p>Peter D propuso un m&eacute;todo para garantizar que las contribuciones voluntarias m&aacute;s all&aacute; del precio de la entrada no est&eacute;n sujetas a impuestos, tribut&aacute;ndose &uacute;nicamente la parte correspondiente al precio de la entrada. El enfoque est&aacute; siendo verificado con los contables para su confirmaci&oacute;n.</p>
+
+                        <h2>2. Actualizaci&oacute;n de la Integraci&oacute;n de Sistemas</h2>
+                        <p>Daniela M S inform&oacute; sobre el progreso en la alineaci&oacute;n visual de las plataformas &ldquo;fist&rdquo; y &ldquo;humans&rdquo;. Se discuti&oacute; el inicio de sesi&oacute;n &uacute;nico entre ambas, pero se consider&oacute; t&eacute;cnicamente complicado debido a las diferentes pilas tecnol&oacute;gicas involucradas. La funcionalidad de correo electr&oacute;nico fue identificada como la siguiente prioridad para el flujo de inicio de sesi&oacute;n.</p>
+
+                        <h2>3. Asunto Individual</h2>
+                        <p>La junta recibi&oacute; una actualizaci&oacute;n sobre un asunto individual en curso. Se ha comunicado una decisi&oacute;n formal al individuo. La junta acord&oacute; mantener su posici&oacute;n e interactuar m&iacute;nimamente. Los miembros relevantes de la comunidad tambi&eacute;n est&aacute;n trabajando en el desarrollo de pol&iacute;ticas y procedimientos claros para manejar casos similares en el futuro.</p>
+
+                        <h2>4. Modificaci&oacute;n de Estatutos</h2>
+                        <p>La junta revis&oacute; las modificaciones estatutarias propuestas preparadas por Pepe C, que cubren disposiciones para votaci&oacute;n electr&oacute;nica y reuniones electr&oacute;nicas, junto con correcciones de referencias cruzadas y refinamiento del lenguaje. La votaci&oacute;n fue aplazada al lunes para permitir la participaci&oacute;n de un miembro ausente de la junta.</p>
+
+                        <h2>5. Activos de Contenedores</h2>
+                        <p>La junta recibi&oacute; una actualizaci&oacute;n legal sobre los acuerdos para la infraestructura del evento. Se ha acordado en principio un contrato de licencia de 12 meses, pendiente del inventario final. Se aplican restricciones geogr&aacute;ficas. Los detalles son restringidos.</p>
+
+                        <h2>6. Cuenta Bancaria</h2>
+                        <p>El proceso de apertura de la cuenta bancaria contin&uacute;a avanzando. Se ha presentado la documentaci&oacute;n de identidad. La junta espera que la cuenta est&eacute; operativa pronto.</p>
+
+                        <h2>7. Lanzamiento de Venta de Entradas</h2>
+                        <p>La junta decidi&oacute; lanzar la venta p&uacute;blica de entradas el s&aacute;bado. Puntos clave:</p>
+                        <ul>
+                            <li>El C&oacute;digo de Conducta est&aacute; listo; los T&eacute;rminos y Condiciones y la Pol&iacute;tica de Privacidad necesitan revisi&oacute;n final</li>
+                            <li>Se ofrecer&aacute; un descuento para miembros mediante c&oacute;digo de cup&oacute;n</li>
+                            <li>El equipo de venta de entradas utilizar&aacute; cuentas de correo electr&oacute;nico dedicadas</li>
+                            <li>Las pruebas est&aacute;n previstas para el viernes</li>
+                        </ul>
+
+                        <h2>8. Nombre del Evento</h2>
+                        <p>La junta confirm&oacute; el nombre del evento &ldquo;Elsewhere&rdquo; para el anuncio p&uacute;blico, sujeto a la verificaci&oacute;n pendiente de marca registrada. Se prioriz&oacute; la necesidad operativa para la venta de entradas.</p>
+
+                        <h2>9. Planificaci&oacute;n de la Reuni&oacute;n Comunitaria</h2>
+                        <p>La junta revis&oacute; la agenda para la reuni&oacute;n comunitaria posterior a la sesi&oacute;n de la junta, que cubre actualizaciones legales, anuncio del nombre, actualizaciones de sistemas, reclutamiento, venta de entradas y comunicaciones.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Pablo V</td><td>Conceder a Daniel T acceso a la plataforma de venta de entradas</td><td>Lo antes posible</td></tr>
+                                <tr><td>Pepe C</td><td>Contactar diariamente a los contables sobre la verificaci&oacute;n de marca para &ldquo;Elsewhere&rdquo;</td><td>En curso</td></tr>
+                                <tr><td>Pepe C</td><td>Finalizar T&eacute;rminos y Condiciones y Pol&iacute;tica de Privacidad</td><td>Antes del s&aacute;bado</td></tr>
+                                <tr><td>Junta</td><td>Votar las modificaciones de los estatutos</td><td>Lunes</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordinar cuentas de correo electr&oacute;nico dedicadas para la venta de entradas</td><td>Antes del lanzamiento</td></tr>
+                                <tr><td>Victor P / equipo</td><td>Revisi&oacute;n final y pruebas de la configuraci&oacute;n de entradas</td><td>Viernes</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas con asistencia de IA a partir de notas de reuni&oacute;n de Gemini. Depuradas para el registro p&uacute;blico.</em></p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Participants :</strong> Daniel T, Peter D, Pablo V, Daniela M S, Michelle T, Victor P, Pepe C (conseiller juridique)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Traitement Fiscal des Contributions</h2>
+                        <p>Peter D a propos&eacute; une m&eacute;thode pour garantir que les contributions volontaires au-del&agrave; du prix du billet ne soient pas soumises &agrave; l&rsquo;imp&ocirc;t, seule la partie correspondant au prix du billet &eacute;tant impos&eacute;e. L&rsquo;approche est en cours de v&eacute;rification aupr&egrave;s des comptables pour confirmation.</p>
+
+                        <h2>2. Mise &agrave; jour de l&rsquo;Int&eacute;gration des Syst&egrave;mes</h2>
+                        <p>Daniela M S a rapport&eacute; les progr&egrave;s r&eacute;alis&eacute;s dans l&rsquo;harmonisation visuelle des plateformes &laquo; fist &raquo; et &laquo; humans &raquo;. L&rsquo;authentification unique entre les deux a &eacute;t&eacute; discut&eacute;e mais jug&eacute;e techniquement complexe en raison des diff&eacute;rentes piles technologiques impliqu&eacute;es. La fonctionnalit&eacute; de courrier &eacute;lectronique a &eacute;t&eacute; identifi&eacute;e comme la prochaine priorit&eacute; pour le flux de connexion.</p>
+
+                        <h2>3. Affaire Individuelle</h2>
+                        <p>Le conseil a re&ccedil;u une mise &agrave; jour sur une affaire individuelle en cours. Une d&eacute;cision formelle a &eacute;t&eacute; communiqu&eacute;e &agrave; la personne concern&eacute;e. Le conseil a convenu de maintenir sa position et de s&rsquo;engager au minimum. Les membres concern&eacute;s de la communaut&eacute; travaillent &eacute;galement &agrave; l&rsquo;&eacute;laboration de politiques et proc&eacute;dures claires pour traiter des cas similaires &agrave; l&rsquo;avenir.</p>
+
+                        <h2>4. Modification des Statuts</h2>
+                        <p>Le conseil a examin&eacute; les modifications statutaires propos&eacute;es et pr&eacute;par&eacute;es par Pepe C, couvrant des dispositions pour le vote &eacute;lectronique et les r&eacute;unions &eacute;lectroniques, ainsi que des corrections de r&eacute;f&eacute;rences crois&eacute;es et un raffinement du langage. Le vote a &eacute;t&eacute; report&eacute; &agrave; lundi pour permettre &agrave; un membre absent du conseil de participer.</p>
+
+                        <h2>5. Actifs de Conteneurs</h2>
+                        <p>Le conseil a re&ccedil;u une mise &agrave; jour juridique sur les dispositions relatives &agrave; l&rsquo;infrastructure de l&rsquo;&eacute;v&eacute;nement. Un accord de licence de 12 mois a &eacute;t&eacute; convenu en principe, l&rsquo;inventaire final &eacute;tant en attente. Des restrictions g&eacute;ographiques s&rsquo;appliquent. Les d&eacute;tails sont restreints.</p>
+
+                        <h2>6. Compte Bancaire</h2>
+                        <p>Le processus d&rsquo;ouverture du compte bancaire continue de progresser. Les documents d&rsquo;identit&eacute; ont &eacute;t&eacute; soumis. Le conseil s&rsquo;attend &agrave; ce que le compte soit op&eacute;rationnel prochainement.</p>
+
+                        <h2>7. Lancement de la Billetterie</h2>
+                        <p>Le conseil a d&eacute;cid&eacute; de lancer la vente publique de billets samedi. Points cl&eacute;s :</p>
+                        <ul>
+                            <li>Le Code de Conduite est pr&ecirc;t ; les Conditions G&eacute;n&eacute;rales et la Politique de Confidentialit&eacute; n&eacute;cessitent une r&eacute;vision finale</li>
+                            <li>Une r&eacute;duction pour les membres sera propos&eacute;e via un code de bon d&rsquo;achat</li>
+                            <li>L&rsquo;&eacute;quipe de billetterie utilisera des comptes de messagerie d&eacute;di&eacute;s</li>
+                            <li>Les tests sont pr&eacute;vus pour vendredi</li>
+                        </ul>
+
+                        <h2>8. Nom de l&rsquo;&Eacute;v&eacute;nement</h2>
+                        <p>Le conseil a confirm&eacute; le nom de l&rsquo;&eacute;v&eacute;nement &laquo; Elsewhere &raquo; pour l&rsquo;annonce publique, sous r&eacute;serve de la v&eacute;rification en cours de la marque d&eacute;pos&eacute;e. Le besoin op&eacute;rationnel pour la vente de billets a &eacute;t&eacute; prioris&eacute;.</p>
+
+                        <h2>9. Planification de la R&eacute;union Communautaire</h2>
+                        <p>Le conseil a revu l&rsquo;ordre du jour de la r&eacute;union communautaire suivant la session du conseil, couvrant les mises &agrave; jour juridiques, l&rsquo;annonce du nom, les mises &agrave; jour des syst&egrave;mes, le recrutement, la billetterie et les communications.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Pablo V</td><td>Accorder &agrave; Daniel T l&rsquo;acc&egrave;s &agrave; la plateforme de billetterie</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Pepe C</td><td>Relancer quotidiennement les comptables concernant la v&eacute;rification de marque pour &laquo; Elsewhere &raquo;</td><td>En cours</td></tr>
+                                <tr><td>Pepe C</td><td>Finaliser les Conditions G&eacute;n&eacute;rales et la Politique de Confidentialit&eacute;</td><td>Avant samedi</td></tr>
+                                <tr><td>Conseil</td><td>Voter les modifications des statuts</td><td>Lundi</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordonner les comptes de messagerie d&eacute;di&eacute;s pour la billetterie</td><td>Avant le lancement</td></tr>
+                                <tr><td>Victor P / &eacute;quipe</td><td>R&eacute;vision finale et tests de la configuration de billetterie</td><td>Vendredi</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; avec l&rsquo;assistance de l&rsquo;IA &agrave; partir des notes de r&eacute;union Gemini. D&eacute;puration effectu&eacute;e pour le registre public.</em></p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Partecipanti:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Michelle T, Victor P, Pepe C (consulente legale)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Trattamento Fiscale dei Contributi</h2>
+                        <p>Peter D ha proposto un metodo per garantire che i contributi volontari oltre il prezzo del biglietto non siano soggetti a imposta, con la tassazione applicata solo alla parte corrispondente al prezzo del biglietto. L&rsquo;approccio &egrave; in fase di verifica con i commercialisti per la conferma.</p>
+
+                        <h2>2. Aggiornamento sull&rsquo;Integrazione dei Sistemi</h2>
+                        <p>Daniela M S ha riferito sui progressi nell&rsquo;allineamento visivo delle piattaforme &ldquo;fist&rdquo; e &ldquo;humans&rdquo;. L&rsquo;accesso unico tra le due piattaforme &egrave; stato discusso ma ritenuto tecnicamente impegnativo a causa delle diverse tecnologie coinvolte. La funzionalit&agrave; di posta elettronica &egrave; stata identificata come la prossima priorit&agrave; per il flusso di accesso.</p>
+
+                        <h2>3. Questione Individuale</h2>
+                        <p>Il consiglio ha ricevuto un aggiornamento su una questione individuale in corso. Una decisione formale &egrave; stata comunicata alla persona interessata. Il consiglio ha concordato di mantenere la propria posizione e di interagire al minimo. I membri rilevanti della comunit&agrave; stanno inoltre lavorando allo sviluppo di politiche e procedure chiare per gestire casi simili in futuro.</p>
+
+                        <h2>4. Modifica degli Statuti</h2>
+                        <p>Il consiglio ha esaminato le modifiche statutarie proposte preparate da Pepe C, comprendenti disposizioni per il voto elettronico e le riunioni elettroniche, insieme a correzioni di riferimenti incrociati e perfezionamento del linguaggio. Il voto &egrave; stato rinviato a luned&igrave; per consentire la partecipazione di un membro assente del consiglio.</p>
+
+                        <h2>5. Beni Relativi ai Contenitori</h2>
+                        <p>Il consiglio ha ricevuto un aggiornamento legale sugli accordi per l&rsquo;infrastruttura dell&rsquo;evento. Un contratto di licenza di 12 mesi &egrave; stato concordato in linea di principio, in attesa dell&rsquo;inventario finale. Si applicano restrizioni geografiche. I dettagli sono riservati.</p>
+
+                        <h2>6. Conto Bancario</h2>
+                        <p>Il processo di apertura del conto bancario continua a progredire. La documentazione di identit&agrave; &egrave; stata presentata. Il consiglio si aspetta che il conto sia operativo a breve.</p>
+
+                        <h2>7. Lancio della Biglietteria</h2>
+                        <p>Il consiglio ha deciso di lanciare la vendita pubblica dei biglietti sabato. Punti chiave:</p>
+                        <ul>
+                            <li>Il Codice di Condotta &egrave; pronto; i Termini e Condizioni e l&rsquo;Informativa sulla Privacy necessitano di una revisione finale</li>
+                            <li>Sar&agrave; offerto uno sconto per i membri tramite codice sconto</li>
+                            <li>Il team di biglietteria utilizzer&agrave; account di posta elettronica dedicati</li>
+                            <li>I test sono previsti per venerd&igrave;</li>
+                        </ul>
+
+                        <h2>8. Nome dell&rsquo;Evento</h2>
+                        <p>Il consiglio ha confermato il nome dell&rsquo;evento &ldquo;Elsewhere&rdquo; per l&rsquo;annuncio pubblico, subordinatamente alla verifica del marchio in corso. La necessit&agrave; operativa per la vendita dei biglietti &egrave; stata prioritizzata.</p>
+
+                        <h2>9. Pianificazione della Riunione Comunitaria</h2>
+                        <p>Il consiglio ha esaminato l&rsquo;ordine del giorno della riunione comunitaria successiva alla sessione del consiglio, che comprende aggiornamenti legali, annuncio del nome, aggiornamenti dei sistemi, reclutamento, biglietteria e comunicazioni.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Pablo V</td><td>Concedere a Daniel T l&rsquo;accesso alla piattaforma di biglietteria</td><td>Al pi&ugrave; presto</td></tr>
+                                <tr><td>Pepe C</td><td>Sollecitare quotidianamente i commercialisti riguardo alla verifica del marchio per &ldquo;Elsewhere&rdquo;</td><td>In corso</td></tr>
+                                <tr><td>Pepe C</td><td>Finalizzare Termini e Condizioni e Informativa sulla Privacy</td><td>Prima di sabato</td></tr>
+                                <tr><td>Consiglio</td><td>Votare le modifiche agli statuti</td><td>Luned&igrave;</td></tr>
+                                <tr><td>Daniela M S</td><td>Coordinare gli account di posta elettronica dedicati per la biglietteria</td><td>Prima del lancio</td></tr>
+                                <tr><td>Victor P / team</td><td>Revisione finale e test della configurazione della biglietteria</td><td>Venerd&igrave;</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato con assistenza dell&rsquo;IA dalle note della riunione Gemini. Depurato per il registro pubblico.</em></p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Teilnehmer:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Michelle T, Victor P, Pepe C (Rechtsberater)
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Steuerliche Behandlung von Beitr&auml;gen</h2>
+                        <p>Peter D schlug eine Methode vor, um sicherzustellen, dass freiwillige Beitr&auml;ge &uuml;ber den Ticketpreis hinaus nicht steuerpflichtig sind und nur der Anteil des Ticketpreises besteuert wird. Der Ansatz wird zur Best&auml;tigung mit den Buchhaltern gepr&uuml;ft.</p>
+
+                        <h2>2. Aktualisierung zur Systemintegration</h2>
+                        <p>Daniela M S berichtete &uuml;ber die Fortschritte bei der visuellen Angleichung der Plattformen &bdquo;fist&ldquo; und &bdquo;humans&ldquo;. Eine einheitliche Anmeldung zwischen beiden wurde diskutiert, aber aufgrund der unterschiedlichen Technologiestacks als technisch anspruchsvoll eingestuft. Die E-Mail-Funktionalit&auml;t wurde als n&auml;chste Priorit&auml;t f&uuml;r den Anmeldevorgang identifiziert.</p>
+
+                        <h2>3. Individuelle Angelegenheit</h2>
+                        <p>Der Vorstand erhielt ein Update zu einer laufenden individuellen Angelegenheit. Eine formelle Entscheidung wurde der betroffenen Person mitgeteilt. Der Vorstand beschloss, seine Position beizubehalten und minimal zu interagieren. Relevante Mitglieder der Gemeinschaft arbeiten zudem an der Entwicklung klarer Richtlinien und Verfahren f&uuml;r die Behandlung &auml;hnlicher F&auml;lle in der Zukunft.</p>
+
+                        <h2>4. Satzungs&auml;nderung</h2>
+                        <p>Der Vorstand pr&uuml;fte die von Pepe C vorbereiteten Satzungs&auml;nderungen, die Bestimmungen f&uuml;r elektronische Abstimmungen und elektronische Sitzungen sowie Korrekturen von Querverweisen und sprachliche Verfeinerungen umfassen. Die Abstimmung wurde auf Montag verschoben, um einem abwesenden Vorstandsmitglied die Teilnahme zu erm&ouml;glichen.</p>
+
+                        <h2>5. Container-Verm&ouml;genswerte</h2>
+                        <p>Der Vorstand erhielt ein rechtliches Update zu den Vereinbarungen f&uuml;r die Veranstaltungsinfrastruktur. Ein 12-monatiger Lizenzvertrag wurde grunds&auml;tzlich vereinbart, das endg&uuml;ltige Inventar steht noch aus. Es gelten geografische Beschr&auml;nkungen. Die Details sind vertraulich.</p>
+
+                        <h2>6. Bankkonto</h2>
+                        <p>Der Prozess der Bankkontoe&ouml;ffnung schreitet weiter voran. Die Identit&auml;tsdokumente wurden eingereicht. Der Vorstand erwartet, dass das Konto in K&uuml;rze betriebsbereit sein wird.</p>
+
+                        <h2>7. Start des Ticketverkaufs</h2>
+                        <p>Der Vorstand beschloss, den &ouml;ffentlichen Ticketverkauf am Samstag zu starten. Wichtige Punkte:</p>
+                        <ul>
+                            <li>Der Verhaltenskodex ist fertig; die Allgemeinen Gesch&auml;ftsbedingungen und die Datenschutzrichtlinie bed&uuml;rfen einer abschlie&szlig;enden Pr&uuml;fung</li>
+                            <li>Ein Mitgliederrabatt wird per Gutscheincode angeboten</li>
+                            <li>Das Ticketing-Team wird dedizierte E-Mail-Konten verwenden</li>
+                            <li>Tests sind f&uuml;r Freitag geplant</li>
+                        </ul>
+
+                        <h2>8. Name der Veranstaltung</h2>
+                        <p>Der Vorstand best&auml;tigte den Veranstaltungsnamen &bdquo;Elsewhere&ldquo; f&uuml;r die &ouml;ffentliche Bekanntgabe, vorbehaltlich der ausstehenden Markenpr&uuml;fung. Der operative Bedarf f&uuml;r den Ticketverkauf wurde priorisiert.</p>
+
+                        <h2>9. Planung der Gemeinschaftsversammlung</h2>
+                        <p>Der Vorstand &uuml;berpr&uuml;fte die Tagesordnung f&uuml;r die Gemeinschaftsversammlung im Anschluss an die Vorstandssitzung, die rechtliche Updates, die Namensbekanntgabe, Systemaktualisierungen, Rekrutierung, Ticketverkauf und Kommunikation umfasst.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;llig</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Pablo V</td><td>Daniel T Zugang zur Ticketing-Plattform gew&auml;hren</td><td>Schnellstm&ouml;glich</td></tr>
+                                <tr><td>Pepe C</td><td>T&auml;glich bei den Buchhaltern wegen Markenpr&uuml;fung f&uuml;r &bdquo;Elsewhere&ldquo; nachhaken</td><td>Laufend</td></tr>
+                                <tr><td>Pepe C</td><td>AGB und Datenschutzrichtlinie finalisieren</td><td>Vor Samstag</td></tr>
+                                <tr><td>Vorstand</td><td>&Uuml;ber Satzungs&auml;nderungen abstimmen</td><td>Montag</td></tr>
+                                <tr><td>Daniela M S</td><td>Dedizierte E-Mail-Konten f&uuml;r den Ticketverkauf koordinieren</td><td>Vor dem Start</td></tr>
+                                <tr><td>Victor P / Team</td><td>Abschlie&szlig;ende Pr&uuml;fung und Tests der Ticket-Konfiguration</td><td>Freitag</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll erstellt mit KI-Unterst&uuml;tzung aus Gemini-Besprechungsnotizen. F&uuml;r das &ouml;ffentliche Protokoll bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
