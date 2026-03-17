@@ -55,7 +55,7 @@ var USEFUL_LINKS_CATEGORIES = [
             {
                 icon: 'email',
                 title: 'Email',
-                description: "Say hello if you need anything. We'll listen.",
+                description: "Say hello if you need anything — hello@nobodies.team. We'll listen.",
                 url: 'mailto:hello@nobodies.team',
                 accent: '#c2703e'
             }
