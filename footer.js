@@ -52,8 +52,8 @@
                     '</div>' +
                 '</div>' +
                 '<div class="footer-bottom">' +
-                    '<span class="footer-logo">Nobodies Collective</span>' +
-                    '<p>Organizers of Elsewhere Burn</p>' +
+                    '<span class="footer-logo">Nobodies Collective Asociaci&oacute;n</span>' +
+                    '<p>Organizers of Elsewhere</p>' +
                     '<p>A Spanish non-profit cultural association</p>' +
                     '<p class="footer-address">Glorieta de Bilbao 1, 3&ordm; Derecha<br>28004 Madrid, Spain</p>' +
                     '<p>&copy; 2026 Asociaci&oacute;n Nobodies Collective</p>' +
