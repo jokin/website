@@ -51,6 +51,13 @@ var USEFUL_LINKS_CATEGORIES = [
                 description: 'We pretend to be social. Help us building community.',
                 url: 'https://www.instagram.com/elsewhere.burn/',
                 accent: '#C06090'
+            },
+            {
+                icon: 'email',
+                title: 'Email',
+                description: "Say hello if you need anything. We'll listen.",
+                url: 'mailto:hello@nobodies.team',
+                accent: '#c2703e'
             }
         ]
     },
@@ -74,17 +81,4 @@ var USEFUL_LINKS_CATEGORIES = [
             }
         ]
     },
-    {
-        id: 'contact',
-        label: 'Contact',
-        cards: [
-            {
-                icon: 'email',
-                title: 'Email',
-                description: "Say hello if you need anything. We'll listen.",
-                url: 'mailto:hello@nobodies.team',
-                accent: '#c2703e'
-            }
-        ]
-    }
 ];

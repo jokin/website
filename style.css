@@ -2178,6 +2178,12 @@ a.link-card:focus-visible {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
 }
 
+/* No URL — display only, not a link */
+div.link-card:not(.link-card--disabled) {
+    opacity: 0.45;
+    cursor: default;
+}
+
 /* Disabled / coming soon */
 .link-card--disabled {
     opacity: 0.5;
