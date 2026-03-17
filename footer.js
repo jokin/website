@@ -32,12 +32,14 @@
                         '<a href="' + prefix + '/estatutos.html">Estatutos</a>' +
                         '<a href="' + prefix + '/transparency.html">Transparency</a>' +
                         '<a href="' + prefix + '/faq.html">FAQ</a>' +
+                    '</div>' +
+                    '<div class="footer-legal">' +
+                        '<h4>Legal</h4>' +
                         '<a href="' + prefix + '/code-of-conduct.html">Code of Conduct</a>' +
                         '<a href="' + prefix + '/terms.html">Terms &amp; Conditions</a>' +
                         '<a href="' + prefix + '/refund-policy.html">Refund Policy</a>' +
                         '<a href="' + prefix + '/low-income-tickets.html">Low-Income Tickets</a>' +
                         '<a href="' + prefix + '/privacy-policy.html">Privacy Policy</a>' +
-                        '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
                     '</div>' +
                     '<div class="footer-volunteer">' +
                         '<h4>Volunteer</h4>' +
@@ -45,7 +47,8 @@
                         '<a href="https://vim.nobodies.team" target="_blank">VIM Shifts</a>' +
                     '</div>' +
                     '<div class="footer-links">' +
-                        '<h4>Navigate</h4>' +
+                        '<h4>Other</h4>' +
+                        '<a href="' + prefix + '/survival-guide.html">Survival Guide</a>' +
                         '<a href="' + prefix + '/#about">About</a>' +
                         '<a href="' + prefix + '/#principles">Principles</a>' +
                         '<a href="' + prefix + '/#event">Event</a>' +
