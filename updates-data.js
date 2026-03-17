@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 17 ===
+    {"date": "2026-03-17", "source": "Governance", "text": "Posted board meeting minutes from <a href=\"transparency/2026-03-16-board.html\">16 Mar</a>"},
     {"date": "2026-03-17", "source": "Tech", "text": "Obtained non-profit status with Google Workspace"},
     {"date": "2026-03-17", "source": "Comms", "text": "Logo contest launched! Find out more on <a href=\"https://t.me/nobodiescollective\" target=\"_blank\">Telegram</a> and <a href=\"https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c\" target=\"_blank\">WhatsApp</a>"},
     {"date": "2026-03-17", "source": "Tech", "text": "Humans app now supports shift setup. RIP FIST"},

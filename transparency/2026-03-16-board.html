@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCA Board Meeting Minutes - March 16, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .meeting-content blockquote {
+            margin: 1.25rem 0;
+            padding: 0.75rem 1rem;
+            border-left: 4px solid var(--color-border);
+            background: var(--color-bg-secondary);
+            color: var(--color-text);
+        }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .note-box {
+            margin: 1.25rem 0 2rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>NCA Board Meeting Minutes</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Sunday 16 March 2026, 18:56 CET</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Attendees:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Ben D, Pepe C (legal counsel)<br>
+                        <strong>Absent:</strong> Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Ticket Sales Update</h2>
+                        <p>Collaborator pre-sale launched over the weekend. Team preparing for public launch.</p>
+
+                        <h2>2. Event Branding</h2>
+                        <p>Board discussed feedback on current event name. Agreed to explore whether certain terminology requires clearance from external organisations. Outreach will be made to clarify usage permissions.</p>
+
+                        <h2>3. Statutes Amendment</h2>
+                        <p>Planned vote could not proceed (absent board member + final text not available). Board agreed to extract single clause on asynchronous voting as standalone amendment for Thursday&rsquo;s vote. Daniel T to prepare as GitHub PR.</p>
+
+                        <h2>4. Production Update</h2>
+                        <p>Daniela M S reported event name, branding, and ticketing launch completed previous week. Coordinator briefings went well. Coming week priorities: low-income ticket process, barrio registration launch, budget finalisation.</p>
+
+                        <h2>5. Vendor Payments and Budget</h2>
+                        <p>Two urgent vendor payments need attention (primarily cabins). Daniela M S working on securing contracts and pushing payments toward April. Updated budget to be circulated by email. Budget being transformed into weekly cash flow plan.</p>
+
+                        <h2>6. Asset Procurement</h2>
+                        <p>Legal counsel update on asset negotiation. Discussions progressing, key contractual point being resolved. Shorter contract term may be used to reduce risk. Board expressed confidence in counsel&rsquo;s handling.</p>
+
+                        <h2>7. Humans App and Volunteer Systems</h2>
+                        <p>Peter D comprehensive update. Barrio registration live with exportable public API. Full team hierarchy for departments/teams with role assignments and access controls. Shift creation and volunteer management (VIM integration) going live following morning. System tracks consent form completion, language preferences, member locations &mdash; real-time visibility into team readiness. Built-in email campaign functionality, potential to replace external mailing tools. Ticketing data integrated from Ticket Tailor with planned Stripe integration. Platform now single source of truth for membership, volunteering, and operational data.</p>
+
+                        <h2>8. Consent and Safeguarding</h2>
+                        <p>Board discussed consent team&rsquo;s approach to monitoring ticket purchases. Ben D raised consent lead waiting for responses on legal questions re PII handling. Pepe C to follow up directly.</p>
+
+                        <h2>9. Bank Account</h2>
+                        <p>Bank account opening imminent. All documentation submitted, awaiting final confirmation. Daniel T to follow up in person.</p>
+
+                        <h2>10. Insurance</h2>
+                        <p>D&amp;O liability insurance (~2,000 EUR) not yet obtained. Board agreed to prioritise March/April. Event insurance on separate timeline.</p>
+
+                        <h2>11. Board Focus and Governance</h2>
+                        <p>Board discussed its role vs operational teams. Agreement to focus on governance, legal, structural matters while trusting ops teams. Some noted board should also address strategic gaps.</p>
+
+                        <h2>12. Meeting Process Improvements</h2>
+                        <p>Ben D proposed Notion-based agenda system. Pepe C suggested locking agendas in advance with materials. Ben D requested more time for deliberative discussion. Formalisation of minutes and past agendas to be undertaken.</p>
+
+                        <h2>13. Communications</h2>
+                        <p>Board agreed to share reviewed board meeting summaries with comms lead as temporary measure, until departments provide direct input to comms.</p>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Prepare async voting statutes amendment as GitHub PR</td><td>Thursday</td></tr>
+                                <tr><td>Daniel T</td><td>Follow up with bank in person</td><td>Tomorrow</td></tr>
+                                <tr><td>Daniel T</td><td>Send reviewed board summary to comms lead</td><td>After each meeting</td></tr>
+                                <tr><td>Daniela M S</td><td>Check vendor contract options and push payments to April</td><td>This week</td></tr>
+                                <tr><td>Daniela M S</td><td>Send updated budget by email</td><td>Tomorrow</td></tr>
+                                <tr><td>Daniela M S</td><td>Check on asset inventory status</td><td>This week</td></tr>
+                                <tr><td>Ben D</td><td>Add production updates as standing agenda items</td><td>Thursday</td></tr>
+                                <tr><td>Ben D</td><td>Trial Notion-based agenda system</td><td>Thursday</td></tr>
+                                <tr><td>Ben D</td><td>Formalise minutes and past agendas</td><td>Ongoing</td></tr>
+                                <tr><td>Pepe C</td><td>Send statutes amendment content to Daniel T</td><td>ASAP</td></tr>
+                                <tr><td>Pepe C</td><td>Contact consent lead re: outstanding legal questions</td><td>This week</td></tr>
+                                <tr><td>Pepe C</td><td>Resend loan documentation spreadsheet to board</td><td>This week</td></tr>
+                                <tr><td>Pepe C + Daniela M S</td><td>Prioritise Director&rsquo;s Liability insurance</td><td>March/April</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes generated with AI assistance from Gemini meeting notes. Sanitised for public record.</em></p>
+                    </div>
+                </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Asistentes:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Ben D, Pepe C (asesor legal)<br>
+                        <strong>Ausentes:</strong> Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Actualizaci&oacute;n de Venta de Entradas</h2>
+                        <p>La preventa para colaboradores se lanz&oacute; durante el fin de semana. El equipo se prepara para el lanzamiento p&uacute;blico.</p>
+
+                        <h2>2. Marca del Evento</h2>
+                        <p>La junta discuti&oacute; los comentarios sobre el nombre actual del evento. Se acord&oacute; explorar si cierta terminolog&iacute;a requiere autorizaci&oacute;n de organizaciones externas. Se realizar&aacute;n gestiones para aclarar los permisos de uso.</p>
+
+                        <h2>3. Modificaci&oacute;n de Estatutos</h2>
+                        <p>La votaci&oacute;n prevista no pudo llevarse a cabo (miembro de la junta ausente + texto final no disponible). La junta acord&oacute; extraer la cl&aacute;usula &uacute;nica sobre votaci&oacute;n asincr&oacute;nica como enmienda independiente para la votaci&oacute;n del jueves. Daniel T preparar&aacute; la propuesta como PR en GitHub.</p>
+
+                        <h2>4. Actualizaci&oacute;n de Producci&oacute;n</h2>
+                        <p>Daniela M S inform&oacute; que el nombre del evento, la marca y el lanzamiento de la venta de entradas se completaron la semana anterior. Las sesiones informativas para coordinadores fueron bien. Prioridades de la pr&oacute;xima semana: proceso de entradas de bajo coste, lanzamiento del registro de barrios, finalizaci&oacute;n del presupuesto.</p>
+
+                        <h2>5. Pagos a Proveedores y Presupuesto</h2>
+                        <p>Dos pagos urgentes a proveedores requieren atenci&oacute;n (principalmente caba&ntilde;as). Daniela M S trabaja en asegurar contratos y aplazar pagos hacia abril. El presupuesto actualizado se circular&aacute; por correo electr&oacute;nico. El presupuesto se est&aacute; transformando en un plan de flujo de caja semanal.</p>
+
+                        <h2>6. Adquisici&oacute;n de Activos</h2>
+                        <p>Actualizaci&oacute;n del asesor legal sobre la negociaci&oacute;n de activos. Las negociaciones avanzan, se est&aacute; resolviendo un punto contractual clave. Se podr&iacute;a utilizar un plazo contractual m&aacute;s corto para reducir el riesgo. La junta expres&oacute; confianza en la gesti&oacute;n del asesor.</p>
+
+                        <h2>7. Aplicaci&oacute;n Humans y Sistemas de Voluntariado</h2>
+                        <p>Peter D present&oacute; una actualizaci&oacute;n exhaustiva. Registro de barrios activo con API p&uacute;blica exportable. Jerarqu&iacute;a completa de equipos para departamentos/equipos con asignaci&oacute;n de roles y controles de acceso. Creaci&oacute;n de turnos y gesti&oacute;n de voluntarios (integraci&oacute;n VIM) entrando en funcionamiento a la ma&ntilde;ana siguiente. El sistema rastrea la finalizaci&oacute;n de formularios de consentimiento, preferencias de idioma, ubicaciones de miembros &mdash; visibilidad en tiempo real del estado de preparaci&oacute;n del equipo. Funcionalidad integrada de campa&ntilde;as de correo electr&oacute;nico, con potencial para reemplazar herramientas de mailing externas. Datos de venta de entradas integrados desde Ticket Tailor con integraci&oacute;n de Stripe planificada. La plataforma es ahora la fuente &uacute;nica de verdad para membres&iacute;a, voluntariado y datos operativos.</p>
+
+                        <h2>8. Consentimiento y Protecci&oacute;n</h2>
+                        <p>La junta discuti&oacute; el enfoque del equipo de consentimiento para monitorizar las compras de entradas. Ben D plante&oacute; que la persona responsable de consentimiento est&aacute; esperando respuestas sobre cuestiones legales relativas al manejo de datos personales. Pepe C har&aacute; seguimiento directo.</p>
+
+                        <h2>9. Cuenta Bancaria</h2>
+                        <p>La apertura de la cuenta bancaria es inminente. Toda la documentaci&oacute;n ha sido presentada, a la espera de confirmaci&oacute;n final. Daniel T har&aacute; seguimiento en persona.</p>
+
+                        <h2>10. Seguros</h2>
+                        <p>El seguro de responsabilidad de directivos (~2.000 EUR) a&uacute;n no se ha obtenido. La junta acord&oacute; priorizarlo en marzo/abril. El seguro del evento tiene un calendario independiente.</p>
+
+                        <h2>11. Enfoque de la Junta y Gobernanza</h2>
+                        <p>La junta discuti&oacute; su rol frente a los equipos operativos. Acuerdo de centrarse en gobernanza, asuntos legales y estructurales, confiando en los equipos operativos. Algunos se&ntilde;alaron que la junta tambi&eacute;n deber&iacute;a abordar lagunas estrat&eacute;gicas.</p>
+
+                        <h2>12. Mejoras en el Proceso de Reuniones</h2>
+                        <p>Ben D propuso un sistema de agenda basado en Notion. Pepe C sugiri&oacute; cerrar las agendas con antelaci&oacute;n incluyendo materiales. Ben D solicit&oacute; m&aacute;s tiempo para discusi&oacute;n deliberativa. Se emprender&aacute; la formalizaci&oacute;n de actas y agendas anteriores.</p>
+
+                        <h2>13. Comunicaciones</h2>
+                        <p>La junta acord&oacute; compartir los res&uacute;menes revisados de las reuniones de la junta con la persona responsable de comunicaciones como medida temporal, hasta que los departamentos proporcionen informaci&oacute;n directa a comunicaciones.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Preparar la enmienda de estatutos sobre votaci&oacute;n asincr&oacute;nica como PR en GitHub</td><td>Jueves</td></tr>
+                                <tr><td>Daniel T</td><td>Hacer seguimiento con el banco en persona</td><td>Ma&ntilde;ana</td></tr>
+                                <tr><td>Daniel T</td><td>Enviar el resumen revisado de la junta a la persona responsable de comunicaciones</td><td>Despu&eacute;s de cada reuni&oacute;n</td></tr>
+                                <tr><td>Daniela M S</td><td>Verificar opciones de contratos con proveedores y aplazar pagos a abril</td><td>Esta semana</td></tr>
+                                <tr><td>Daniela M S</td><td>Enviar presupuesto actualizado por correo electr&oacute;nico</td><td>Ma&ntilde;ana</td></tr>
+                                <tr><td>Daniela M S</td><td>Verificar el estado del inventario de activos</td><td>Esta semana</td></tr>
+                                <tr><td>Ben D</td><td>A&ntilde;adir actualizaciones de producci&oacute;n como puntos permanentes de la agenda</td><td>Jueves</td></tr>
+                                <tr><td>Ben D</td><td>Probar el sistema de agenda basado en Notion</td><td>Jueves</td></tr>
+                                <tr><td>Ben D</td><td>Formalizar actas y agendas anteriores</td><td>En curso</td></tr>
+                                <tr><td>Pepe C</td><td>Enviar contenido de la enmienda de estatutos a Daniel T</td><td>Lo antes posible</td></tr>
+                                <tr><td>Pepe C</td><td>Contactar a la persona responsable de consentimiento sobre cuestiones legales pendientes</td><td>Esta semana</td></tr>
+                                <tr><td>Pepe C</td><td>Reenviar la hoja de c&aacute;lculo de documentaci&oacute;n de pr&eacute;stamos a la junta</td><td>Esta semana</td></tr>
+                                <tr><td>Pepe C + Daniela M S</td><td>Priorizar el seguro de responsabilidad de directivos</td><td>Marzo/Abril</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas con asistencia de IA a partir de notas de reuni&oacute;n de Gemini. Depuradas para el registro p&uacute;blico.</em></p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Participants :</strong> Daniel T, Peter D, Pablo V, Daniela M S, Ben D, Pepe C (conseiller juridique)<br>
+                        <strong>Absents :</strong> Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Mise &agrave; jour de la Vente de Billets</h2>
+                        <p>La pr&eacute;vente pour les collaborateurs a &eacute;t&eacute; lanc&eacute;e au cours du week-end. L&rsquo;&eacute;quipe se pr&eacute;pare pour le lancement public.</p>
+
+                        <h2>2. Image de Marque de l&rsquo;&Eacute;v&eacute;nement</h2>
+                        <p>Le conseil a discut&eacute; des retours sur le nom actuel de l&rsquo;&eacute;v&eacute;nement. Il a &eacute;t&eacute; convenu d&rsquo;examiner si certaine terminologie n&eacute;cessite une autorisation d&rsquo;organisations externes. Des d&eacute;marches seront entreprises pour clarifier les autorisations d&rsquo;utilisation.</p>
+
+                        <h2>3. Modification des Statuts</h2>
+                        <p>Le vote pr&eacute;vu n&rsquo;a pas pu avoir lieu (membre du conseil absent + texte final non disponible). Le conseil a convenu d&rsquo;extraire la clause unique sur le vote asynchrone en tant qu&rsquo;amendement autonome pour le vote de jeudi. Daniel T pr&eacute;parera la proposition sous forme de PR GitHub.</p>
+
+                        <h2>4. Mise &agrave; jour de la Production</h2>
+                        <p>Daniela M S a rapport&eacute; que le nom de l&rsquo;&eacute;v&eacute;nement, l&rsquo;image de marque et le lancement de la billetterie ont &eacute;t&eacute; finalis&eacute;s la semaine pr&eacute;c&eacute;dente. Les briefings des coordinateurs se sont bien d&eacute;roul&eacute;s. Priorit&eacute;s de la semaine &agrave; venir : processus de billets &agrave; tarif r&eacute;duit, lancement de l&rsquo;inscription des barrios, finalisation du budget.</p>
+
+                        <h2>5. Paiements aux Fournisseurs et Budget</h2>
+                        <p>Deux paiements urgents aux fournisseurs n&eacute;cessitent une attention (principalement les cabanes). Daniela M S travaille &agrave; s&eacute;curiser les contrats et &agrave; repousser les paiements vers avril. Le budget mis &agrave; jour sera diffus&eacute; par courrier &eacute;lectronique. Le budget est en cours de transformation en plan de tr&eacute;sorerie hebdomadaire.</p>
+
+                        <h2>6. Acquisition d&rsquo;Actifs</h2>
+                        <p>Mise &agrave; jour du conseiller juridique sur la n&eacute;gociation des actifs. Les discussions progressent, un point contractuel cl&eacute; est en cours de r&eacute;solution. Une dur&eacute;e contractuelle plus courte pourrait &ecirc;tre utilis&eacute;e pour r&eacute;duire le risque. Le conseil a exprim&eacute; sa confiance dans la gestion du conseiller.</p>
+
+                        <h2>7. Application Humans et Syst&egrave;mes de B&eacute;n&eacute;volat</h2>
+                        <p>Peter D a pr&eacute;sent&eacute; une mise &agrave; jour compl&egrave;te. Inscription des barrios op&eacute;rationnelle avec API publique exportable. Hi&eacute;rarchie compl&egrave;te des &eacute;quipes pour les d&eacute;partements/&eacute;quipes avec attribution de r&ocirc;les et contr&ocirc;les d&rsquo;acc&egrave;s. Cr&eacute;ation de cr&eacute;neaux et gestion des b&eacute;n&eacute;voles (int&eacute;gration VIM) mise en service le lendemain matin. Le syst&egrave;me suit la compl&eacute;tion des formulaires de consentement, les pr&eacute;f&eacute;rences linguistiques, les localisations des membres &mdash; visibilit&eacute; en temps r&eacute;el de l&rsquo;&eacute;tat de pr&eacute;paration des &eacute;quipes. Fonctionnalit&eacute; int&eacute;gr&eacute;e de campagnes par courrier &eacute;lectronique, avec potentiel de remplacement des outils de mailing externes. Donn&eacute;es de billetterie int&eacute;gr&eacute;es depuis Ticket Tailor avec int&eacute;gration Stripe pr&eacute;vue. La plateforme est d&eacute;sormais la source unique de v&eacute;rit&eacute; pour l&rsquo;adh&eacute;sion, le b&eacute;n&eacute;volat et les donn&eacute;es op&eacute;rationnelles.</p>
+
+                        <h2>8. Consentement et Protection</h2>
+                        <p>Le conseil a discut&eacute; de l&rsquo;approche de l&rsquo;&eacute;quipe de consentement pour le suivi des achats de billets. Ben D a signal&eacute; que le responsable du consentement attend des r&eacute;ponses sur des questions juridiques concernant le traitement des donn&eacute;es personnelles. Pepe C assurera un suivi direct.</p>
+
+                        <h2>9. Compte Bancaire</h2>
+                        <p>L&rsquo;ouverture du compte bancaire est imminente. Toute la documentation a &eacute;t&eacute; soumise, en attente de confirmation finale. Daniel T assurera un suivi en personne.</p>
+
+                        <h2>10. Assurance</h2>
+                        <p>L&rsquo;assurance responsabilit&eacute; des dirigeants (~2 000 EUR) n&rsquo;a pas encore &eacute;t&eacute; obtenue. Le conseil a convenu de la prioriser en mars/avril. L&rsquo;assurance de l&rsquo;&eacute;v&eacute;nement suit un calendrier distinct.</p>
+
+                        <h2>11. Orientation du Conseil et Gouvernance</h2>
+                        <p>Le conseil a discut&eacute; de son r&ocirc;le par rapport aux &eacute;quipes op&eacute;rationnelles. Accord pour se concentrer sur la gouvernance, les questions juridiques et structurelles tout en faisant confiance aux &eacute;quipes op&eacute;rationnelles. Certains ont not&eacute; que le conseil devrait &eacute;galement combler les lacunes strat&eacute;giques.</p>
+
+                        <h2>12. Am&eacute;lioration du Processus de R&eacute;union</h2>
+                        <p>Ben D a propos&eacute; un syst&egrave;me d&rsquo;ordre du jour bas&eacute; sur Notion. Pepe C a sugg&eacute;r&eacute; de verrouiller les ordres du jour &agrave; l&rsquo;avance avec les documents. Ben D a demand&eacute; davantage de temps pour la discussion d&eacute;lib&eacute;rative. La formalisation des proc&egrave;s-verbaux et des ordres du jour ant&eacute;rieurs sera entreprise.</p>
+
+                        <h2>13. Communications</h2>
+                        <p>Le conseil a convenu de partager les r&eacute;sum&eacute;s r&eacute;vis&eacute;s des r&eacute;unions du conseil avec le responsable des communications &agrave; titre de mesure temporaire, jusqu&rsquo;&agrave; ce que les d&eacute;partements fournissent des informations directes aux communications.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Pr&eacute;parer l&rsquo;amendement statutaire sur le vote asynchrone sous forme de PR GitHub</td><td>Jeudi</td></tr>
+                                <tr><td>Daniel T</td><td>Faire le suivi avec la banque en personne</td><td>Demain</td></tr>
+                                <tr><td>Daniel T</td><td>Envoyer le r&eacute;sum&eacute; r&eacute;vis&eacute; du conseil au responsable des communications</td><td>Apr&egrave;s chaque r&eacute;union</td></tr>
+                                <tr><td>Daniela M S</td><td>V&eacute;rifier les options de contrats fournisseurs et repousser les paiements &agrave; avril</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniela M S</td><td>Envoyer le budget mis &agrave; jour par courrier &eacute;lectronique</td><td>Demain</td></tr>
+                                <tr><td>Daniela M S</td><td>V&eacute;rifier l&rsquo;&eacute;tat de l&rsquo;inventaire des actifs</td><td>Cette semaine</td></tr>
+                                <tr><td>Ben D</td><td>Ajouter les mises &agrave; jour de production comme points permanents de l&rsquo;ordre du jour</td><td>Jeudi</td></tr>
+                                <tr><td>Ben D</td><td>Tester le syst&egrave;me d&rsquo;ordre du jour bas&eacute; sur Notion</td><td>Jeudi</td></tr>
+                                <tr><td>Ben D</td><td>Formaliser les proc&egrave;s-verbaux et les ordres du jour ant&eacute;rieurs</td><td>En cours</td></tr>
+                                <tr><td>Pepe C</td><td>Envoyer le contenu de l&rsquo;amendement statutaire &agrave; Daniel T</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Pepe C</td><td>Contacter le responsable du consentement concernant les questions juridiques en suspens</td><td>Cette semaine</td></tr>
+                                <tr><td>Pepe C</td><td>Renvoyer le tableur de documentation de pr&ecirc;t au conseil</td><td>Cette semaine</td></tr>
+                                <tr><td>Pepe C + Daniela M S</td><td>Prioriser l&rsquo;assurance responsabilit&eacute; des dirigeants</td><td>Mars/Avril</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; avec l&rsquo;assistance de l&rsquo;IA &agrave; partir des notes de r&eacute;union Gemini. D&eacute;puration effectu&eacute;e pour le registre public.</em></p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Partecipanti:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Ben D, Pepe C (consulente legale)<br>
+                        <strong>Assenti:</strong> Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Aggiornamento sulla Vendita dei Biglietti</h2>
+                        <p>La prevendita per i collaboratori &egrave; stata lanciata durante il fine settimana. Il team si sta preparando per il lancio pubblico.</p>
+
+                        <h2>2. Branding dell&rsquo;Evento</h2>
+                        <p>Il consiglio ha discusso i feedback sul nome attuale dell&rsquo;evento. Si &egrave; concordato di esplorare se determinata terminologia richieda l&rsquo;autorizzazione di organizzazioni esterne. Verranno effettuate consultazioni per chiarire i permessi di utilizzo.</p>
+
+                        <h2>3. Modifica degli Statuti</h2>
+                        <p>Il voto previsto non ha potuto procedere (membro del consiglio assente + testo finale non disponibile). Il consiglio ha concordato di estrarre la singola clausola sul voto asincrono come emendamento autonomo per il voto di gioved&igrave;. Daniel T preparer&agrave; la proposta come PR su GitHub.</p>
+
+                        <h2>4. Aggiornamento sulla Produzione</h2>
+                        <p>Daniela M S ha riferito che il nome dell&rsquo;evento, il branding e il lancio della biglietteria sono stati completati la settimana precedente. I briefing dei coordinatori sono andati bene. Priorit&agrave; della prossima settimana: processo biglietti a basso reddito, lancio della registrazione dei barrios, finalizzazione del bilancio.</p>
+
+                        <h2>5. Pagamenti ai Fornitori e Bilancio</h2>
+                        <p>Due pagamenti urgenti ai fornitori richiedono attenzione (principalmente le cabine). Daniela M S sta lavorando per assicurare i contratti e posticipare i pagamenti ad aprile. Il bilancio aggiornato sar&agrave; diffuso via email. Il bilancio viene trasformato in un piano di flusso di cassa settimanale.</p>
+
+                        <h2>6. Acquisizione di Beni</h2>
+                        <p>Aggiornamento del consulente legale sulla negoziazione dei beni. Le discussioni procedono, un punto contrattuale chiave &egrave; in fase di risoluzione. Un termine contrattuale pi&ugrave; breve potrebbe essere utilizzato per ridurre il rischio. Il consiglio ha espresso fiducia nella gestione del consulente.</p>
+
+                        <h2>7. App Humans e Sistemi di Volontariato</h2>
+                        <p>Peter D ha presentato un aggiornamento esaustivo. Registrazione dei barrios attiva con API pubblica esportabile. Gerarchia completa dei team per dipartimenti/squadre con assegnazione dei ruoli e controlli di accesso. Creazione turni e gestione volontari (integrazione VIM) in funzione la mattina seguente. Il sistema traccia il completamento dei moduli di consenso, le preferenze linguistiche, le posizioni dei membri &mdash; visibilit&agrave; in tempo reale sullo stato di preparazione del team. Funzionalit&agrave; integrata di campagne email, con potenziale sostituzione degli strumenti di mailing esterni. Dati di biglietteria integrati da Ticket Tailor con integrazione Stripe prevista. La piattaforma &egrave; ora la fonte unica di verit&agrave; per iscrizioni, volontariato e dati operativi.</p>
+
+                        <h2>8. Consenso e Tutela</h2>
+                        <p>Il consiglio ha discusso l&rsquo;approccio del team del consenso al monitoraggio degli acquisti di biglietti. Ben D ha segnalato che il responsabile del consenso &egrave; in attesa di risposte su questioni legali riguardanti il trattamento dei dati personali. Pepe C effettuer&agrave; un follow-up diretto.</p>
+
+                        <h2>9. Conto Bancario</h2>
+                        <p>L&rsquo;apertura del conto bancario &egrave; imminente. Tutta la documentazione &egrave; stata presentata, in attesa di conferma finale. Daniel T effettuer&agrave; un follow-up di persona.</p>
+
+                        <h2>10. Assicurazione</h2>
+                        <p>L&rsquo;assicurazione di responsabilit&agrave; dei dirigenti (~2.000 EUR) non &egrave; ancora stata ottenuta. Il consiglio ha concordato di darle priorit&agrave; in marzo/aprile. L&rsquo;assicurazione dell&rsquo;evento segue un calendario separato.</p>
+
+                        <h2>11. Orientamento del Consiglio e Governance</h2>
+                        <p>Il consiglio ha discusso il proprio ruolo rispetto ai team operativi. Accordo nel concentrarsi su governance, questioni legali e strutturali, affidandosi ai team operativi. Alcuni hanno osservato che il consiglio dovrebbe anche affrontare le lacune strategiche.</p>
+
+                        <h2>12. Miglioramenti del Processo di Riunione</h2>
+                        <p>Ben D ha proposto un sistema di ordine del giorno basato su Notion. Pepe C ha suggerito di bloccare gli ordini del giorno in anticipo con i materiali. Ben D ha richiesto pi&ugrave; tempo per la discussione deliberativa. La formalizzazione dei verbali e degli ordini del giorno precedenti sar&agrave; intrapresa.</p>
+
+                        <h2>13. Comunicazioni</h2>
+                        <p>Il consiglio ha concordato di condividere i riassunti rivisti delle riunioni del consiglio con il responsabile delle comunicazioni come misura temporanea, fino a quando i dipartimenti forniranno input diretti alle comunicazioni.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Preparare l&rsquo;emendamento statutario sul voto asincrono come PR su GitHub</td><td>Gioved&igrave;</td></tr>
+                                <tr><td>Daniel T</td><td>Fare follow-up con la banca di persona</td><td>Domani</td></tr>
+                                <tr><td>Daniel T</td><td>Inviare il riassunto rivisto del consiglio al responsabile delle comunicazioni</td><td>Dopo ogni riunione</td></tr>
+                                <tr><td>Daniela M S</td><td>Verificare le opzioni contrattuali dei fornitori e posticipare i pagamenti ad aprile</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniela M S</td><td>Inviare il bilancio aggiornato via email</td><td>Domani</td></tr>
+                                <tr><td>Daniela M S</td><td>Verificare lo stato dell&rsquo;inventario dei beni</td><td>Questa settimana</td></tr>
+                                <tr><td>Ben D</td><td>Aggiungere gli aggiornamenti di produzione come punti fissi dell&rsquo;ordine del giorno</td><td>Gioved&igrave;</td></tr>
+                                <tr><td>Ben D</td><td>Testare il sistema di ordine del giorno basato su Notion</td><td>Gioved&igrave;</td></tr>
+                                <tr><td>Ben D</td><td>Formalizzare i verbali e gli ordini del giorno precedenti</td><td>In corso</td></tr>
+                                <tr><td>Pepe C</td><td>Inviare il contenuto dell&rsquo;emendamento statutario a Daniel T</td><td>Al pi&ugrave; presto</td></tr>
+                                <tr><td>Pepe C</td><td>Contattare il responsabile del consenso riguardo alle questioni legali in sospeso</td><td>Questa settimana</td></tr>
+                                <tr><td>Pepe C</td><td>Reinviare il foglio di calcolo della documentazione del prestito al consiglio</td><td>Questa settimana</td></tr>
+                                <tr><td>Pepe C + Daniela M S</td><td>Dare priorit&agrave; all&rsquo;assicurazione di responsabilit&agrave; dei dirigenti</td><td>Marzo/Aprile</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato con assistenza dell&rsquo;IA dalle note della riunione Gemini. Depurato per il registro pubblico.</em></p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Teilnehmer:</strong> Daniel T, Peter D, Pablo V, Daniela M S, Ben D, Pepe C (Rechtsberater)<br>
+                        <strong>Abwesend:</strong> Michelle T, Victor P
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Aktualisierung zum Ticketverkauf</h2>
+                        <p>Der Vorverkauf f&uuml;r Mitarbeiter wurde am Wochenende gestartet. Das Team bereitet den &ouml;ffentlichen Start vor.</p>
+
+                        <h2>2. Event-Branding</h2>
+                        <p>Der Vorstand diskutierte R&uuml;ckmeldungen zum aktuellen Veranstaltungsnamen. Man einigte sich darauf zu pr&uuml;fen, ob bestimmte Terminologie eine Genehmigung externer Organisationen erfordert. Kontaktaufnahmen werden erfolgen, um die Nutzungserlaubnisse zu kl&auml;ren.</p>
+
+                        <h2>3. Satzungs&auml;nderung</h2>
+                        <p>Die geplante Abstimmung konnte nicht stattfinden (abwesendes Vorstandsmitglied + endg&uuml;ltiger Text nicht verf&uuml;gbar). Der Vorstand einigte sich darauf, die einzelne Klausel zur asynchronen Abstimmung als eigenst&auml;ndige &Auml;nderung f&uuml;r die Abstimmung am Donnerstag herauszul&ouml;sen. Daniel T wird dies als GitHub-PR vorbereiten.</p>
+
+                        <h2>4. Produktionsaktualisierung</h2>
+                        <p>Daniela M S berichtete, dass Veranstaltungsname, Branding und Ticketing-Start in der Vorwoche abgeschlossen wurden. Die Koordinatoren-Briefings verliefen gut. Priorit&auml;ten der kommenden Woche: Prozess f&uuml;r erm&auml;&szlig;igte Tickets, Start der Barrio-Registrierung, Budgetfinalisierung.</p>
+
+                        <h2>5. Lieferantenzahlungen und Budget</h2>
+                        <p>Zwei dringende Lieferantenzahlungen erfordern Aufmerksamkeit (haupts&auml;chlich H&uuml;tten). Daniela M S arbeitet daran, Vertr&auml;ge zu sichern und Zahlungen Richtung April zu verschieben. Das aktualisierte Budget wird per E-Mail verteilt. Das Budget wird in einen w&ouml;chentlichen Cashflow-Plan umgewandelt.</p>
+
+                        <h2>6. Beschaffung von Verm&ouml;genswerten</h2>
+                        <p>Aktualisierung des Rechtsberaters zur Verm&ouml;genswertverhandlung. Die Gespr&auml;che schreiten voran, ein wichtiger Vertragspunkt wird gel&ouml;st. Eine k&uuml;rzere Vertragslaufzeit k&ouml;nnte zur Risikominderung eingesetzt werden. Der Vorstand &auml;u&szlig;erte Vertrauen in die Handhabung durch den Berater.</p>
+
+                        <h2>7. Humans-App und Freiwilligensysteme</h2>
+                        <p>Peter D gab eine umfassende Aktualisierung. Barrio-Registrierung aktiv mit exportierbarer &ouml;ffentlicher API. Vollst&auml;ndige Teamhierarchie f&uuml;r Abteilungen/Teams mit Rollenzuweisung und Zugriffskontrollen. Schichterstellung und Freiwilligenmanagement (VIM-Integration) gehen am folgenden Morgen live. Das System verfolgt den Abschluss von Einverst&auml;ndniserkl&auml;rungen, Sprachpr&auml;ferenzen, Standorte der Mitglieder &mdash; Echtzeit-&Uuml;berblick &uuml;ber die Teambereitschaft. Integrierte E-Mail-Kampagnenfunktionalit&auml;t mit Potenzial, externe Mailing-Tools zu ersetzen. Ticketing-Daten von Ticket Tailor integriert mit geplanter Stripe-Integration. Die Plattform ist nun die einzige Quelle der Wahrheit f&uuml;r Mitgliedschaft, Freiwilligenarbeit und Betriebsdaten.</p>
+
+                        <h2>8. Einwilligung und Schutzma&szlig;nahmen</h2>
+                        <p>Der Vorstand diskutierte den Ansatz des Einwilligungsteams zur &Uuml;berwachung von Ticketk&auml;ufen. Ben D wies darauf hin, dass die Einwilligungsleitung auf Antworten zu rechtlichen Fragen bez&uuml;glich der Verarbeitung personenbezogener Daten wartet. Pepe C wird direkt nachfassen.</p>
+
+                        <h2>9. Bankkonto</h2>
+                        <p>Die Er&ouml;ffnung des Bankkontos steht unmittelbar bevor. Alle Unterlagen wurden eingereicht, die endg&uuml;ltige Best&auml;tigung wird erwartet. Daniel T wird pers&ouml;nlich nachfassen.</p>
+
+                        <h2>10. Versicherung</h2>
+                        <p>Die Direktoren-Haftpflichtversicherung (~2.000 EUR) wurde noch nicht abgeschlossen. Der Vorstand einigte sich darauf, dies im M&auml;rz/April zu priorisieren. Die Veranstaltungsversicherung folgt einem separaten Zeitplan.</p>
+
+                        <h2>11. Schwerpunkt des Vorstands und Governance</h2>
+                        <p>Der Vorstand diskutierte seine Rolle gegen&uuml;ber den operativen Teams. Einigung, sich auf Governance, rechtliche und strukturelle Angelegenheiten zu konzentrieren und den operativen Teams zu vertrauen. Einige merkten an, dass der Vorstand auch strategische L&uuml;cken adressieren sollte.</p>
+
+                        <h2>12. Verbesserung des Sitzungsprozesses</h2>
+                        <p>Ben D schlug ein Notion-basiertes Agendensystem vor. Pepe C regte an, die Tagesordnungen vorab mit Materialien festzulegen. Ben D bat um mehr Zeit f&uuml;r beratende Diskussion. Die Formalisierung von Protokollen und fr&uuml;heren Tagesordnungen wird in Angriff genommen.</p>
+
+                        <h2>13. Kommunikation</h2>
+                        <p>Der Vorstand einigte sich darauf, &uuml;berpr&uuml;fte Zusammenfassungen der Vorstandssitzungen als vor&uuml;bergehende Ma&szlig;nahme mit der Kommunikationsleitung zu teilen, bis die Abteilungen direkte Beitr&auml;ge zur Kommunikation liefern.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;llig</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Satzungs&auml;nderung zur asynchronen Abstimmung als GitHub-PR vorbereiten</td><td>Donnerstag</td></tr>
+                                <tr><td>Daniel T</td><td>Pers&ouml;nlich bei der Bank nachfassen</td><td>Morgen</td></tr>
+                                <tr><td>Daniel T</td><td>&Uuml;berpr&uuml;fte Vorstandszusammenfassung an die Kommunikationsleitung senden</td><td>Nach jeder Sitzung</td></tr>
+                                <tr><td>Daniela M S</td><td>Lieferantenvertragsoptionen pr&uuml;fen und Zahlungen auf April verschieben</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniela M S</td><td>Aktualisiertes Budget per E-Mail senden</td><td>Morgen</td></tr>
+                                <tr><td>Daniela M S</td><td>Status des Verm&ouml;gensinventars pr&uuml;fen</td><td>Diese Woche</td></tr>
+                                <tr><td>Ben D</td><td>Produktionsaktualisierungen als feste Tagesordnungspunkte hinzuf&uuml;gen</td><td>Donnerstag</td></tr>
+                                <tr><td>Ben D</td><td>Notion-basiertes Agendensystem testen</td><td>Donnerstag</td></tr>
+                                <tr><td>Ben D</td><td>Protokolle und fr&uuml;here Tagesordnungen formalisieren</td><td>Laufend</td></tr>
+                                <tr><td>Pepe C</td><td>Inhalt der Satzungs&auml;nderung an Daniel T senden</td><td>Schnellstm&ouml;glich</td></tr>
+                                <tr><td>Pepe C</td><td>Einwilligungsleitung wegen offener Rechtsfragen kontaktieren</td><td>Diese Woche</td></tr>
+                                <tr><td>Pepe C</td><td>Darlehens-Dokumentationstabelle erneut an den Vorstand senden</td><td>Diese Woche</td></tr>
+                                <tr><td>Pepe C + Daniela M S</td><td>Direktoren-Haftpflichtversicherung priorisieren</td><td>M&auml;rz/April</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll erstellt mit KI-Unterst&uuml;tzung aus Gemini-Besprechungsnotizen. F&uuml;r das &ouml;ffentliche Protokoll bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
