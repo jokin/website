@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 17 ===
+    {"date": "2026-03-17", "source": "Comms", "text": "Logo contest launched! Submit your designs via <a href=\"https://t.me/nobodiescollective\" target=\"_blank\">Telegram</a> and <a href=\"https://chat.whatsapp.com/HXJTO6nevLw9QlORlkHxY0?mode=gi_c\" target=\"_blank\">WhatsApp</a>"},
     {"date": "2026-03-17", "source": "Tech", "text": "Humans app now supports shift setup. RIP FIST"},
     {"date": "2026-03-17", "source": "Ticketing", "text": "<a href=\"low-income-tickets.html\">Low-income ticket</a> policy and process published"},
     {"date": "2026-03-17", "source": "Community", "text": "Barrio registration is open! Register your camp at <a href=\"https://humans.nobodies.team/Barrios\" target=\"_blank\">humans.nobodies.team/Barrios</a>"},
