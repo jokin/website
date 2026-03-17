@@ -2097,3 +2097,157 @@ h4 { font-size: 1.15rem; }
         font-size: clamp(1.5rem, 8vw, 3rem) !important;
     }
 }
+
+/* ==========================================================================
+   Useful Links Section
+   ========================================================================== */
+
+.useful-links {
+    padding: 8rem 0;
+    background: var(--color-bg);
+    scroll-margin-top: 80px;
+}
+
+.useful-links h2 {
+    margin-bottom: 0.5rem;
+}
+
+.useful-links-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin: 0 0 3.5rem;
+}
+
+.useful-links-category {
+    margin-bottom: 2.5rem;
+}
+
+.useful-links-category:last-child {
+    margin-bottom: 0;
+}
+
+.useful-links-category-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.useful-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 0.875rem;
+}
+
+/* Card base */
+.link-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 1.125rem 1.25rem;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--card-accent, var(--color-accent));
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.link-card:hover,
+a.link-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+a.link-card:focus-visible {
+    outline: 2px solid var(--card-accent, var(--color-accent));
+    outline-offset: 2px;
+}
+
+/* Featured card (Discord) */
+.link-card--featured {
+    border-left-width: 6px;
+    padding: 1.375rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* Disabled / coming soon */
+.link-card--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.link-card-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 0.1rem;
+}
+
+.link-card--featured .link-card-icon {
+    font-size: 1.65rem;
+}
+
+.link-card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.link-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 0.2rem;
+}
+
+.link-card--featured .link-card-title {
+    font-size: 1rem;
+}
+
+.link-card-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.link-card-note {
+    display: block;
+    font-size: 0.74rem;
+    color: var(--color-accent);
+    margin-top: 0.35rem;
+    font-style: italic;
+}
+
+.link-card-badge {
+    display: inline-block;
+    font-size: 0.63rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    border: 1px dashed var(--color-border);
+    border-radius: 4px;
+    padding: 0.15em 0.45em;
+    margin-top: 0.45rem;
+}
+
+@media (max-width: 900px) {
+    .useful-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .useful-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
