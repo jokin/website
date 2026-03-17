@@ -23,7 +23,7 @@
             if (hasUrl && !isDisabled) {
                 html += '<a href="' + card.url + '" class="' + classes + '"' + accentAttr + ' target="_blank" rel="noopener noreferrer">';
             } else {
-                html += '<div class="' + classes + '"' + accentAttr + '>';
+                html += '<div class="' + classes + '"' + accentAttr + ' aria-disabled="true">';
             }
 
             html += '<span class="link-card-icon" aria-hidden="true">' + iconHtml + '</span>';

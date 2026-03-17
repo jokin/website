@@ -66,18 +66,18 @@ var USEFUL_LINKS_CATEGORIES = [
         label: 'Tools & Resources',
         cards: [
             {
-                icon: 'drive',
-                title: 'Drive',
-                description: 'Docs, files, shared chaos. Join the NCA or apply to a team and we\'ll give you access.',
-                url: null,
-                accent: '#6B8EC5'
-            },
-            {
                 icon: 'clickup',
                 title: 'ClickUp',
                 description: 'Tasks, projects, things to do. We are chaotic but we try our best.',
                 url: 'https://sharing.clickup.com/90152347870/l/h/6-901521156810-1/69b1bf9a027a2d4',
                 accent: '#8B78D4'
+            },
+            {
+                icon: 'drive',
+                title: 'Drive',
+                description: 'Docs, files, shared chaos. Join the NCA or apply to a team and we\'ll give you access.',
+                url: null,
+                accent: '#6B8EC5'
             }
         ]
     },

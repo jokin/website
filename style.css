@@ -2180,7 +2180,7 @@ a.link-card:focus-visible {
 
 /* No URL — display only, not a link */
 div.link-card:not(.link-card--disabled) {
-    opacity: 0.45;
+    opacity: 0.6;
     cursor: default;
 }
 
