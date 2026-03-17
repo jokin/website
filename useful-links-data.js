@@ -28,8 +28,7 @@ var USEFUL_LINKS_CATEGORIES = [
                 title: 'Discord',
                 description: 'The main campfire. Talk, ask, lurk, find your people.',
                 url: 'https://discord.gg/bFvUHQWJ',
-                accent: '#7289DA',
-                featured: true
+                accent: '#7289DA'
             },
             {
                 icon: 'whatsapp',
