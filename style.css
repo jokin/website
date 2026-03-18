@@ -1009,6 +1009,7 @@ h4 { font-size: 1.15rem; }
 .activity-source[data-source="Comms"] { background: #ddf0e8; color: #3a7a5a; }
 .activity-source[data-source="Community"] { background: #f0eddd; color: #6a6a3a; }
 .activity-source[data-source="Ticketing"] { background: #fce8d5; color: #8a5a2a; }
+.activity-source[data-source="Power"] { background: #f6e4c9; color: #8a5d16; }
 .activity-source[data-source="Art"] { background: #f0ddee; color: #7a3a6a; }
 .activity-source[data-source="Welfare"] { background: #f5dde8; color: #7a3a5a; }
 
@@ -1573,6 +1574,17 @@ h4 { font-size: 1.15rem; }
 .footer-legal a:hover,
 .footer-volunteer a:hover {
     color: var(--color-accent);
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-legal-group h4 {
+    margin-top: 0;
+    margin-bottom: 0.85rem;
 }
 
 .footer-connect .footer-social-link {

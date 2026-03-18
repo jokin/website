@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 18 ===
+    {"date": "2026-03-18", "source": "Ticketing", "text": "Translated new ticketing legal docs to multiple languages"},
+
     // === March 17 ===
     {"date": "2026-03-17", "source": "Power", "text": "Power team has created a 'Power AI' and is not worried about it taking over the playa"},
     {"date": "2026-03-17", "source": "Ticketing", "text": "Additional ticketing policy docs added to the website"},

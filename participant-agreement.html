@@ -104,6 +104,37 @@
             }
         }
 
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
         .lang-note {
             font-style: italic;
             color: var(--color-text-muted);
@@ -128,103 +159,515 @@
                 <p class="legal-intro">Elsewhere 2026</p>
             </div>
 
-            <div class="legal-content">
-                <p class="lang-note">This document is provided in English. An official Spanish version will be made available.</p>
+            <div class="lang-toggle">
+                <button class="active" data-lang="en">English</button>
+                <button data-lang="es">Espa&ntilde;ol</button>
+                <button data-lang="fr">Fran&ccedil;ais</button>
+                <button data-lang="it">Italiano</button>
+                <button data-lang="de">Deutsch</button>
+            </div>
 
-                <section class="legal-section">
-                    <h2>1. Why does this agreement exist?</h2>
-                    <p>Elsewhere is not a typical festival. It is a temporary community created by its participants in a remote and sometimes challenging environment.</p>
-                    <p>This agreement exists so that everyone understands the nature of the event, the responsibilities that come with participating, and the risks that are part of the experience.</p>
-                    <p>By attending Elsewhere, you acknowledge that participation in the event comes with a level of personal responsibility that may be greater than what you would normally encounter at a commercial event.</p>
-                </section>
+            <div class="lang-content active" data-lang="en">
+                <div class="legal-content">
+                    <p class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</p>
 
-                <section class="legal-section">
-                    <h2>2. What kind of environment am I entering?</h2>
-                    <p>Elsewhere takes place in a remote outdoor environment where conditions can be unpredictable and sometimes harsh.</p>
-                    <p>This may include things such as:</p>
-                    <ul>
-                        <li>extreme heat or cold</li>
-                        <li>dust, wind, or sudden weather changes</li>
-                        <li>uneven terrain or limited infrastructure</li>
-                        <li>limited access to medical services</li>
-                        <li>long distances between services or assistance</li>
-                    </ul>
-                    <p>You are responsible for preparing yourself appropriately for these conditions.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>1. Why does this agreement exist?</h2>
+                        <p>Elsewhere is not a typical festival. It is a temporary community created by its participants in a remote and sometimes challenging environment.</p>
+                        <p>This agreement exists so that everyone understands the nature of the event, the responsibilities that come with participating, and the risks that are part of the experience.</p>
+                        <p>By attending Elsewhere, you acknowledge that participation in the event comes with a level of personal responsibility that may be greater than what you would normally encounter at a commercial event.</p>
+                    </section>
 
-                <section class="legal-section">
-                    <h2>3. What does &ldquo;personal responsibility&rdquo; mean here?</h2>
-                    <p>Elsewhere operates on the principle that participants are responsible for their own wellbeing and for looking out for the people around them.</p>
-                    <p>By attending the event, you agree to:</p>
-                    <ul>
-                        <li>take reasonable steps to protect your own health and safety</li>
-                        <li>bring the equipment and supplies you need to participate safely</li>
-                        <li>act responsibly toward other participants</li>
-                        <li>respect the environment and the temporary community being created</li>
-                        <li>respect the privacy and consent of others, including when taking photos or recording</li>
-                    </ul>
-                    <p>If you see someone in need of help, you are encouraged to assist or seek support from event teams.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>2. What kind of environment am I entering?</h2>
+                        <p>Elsewhere takes place in a remote outdoor environment where conditions can be unpredictable and sometimes harsh.</p>
+                        <p>This may include things such as:</p>
+                        <ul>
+                            <li>extreme heat or cold</li>
+                            <li>dust, wind, or sudden weather changes</li>
+                            <li>uneven terrain or limited infrastructure</li>
+                            <li>limited access to medical services</li>
+                            <li>long distances between services or assistance</li>
+                        </ul>
+                        <p>You are responsible for preparing yourself appropriately for these conditions.</p>
+                    </section>
 
-                <section class="legal-section">
-                    <h2>4. What risks should I be aware of?</h2>
-                    <p>Participation in Elsewhere may involve risks, including but not limited to:</p>
-                    <ul>
-                        <li>physical injury</li>
-                        <li>environmental exposure</li>
-                        <li>accidents involving art installations, structures, or vehicles</li>
-                        <li>interaction with large crowds or temporary infrastructure</li>
-                        <li>participation in physical or creative activities</li>
-                    </ul>
-                    <p>By choosing to attend the event, you acknowledge that these and other risks may exist.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>3. What does &ldquo;personal responsibility&rdquo; mean here?</h2>
+                        <p>Elsewhere operates on the principle that participants are responsible for their own wellbeing and for looking out for the people around them.</p>
+                        <p>By attending the event, you agree to:</p>
+                        <ul>
+                            <li>take reasonable steps to protect your own health and safety</li>
+                            <li>bring the equipment and supplies you need to participate safely</li>
+                            <li>act responsibly toward other participants</li>
+                            <li>respect the environment and the temporary community being created</li>
+                            <li>respect the privacy and consent of others, including when taking photos or recording</li>
+                        </ul>
+                        <p>If you see someone in need of help, you are encouraged to assist or seek support from event teams.</p>
+                    </section>
 
-                <section class="legal-section">
-                    <h2>5. What am I agreeing to by attending?</h2>
-                    <p>By attending Elsewhere, you acknowledge and agree that:</p>
-                    <ul>
-                        <li>participation in the event is voluntary</li>
-                        <li>you are responsible for your own safety and wellbeing</li>
-                        <li>you accept the inherent risks associated with participating in the event environment</li>
-                        <li>you will follow the rules, policies, and guidelines established for the event</li>
-                    </ul>
-                </section>
+                    <section class="legal-section">
+                        <h2>4. What risks should I be aware of?</h2>
+                        <p>Participation in Elsewhere may involve risks, including but not limited to:</p>
+                        <ul>
+                            <li>physical injury</li>
+                            <li>environmental exposure</li>
+                            <li>accidents involving art installations, structures, or vehicles</li>
+                            <li>interaction with large crowds or temporary infrastructure</li>
+                            <li>participation in physical or creative activities</li>
+                        </ul>
+                        <p>By choosing to attend the event, you acknowledge that these and other risks may exist.</p>
+                    </section>
 
-                <section class="legal-section">
-                    <h2>6. What happens if I don&rsquo;t follow the rules?</h2>
-                    <p>Elsewhere depends on cooperation and respect between participants.</p>
-                    <p>If you engage in behavior that creates significant risk for others or violates event rules, the organizers may deny entry to the event or ask you to leave the event site.</p>
-                    <p>These decisions may be necessary to protect you and the wider community.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>5. What am I agreeing to by attending?</h2>
+                        <p>By attending Elsewhere, you acknowledge and agree that:</p>
+                        <ul>
+                            <li>participation in the event is voluntary</li>
+                            <li>you are responsible for your own safety and wellbeing</li>
+                            <li>you accept the inherent risks associated with participating in the event environment</li>
+                            <li>you will follow the rules, policies, and guidelines established for the event</li>
+                        </ul>
+                    </section>
 
-                <section class="legal-section">
-                    <h2>7. A shared experiment</h2>
-                    <p>Elsewhere exists because people choose to come together to build something unusual and meaningful for a short period of time.</p>
-                    <p>By participating in the event, you acknowledge that this is a shared experiment in community, creativity, and responsibility.</p>
-                    <p>You agree to take care of yourself, respect the people around you, and contribute to making the experience possible for everyone.</p>
-                </section>
+                    <section class="legal-section">
+                        <h2>6. What happens if I don&rsquo;t follow the rules?</h2>
+                        <p>Elsewhere depends on cooperation and respect between participants.</p>
+                        <p>If you engage in behavior that creates significant risk for others or violates event rules, the organizers may deny entry to the event or ask you to leave the event site.</p>
+                        <p>These decisions may be necessary to protect you and the wider community.</p>
+                    </section>
 
-                <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
-                    <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Important Note</h2>
-                    <p>This document is one part of Elsewhere&rsquo;s participation framework. It works together with the other policies that govern participation in the event.</p>
-                    <p>You should read it together with the rest of the framework, which includes:</p>
-                    <ul>
-                        <li><a href="terms.html">Ticket Terms &amp; Conditions</a></li>
-                        <li><a href="refund-policy.html">Refund Policy</a></li>
-                        <li><a href="participant-agreement.html">Participant Agreement</a></li>
-                        <li><a href="public-health-policy.html">Public Health &amp; Safety Policy</a></li>
-                        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
-                        <li><a href="privacy-notice.html">Privacy Notice</a></li>
-                        <li><a href="media-image-rights.html">Media &amp; Image Policy</a></li>
-                    </ul>
-                    <p>Together, these documents explain how the event works, what you can expect from the organizers, and what is expected from you as a participant. By purchasing a ticket or attending Elsewhere, you agree to this framework.</p>
+                    <section class="legal-section">
+                        <h2>7. A shared experiment</h2>
+                        <p>Elsewhere exists because people choose to come together to build something unusual and meaningful for a short period of time.</p>
+                        <p>By participating in the event, you acknowledge that this is a shared experiment in community, creativity, and responsibility.</p>
+                        <p>You agree to take care of yourself, respect the people around you, and contribute to making the experience possible for everyone.</p>
+                    </section>
+
+                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                        <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Important Note</h2>
+                        <p>This document is one part of Elsewhere&rsquo;s participation framework. It works together with the other policies that govern participation in the event.</p>
+                        <p>You should read it together with the rest of the framework, which includes:</p>
+                        <ul>
+                            <li><a href="terms.html">Ticket Terms &amp; Conditions</a></li>
+                            <li><a href="refund-policy.html">Refund Policy</a></li>
+                            <li><a href="participant-agreement.html">Participant Agreement</a></li>
+                            <li><a href="public-health-policy.html">Public Health &amp; Safety Policy</a></li>
+                            <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+                            <li><a href="privacy-notice.html">Privacy Notice</a></li>
+                            <li><a href="media-image-rights.html">Media &amp; Image Policy</a></li>
+                        </ul>
+                        <p>Together, these documents explain how the event works, what you can expect from the organizers, and what is expected from you as a participant. By purchasing a ticket or attending Elsewhere, you agree to this framework.</p>
+                    </div>
+
+                    <div class="legal-contact">
+                        <p>Questions about this agreement? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted);">Version 2.1 &mdash; 17 March 2026 &mdash; Prepared by Pepe Carrillo</p>
                 </div>
+            </div>
 
-                <div class="legal-contact">
-                    <p>Questions about this agreement? Contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+            <div class="lang-content" data-lang="es">
+                <div class="legal-content">
+                    <section class="legal-section">
+                        <h2>1. &iquest;Por qu&eacute; existe este acuerdo?</h2>
+                        <p>Elsewhere no es un festival t&iacute;pico. Es una comunidad temporal creada por sus participantes en un entorno remoto y, en ocasiones, exigente.</p>
+                        <p>Este acuerdo existe para que todo el mundo entienda la naturaleza del evento, las responsabilidades que conlleva participar y los riesgos que forman parte de la experiencia.</p>
+                        <p>Al asistir a Elsewhere, reconoces que la participaci&oacute;n en el evento implica un nivel de responsabilidad personal que puede ser mayor que el que normalmente encontrar&iacute;as en un evento comercial.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>2. &iquest;En qu&eacute; tipo de entorno estoy entrando?</h2>
+                        <p>Elsewhere se celebra en un entorno exterior remoto donde las condiciones pueden ser imprevisibles y a veces duras.</p>
+                        <p>Esto puede incluir cosas como:</p>
+                        <ul>
+                            <li>calor o fr&iacute;o extremos</li>
+                            <li>polvo, viento o cambios repentinos del tiempo</li>
+                            <li>terreno irregular o infraestructura limitada</li>
+                            <li>acceso limitado a servicios m&eacute;dicos</li>
+                            <li>largas distancias entre servicios o ayuda</li>
+                        </ul>
+                        <p>Eres responsable de prepararte adecuadamente para estas condiciones.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>3. &iquest;Qu&eacute; significa aqu&iacute; &ldquo;responsabilidad personal&rdquo;?</h2>
+                        <p>Elsewhere funciona sobre el principio de que los participantes son responsables de su propio bienestar y de cuidar de las personas que les rodean.</p>
+                        <p>Al asistir al evento, aceptas:</p>
+                        <ul>
+                            <li>tomar medidas razonables para proteger tu propia salud y seguridad</li>
+                            <li>llevar el equipo y los suministros que necesitas para participar de forma segura</li>
+                            <li>actuar de forma responsable con otros participantes</li>
+                            <li>respetar el entorno y la comunidad temporal que se est&aacute; creando</li>
+                            <li>respetar la privacidad y el consentimiento de otras personas, incluido al hacer fotos o grabar</li>
+                        </ul>
+                        <p>Si ves a alguien que necesita ayuda, se te anima a asistirle o a buscar apoyo de los equipos del evento.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>4. &iquest;Qu&eacute; riesgos debo tener en cuenta?</h2>
+                        <p>La participaci&oacute;n en Elsewhere puede implicar riesgos, incluidos entre otros:</p>
+                        <ul>
+                            <li>lesiones f&iacute;sicas</li>
+                            <li>exposici&oacute;n ambiental</li>
+                            <li>accidentes relacionados con instalaciones art&iacute;sticas, estructuras o veh&iacute;culos</li>
+                            <li>interacci&oacute;n con grandes multitudes o infraestructura temporal</li>
+                            <li>participaci&oacute;n en actividades f&iacute;sicas o creativas</li>
+                        </ul>
+                        <p>Al elegir asistir al evento, reconoces que estos y otros riesgos pueden existir.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>5. &iquest;A qu&eacute; estoy aceptando al asistir?</h2>
+                        <p>Al asistir a Elsewhere, reconoces y aceptas que:</p>
+                        <ul>
+                            <li>la participaci&oacute;n en el evento es voluntaria</li>
+                            <li>eres responsable de tu propia seguridad y bienestar</li>
+                            <li>aceptas los riesgos inherentes asociados a participar en el entorno del evento</li>
+                            <li>seguir&aacute;s las normas, pol&iacute;ticas y directrices establecidas para el evento</li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>6. &iquest;Qu&eacute; ocurre si no sigo las normas?</h2>
+                        <p>Elsewhere depende de la cooperaci&oacute;n y el respeto entre los participantes.</p>
+                        <p>Si incurres en un comportamiento que cree un riesgo significativo para otras personas o infrinja las normas del evento, los organizadores pueden denegarte la entrada al evento o pedirte que abandones el recinto.</p>
+                        <p>Estas decisiones pueden ser necesarias para protegerte a ti y a la comunidad en general.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>7. Un experimento compartido</h2>
+                        <p>Elsewhere existe porque la gente decide reunirse para construir algo inusual y significativo durante un corto per&iacute;odo de tiempo.</p>
+                        <p>Al participar en el evento, reconoces que se trata de un experimento compartido de comunidad, creatividad y responsabilidad.</p>
+                        <p>Aceptas cuidarte a ti mismo, respetar a las personas que te rodean y contribuir a hacer posible la experiencia para todos.</p>
+                    </section>
+
+                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                        <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota Importante</h2>
+                        <p>Este documento forma parte del marco de participaci&oacute;n de Elsewhere. Funciona conjuntamente con las otras pol&iacute;ticas que rigen la participaci&oacute;n en el evento.</p>
+                        <p>Debes leerlo junto con el resto del marco, que incluye:</p>
+                        <ul>
+                            <li><a href="terms.html">T&eacute;rminos y Condiciones de las Entradas</a></li>
+                            <li><a href="refund-policy.html">Pol&iacute;tica de Reembolso</a></li>
+                            <li><a href="participant-agreement.html">Acuerdo del Participante</a></li>
+                            <li><a href="public-health-policy.html">Pol&iacute;tica de Salud P&uacute;blica y Seguridad</a></li>
+                            <li><a href="code-of-conduct.html">C&oacute;digo de Conducta del Participante</a></li>
+                            <li><a href="privacy-notice.html">Aviso de Privacidad</a></li>
+                            <li><a href="media-image-rights.html">Pol&iacute;tica de Medios e Imagen</a></li>
+                        </ul>
+                        <p>En conjunto, estos documentos explican c&oacute;mo funciona el evento, qu&eacute; puedes esperar de los organizadores y qu&eacute; se espera de ti como participante. Al comprar una entrada o asistir a Elsewhere, aceptas este marco.</p>
+                    </div>
+
+                    <div class="legal-contact">
+                        <p>&iquest;Preguntas sobre este acuerdo? Contacta con <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted);">Versi&oacute;n 2.1 &mdash; 17 de marzo de 2026 &mdash; Preparado por Pepe Carrillo</p>
                 </div>
+            </div>
 
-                <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted);">Version 2.1 &mdash; 17 March 2026 &mdash; Prepared by Pepe Carrillo</p>
+            <div class="lang-content" data-lang="fr">
+                <div class="legal-content">
+                    <p class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</p>
+
+                    <section class="legal-section">
+                        <h2>1. Pourquoi cet accord existe-t-il&nbsp;?</h2>
+                        <p>Elsewhere n&rsquo;est pas un festival classique. C&rsquo;est une communaut&eacute; temporaire cr&eacute;&eacute;e par ses participants dans un environnement isol&eacute; et parfois exigeant.</p>
+                        <p>Cet accord existe afin que chacun comprenne la nature de l&rsquo;&eacute;v&eacute;nement, les responsabilit&eacute;s li&eacute;es &agrave; la participation et les risques qui font partie de l&rsquo;exp&eacute;rience.</p>
+                        <p>En participant &agrave; Elsewhere, vous reconnaissez que la participation &agrave; l&rsquo;&eacute;v&eacute;nement implique un niveau de responsabilit&eacute; personnelle potentiellement sup&eacute;rieur &agrave; celui d&rsquo;un &eacute;v&eacute;nement commercial.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>2. Dans quel type d&rsquo;environnement j&rsquo;entre&nbsp;?</h2>
+                        <p>Elsewhere a lieu dans un environnement ext&eacute;rieur isol&eacute; o&ugrave; les conditions peuvent &ecirc;tre impr&eacute;visibles et parfois rudes.</p>
+                        <p>Cela peut inclure des choses comme&nbsp;:</p>
+                        <ul>
+                            <li>une chaleur ou un froid extr&ecirc;mes</li>
+                            <li>de la poussi&egrave;re, du vent ou des changements soudains de m&eacute;t&eacute;o</li>
+                            <li>un terrain irr&eacute;gulier ou une infrastructure limit&eacute;e</li>
+                            <li>un acc&egrave;s limit&eacute; aux services m&eacute;dicaux</li>
+                            <li>de longues distances entre les services ou les secours</li>
+                        </ul>
+                        <p>Il vous incombe de vous pr&eacute;parer de mani&egrave;re appropri&eacute;e &agrave; ces conditions.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>3. Que signifie ici la &laquo;&nbsp;responsabilit&eacute; personnelle&nbsp;&raquo;&nbsp;?</h2>
+                        <p>Elsewhere repose sur le principe que les participants sont responsables de leur propre bien-&ecirc;tre et attentifs aux personnes qui les entourent.</p>
+                        <p>En participant &agrave; l&rsquo;&eacute;v&eacute;nement, vous acceptez de&nbsp;:</p>
+                        <ul>
+                            <li>prendre des mesures raisonnables pour prot&eacute;ger votre propre sant&eacute; et votre s&eacute;curit&eacute;</li>
+                            <li>apporter l&rsquo;&eacute;quipement et les fournitures n&eacute;cessaires pour participer en toute s&eacute;curit&eacute;</li>
+                            <li>agir de mani&egrave;re responsable envers les autres participants</li>
+                            <li>respecter l&rsquo;environnement et la communaut&eacute; temporaire en cours de cr&eacute;ation</li>
+                            <li>respecter la vie priv&eacute;e et le consentement d&rsquo;autrui, y compris lors de prises de photos ou d&rsquo;enregistrements</li>
+                        </ul>
+                        <p>Si vous voyez une personne ayant besoin d&rsquo;aide, nous vous encourageons &agrave; l&rsquo;aider ou &agrave; solliciter le soutien des &eacute;quipes de l&rsquo;&eacute;v&eacute;nement.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>4. Quels risques dois-je conna&icirc;tre&nbsp;?</h2>
+                        <p>La participation &agrave; Elsewhere peut comporter des risques, y compris notamment&nbsp;:</p>
+                        <ul>
+                            <li>des blessures physiques</li>
+                            <li>une exposition aux &eacute;l&eacute;ments</li>
+                            <li>des accidents impliquant des installations artistiques, des structures ou des v&eacute;hicules</li>
+                            <li>une interaction avec de grandes foules ou une infrastructure temporaire</li>
+                            <li>la participation &agrave; des activit&eacute;s physiques ou cr&eacute;atives</li>
+                        </ul>
+                        <p>En choisissant d&rsquo;assister &agrave; l&rsquo;&eacute;v&eacute;nement, vous reconnaissez que ces risques et d&rsquo;autres peuvent exister.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>5. Qu&rsquo;est-ce que j&rsquo;accepte en participant&nbsp;?</h2>
+                        <p>En participant &agrave; Elsewhere, vous reconnaissez et acceptez que&nbsp;:</p>
+                        <ul>
+                            <li>la participation &agrave; l&rsquo;&eacute;v&eacute;nement est volontaire</li>
+                            <li>vous &ecirc;tes responsable de votre propre s&eacute;curit&eacute; et de votre bien-&ecirc;tre</li>
+                            <li>vous acceptez les risques inh&eacute;rents &agrave; la participation dans l&rsquo;environnement de l&rsquo;&eacute;v&eacute;nement</li>
+                            <li>vous respecterez les r&egrave;gles, politiques et directives &eacute;tablies pour l&rsquo;&eacute;v&eacute;nement</li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>6. Que se passe-t-il si je ne respecte pas les r&egrave;gles&nbsp;?</h2>
+                        <p>Elsewhere d&eacute;pend de la coop&eacute;ration et du respect entre les participants.</p>
+                        <p>Si vous adoptez un comportement qui cr&eacute;e un risque important pour autrui ou enfreint les r&egrave;gles de l&rsquo;&eacute;v&eacute;nement, les organisateurs peuvent vous refuser l&rsquo;entr&eacute;e ou vous demander de quitter le site.</p>
+                        <p>Ces d&eacute;cisions peuvent &ecirc;tre n&eacute;cessaires pour vous prot&eacute;ger ainsi que la communaut&eacute; au sens large.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>7. Une exp&eacute;rimentation partag&eacute;e</h2>
+                        <p>Elsewhere existe parce que des personnes choisissent de se r&eacute;unir pour construire quelque chose d&rsquo;inhabituel et de significatif pendant une courte p&eacute;riode.</p>
+                        <p>En participant &agrave; l&rsquo;&eacute;v&eacute;nement, vous reconnaissez qu&rsquo;il s&rsquo;agit d&rsquo;une exp&eacute;rimentation partag&eacute;e de communaut&eacute;, de cr&eacute;ativit&eacute; et de responsabilit&eacute;.</p>
+                        <p>Vous acceptez de prendre soin de vous, de respecter les personnes qui vous entourent et de contribuer &agrave; rendre cette exp&eacute;rience possible pour tous.</p>
+                    </section>
+
+                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                        <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Note importante</h2>
+                        <p>Ce document constitue une partie du cadre de participation d&rsquo;Elsewhere. Il fonctionne avec les autres politiques qui r&eacute;gissent la participation &agrave; l&rsquo;&eacute;v&eacute;nement.</p>
+                        <p>Vous devez le lire avec le reste du cadre, qui comprend&nbsp;:</p>
+                        <ul>
+                            <li><a href="terms.html">Termes et Conditions des Billets</a></li>
+                            <li><a href="refund-policy.html">Politique de Remboursement</a></li>
+                            <li><a href="participant-agreement.html">Accord du Participant</a></li>
+                            <li><a href="public-health-policy.html">Politique de Sant&eacute; Publique et de S&eacute;curit&eacute;</a></li>
+                            <li><a href="code-of-conduct.html">Code de Conduite du Participant</a></li>
+                            <li><a href="privacy-notice.html">Avis de Confidentialit&eacute;</a></li>
+                            <li><a href="media-image-rights.html">Politique relative aux M&eacute;dias et aux Images</a></li>
+                        </ul>
+                        <p>Ensemble, ces documents expliquent le fonctionnement de l&rsquo;&eacute;v&eacute;nement, ce que vous pouvez attendre des organisateurs et ce qui est attendu de vous en tant que participant. En achetant un billet ou en participant &agrave; Elsewhere, vous acceptez ce cadre.</p>
+                    </div>
+
+                    <div class="legal-contact">
+                        <p>Des questions sur cet accord&nbsp;? Contactez <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted);">Version 2.1 &mdash; 17 mars 2026 &mdash; Pr&eacute;par&eacute; par Pepe Carrillo</p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="it">
+                <div class="legal-content">
+                    <p class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</p>
+
+                    <section class="legal-section">
+                        <h2>1. Perch&eacute; esiste questo accordo?</h2>
+                        <p>Elsewhere non &egrave; un festival tipico. &Egrave; una comunit&agrave; temporanea creata dai suoi partecipanti in un ambiente remoto e talvolta impegnativo.</p>
+                        <p>Questo accordo esiste affinch&eacute; tutti comprendano la natura dell&rsquo;evento, le responsabilit&agrave; che derivano dalla partecipazione e i rischi che fanno parte dell&rsquo;esperienza.</p>
+                        <p>Partecipando a Elsewhere, riconosci che la partecipazione all&rsquo;evento comporta un livello di responsabilit&agrave; personale che pu&ograve; essere maggiore di quello che normalmente incontreresti in un evento commerciale.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>2. In che tipo di ambiente sto entrando?</h2>
+                        <p>Elsewhere si svolge in un ambiente esterno remoto in cui le condizioni possono essere imprevedibili e talvolta dure.</p>
+                        <p>Questo pu&ograve; includere cose come:</p>
+                        <ul>
+                            <li>caldo o freddo estremi</li>
+                            <li>polvere, vento o improvvisi cambiamenti meteorologici</li>
+                            <li>terreno irregolare o infrastrutture limitate</li>
+                            <li>accesso limitato ai servizi medici</li>
+                            <li>lunghe distanze tra servizi o assistenza</li>
+                        </ul>
+                        <p>Sei responsabile di prepararti adeguatamente a queste condizioni.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>3. Cosa significa qui &ldquo;responsabilit&agrave; personale&rdquo;?</h2>
+                        <p>Elsewhere si basa sul principio che i partecipanti siano responsabili del proprio benessere e si prendano cura delle persone che li circondano.</p>
+                        <p>Partecipando all&rsquo;evento, accetti di:</p>
+                        <ul>
+                            <li>adottare misure ragionevoli per proteggere la tua salute e la tua sicurezza</li>
+                            <li>portare l&rsquo;equipaggiamento e le forniture necessarie per partecipare in sicurezza</li>
+                            <li>agire in modo responsabile verso gli altri partecipanti</li>
+                            <li>rispettare l&rsquo;ambiente e la comunit&agrave; temporanea che si sta creando</li>
+                            <li>rispettare la privacy e il consenso altrui, anche quando si scattano foto o si registrano contenuti</li>
+                        </ul>
+                        <p>Se vedi qualcuno che ha bisogno di aiuto, sei incoraggiato ad assisterlo o a cercare supporto dai team dell&rsquo;evento.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>4. Quali rischi dovrei conoscere?</h2>
+                        <p>La partecipazione a Elsewhere pu&ograve; comportare rischi, inclusi, a titolo esemplificativo ma non esaustivo:</p>
+                        <ul>
+                            <li>lesioni fisiche</li>
+                            <li>esposizione agli agenti ambientali</li>
+                            <li>incidenti che coinvolgono installazioni artistiche, strutture o veicoli</li>
+                            <li>interazione con grandi folle o infrastrutture temporanee</li>
+                            <li>partecipazione ad attivit&agrave; fisiche o creative</li>
+                        </ul>
+                        <p>Scegliendo di partecipare all&rsquo;evento, riconosci che questi e altri rischi possono esistere.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>5. A cosa acconsento partecipando?</h2>
+                        <p>Partecipando a Elsewhere, riconosci e accetti che:</p>
+                        <ul>
+                            <li>la partecipazione all&rsquo;evento &egrave; volontaria</li>
+                            <li>sei responsabile della tua sicurezza e del tuo benessere</li>
+                            <li>accetti i rischi intrinseci associati alla partecipazione nell&rsquo;ambiente dell&rsquo;evento</li>
+                            <li>seguirai le regole, le politiche e le linee guida stabilite per l&rsquo;evento</li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>6. Cosa succede se non seguo le regole?</h2>
+                        <p>Elsewhere dipende dalla cooperazione e dal rispetto tra i partecipanti.</p>
+                        <p>Se tieni un comportamento che crea un rischio significativo per gli altri o viola le regole dell&rsquo;evento, gli organizzatori possono negarti l&rsquo;ingresso o chiederti di lasciare il sito dell&rsquo;evento.</p>
+                        <p>Queste decisioni possono essere necessarie per proteggere te e la comunit&agrave; nel suo insieme.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>7. Un esperimento condiviso</h2>
+                        <p>Elsewhere esiste perch&eacute; le persone scelgono di riunirsi per costruire qualcosa di insolito e significativo per un breve periodo di tempo.</p>
+                        <p>Partecipando all&rsquo;evento, riconosci che si tratta di un esperimento condiviso di comunit&agrave;, creativit&agrave; e responsabilit&agrave;.</p>
+                        <p>Accetti di prenderti cura di te stesso, di rispettare le persone intorno a te e di contribuire a rendere l&rsquo;esperienza possibile per tutti.</p>
+                    </section>
+
+                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                        <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Nota importante</h2>
+                        <p>Questo documento &egrave; una parte del quadro di partecipazione di Elsewhere. Funziona insieme alle altre politiche che disciplinano la partecipazione all&rsquo;evento.</p>
+                        <p>Dovresti leggerlo insieme al resto del quadro, che include:</p>
+                        <ul>
+                            <li><a href="terms.html">Termini e Condizioni dei Biglietti</a></li>
+                            <li><a href="refund-policy.html">Politica di Rimborso</a></li>
+                            <li><a href="participant-agreement.html">Accordo del Partecipante</a></li>
+                            <li><a href="public-health-policy.html">Politica di Salute Pubblica e Sicurezza</a></li>
+                            <li><a href="code-of-conduct.html">Codice di Condotta del Partecipante</a></li>
+                            <li><a href="privacy-notice.html">Informativa sulla Privacy</a></li>
+                            <li><a href="media-image-rights.html">Politica su Media e Immagini</a></li>
+                        </ul>
+                        <p>Insieme, questi documenti spiegano come funziona l&rsquo;evento, cosa puoi aspettarti dagli organizzatori e cosa ci si aspetta da te come partecipante. Acquistando un biglietto o partecipando a Elsewhere, accetti questo quadro.</p>
+                    </div>
+
+                    <div class="legal-contact">
+                        <p>Domande su questo accordo? Contatta <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted);">Versione 2.1 &mdash; 17 marzo 2026 &mdash; Preparato da Pepe Carrillo</p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="de">
+                <div class="legal-content">
+                    <p class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</p>
+
+                    <section class="legal-section">
+                        <h2>1. Warum gibt es diese Vereinbarung?</h2>
+                        <p>Elsewhere ist kein typisches Festival. Es ist eine tempor&auml;re Gemeinschaft, die von ihren Teilnehmern in einer abgelegenen und mitunter anspruchsvollen Umgebung geschaffen wird.</p>
+                        <p>Diese Vereinbarung besteht, damit alle die Art der Veranstaltung, die mit der Teilnahme verbundenen Verantwortlichkeiten und die Risiken, die Teil der Erfahrung sind, verstehen.</p>
+                        <p>Mit der Teilnahme an Elsewhere erkennen Sie an, dass die Teilnahme an der Veranstaltung ein Ma&szlig; an pers&ouml;nlicher Verantwortung mit sich bringt, das h&ouml;her sein kann als bei einer kommerziellen Veranstaltung.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>2. In welche Art von Umgebung begebe ich mich?</h2>
+                        <p>Elsewhere findet in einer abgelegenen Outdoor-Umgebung statt, in der die Bedingungen unvorhersehbar und manchmal hart sein k&ouml;nnen.</p>
+                        <p>Dazu k&ouml;nnen Dinge geh&ouml;ren wie:</p>
+                        <ul>
+                            <li>extreme Hitze oder K&auml;lte</li>
+                            <li>Staub, Wind oder pl&ouml;tzliche Wetterumschw&uuml;nge</li>
+                            <li>unebenes Gel&auml;nde oder eingeschr&auml;nkte Infrastruktur</li>
+                            <li>eingeschr&auml;nkter Zugang zu medizinischer Versorgung</li>
+                            <li>gro&szlig;e Entfernungen zwischen Diensten oder Hilfeleistungen</li>
+                        </ul>
+                        <p>Sie sind daf&uuml;r verantwortlich, sich auf diese Bedingungen angemessen vorzubereiten.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>3. Was bedeutet hier &bdquo;pers&ouml;nliche Verantwortung&ldquo;?</h2>
+                        <p>Elsewhere beruht auf dem Grundsatz, dass Teilnehmer f&uuml;r ihr eigenes Wohlergehen verantwortlich sind und auf die Menschen um sie herum achten.</p>
+                        <p>Mit der Teilnahme an der Veranstaltung stimmen Sie zu:</p>
+                        <ul>
+                            <li>angemessene Schritte zu unternehmen, um Ihre eigene Gesundheit und Sicherheit zu sch&uuml;tzen</li>
+                            <li>die Ausr&uuml;stung und Vorr&auml;te mitzubringen, die Sie f&uuml;r eine sichere Teilnahme ben&ouml;tigen</li>
+                            <li>gegen&uuml;ber anderen Teilnehmern verantwortungsvoll zu handeln</li>
+                            <li>die Umwelt und die tempor&auml;re Gemeinschaft, die geschaffen wird, zu respektieren</li>
+                            <li>die Privatsph&auml;re und Einwilligung anderer zu respektieren, auch beim Fotografieren oder Aufzeichnen</li>
+                        </ul>
+                        <p>Wenn Sie sehen, dass jemand Hilfe ben&ouml;tigt, werden Sie ermutigt, zu helfen oder Unterst&uuml;tzung von den Veranstaltungsteams zu holen.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>4. Welche Risiken sollte ich kennen?</h2>
+                        <p>Die Teilnahme an Elsewhere kann Risiken beinhalten, unter anderem:</p>
+                        <ul>
+                            <li>k&ouml;rperliche Verletzungen</li>
+                            <li>Umwelteinfl&uuml;sse</li>
+                            <li>Unf&auml;lle mit Kunstinstallationen, Strukturen oder Fahrzeugen</li>
+                            <li>Interaktion mit gro&szlig;en Menschenmengen oder tempor&auml;rer Infrastruktur</li>
+                            <li>Teilnahme an k&ouml;rperlichen oder kreativen Aktivit&auml;ten</li>
+                        </ul>
+                        <p>Indem Sie sich f&uuml;r die Teilnahme an der Veranstaltung entscheiden, erkennen Sie an, dass diese und andere Risiken bestehen k&ouml;nnen.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>5. Was erkenne ich mit meiner Teilnahme an?</h2>
+                        <p>Mit der Teilnahme an Elsewhere erkennen Sie an und stimmen zu, dass:</p>
+                        <ul>
+                            <li>die Teilnahme an der Veranstaltung freiwillig ist</li>
+                            <li>Sie f&uuml;r Ihre eigene Sicherheit und Ihr Wohlergehen verantwortlich sind</li>
+                            <li>Sie die mit der Teilnahme in der Veranstaltungsumgebung verbundenen inh&auml;renten Risiken akzeptieren</li>
+                            <li>Sie die f&uuml;r die Veranstaltung festgelegten Regeln, Richtlinien und Vorgaben einhalten werden</li>
+                        </ul>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>6. Was passiert, wenn ich die Regeln nicht einhalte?</h2>
+                        <p>Elsewhere lebt von Kooperation und Respekt zwischen den Teilnehmern.</p>
+                        <p>Wenn Sie sich so verhalten, dass f&uuml;r andere ein erhebliches Risiko entsteht oder gegen Veranstaltungsregeln versto&szlig;en wird, k&ouml;nnen die Organisatoren Ihnen den Zutritt verweigern oder Sie auffordern, das Veranstaltungsgel&auml;nde zu verlassen.</p>
+                        <p>Diese Entscheidungen k&ouml;nnen notwendig sein, um Sie und die Gemeinschaft insgesamt zu sch&uuml;tzen.</p>
+                    </section>
+
+                    <section class="legal-section">
+                        <h2>7. Ein gemeinsames Experiment</h2>
+                        <p>Elsewhere existiert, weil Menschen sich daf&uuml;r entscheiden, f&uuml;r kurze Zeit gemeinsam etwas Ungew&ouml;hnliches und Bedeutsames aufzubauen.</p>
+                        <p>Mit Ihrer Teilnahme erkennen Sie an, dass es sich um ein gemeinsames Experiment in Gemeinschaft, Kreativit&auml;t und Verantwortung handelt.</p>
+                        <p>Sie stimmen zu, auf sich selbst zu achten, die Menschen um Sie herum zu respektieren und dazu beizutragen, das Erlebnis f&uuml;r alle zu erm&ouml;glichen.</p>
+                    </section>
+
+                    <div class="legal-section" style="margin-top: 3rem; padding: 2rem; background: var(--color-bg-alt); border-radius: var(--radius); border-left: 4px solid var(--color-accent);">
+                        <h2 style="border-bottom: none; padding-bottom: 0; font-size: 1.2rem;">Wichtiger Hinweis</h2>
+                        <p>Dieses Dokument ist ein Teil des Teilnahme-Rahmens von Elsewhere. Es wirkt zusammen mit den anderen Richtlinien, die die Teilnahme an der Veranstaltung regeln.</p>
+                        <p>Sie sollten es zusammen mit dem restlichen Rahmen lesen, der Folgendes umfasst:</p>
+                        <ul>
+                            <li><a href="terms.html">Ticket-Bedingungen</a></li>
+                            <li><a href="refund-policy.html">R&uuml;ckerstattungsrichtlinie</a></li>
+                            <li><a href="participant-agreement.html">Teilnahmevereinbarung</a></li>
+                            <li><a href="public-health-policy.html">Richtlinie zu &ouml;ffentlicher Gesundheit und Sicherheit</a></li>
+                            <li><a href="code-of-conduct.html">Verhaltenskodex f&uuml;r Teilnehmer</a></li>
+                            <li><a href="privacy-notice.html">Datenschutzhinweis</a></li>
+                            <li><a href="media-image-rights.html">Medien- und Bildrichtlinie</a></li>
+                        </ul>
+                        <p>Zusammen erkl&auml;ren diese Dokumente, wie die Veranstaltung funktioniert, was Sie von den Organisatoren erwarten k&ouml;nnen und was von Ihnen als Teilnehmer erwartet wird. Durch den Kauf eines Tickets oder die Teilnahme an Elsewhere stimmen Sie diesem Rahmen zu.</p>
+                    </div>
+
+                    <div class="legal-contact">
+                        <p>Fragen zu dieser Vereinbarung? Kontaktieren Sie <a href="mailto:legal@nobodies.team">legal@nobodies.team</a></p>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted);">Version 2.1 &mdash; 17. M&auml;rz 2026 &mdash; Erstellt von Pepe Carrillo</p>
+                </div>
             </div>
 
         </div>
@@ -234,5 +677,17 @@
     <script src="footer.js"></script>
 
     <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
