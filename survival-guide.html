@@ -58,9 +58,102 @@
             font-weight: 500;
         }
 
+        .guide-legal {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: var(--color-bg-alt);
+            border-radius: var(--radius);
+            text-align: left;
+        }
+
+        .guide-legal-label {
+            margin-bottom: 0.75rem;
+            color: var(--color-accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .guide-legal h2,
+        .guide-legal h3 {
+            text-align: left;
+        }
+
+        .guide-legal h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .guide-legal h3 {
+            margin: 2rem 0 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .guide-legal p,
+        .guide-legal li {
+            color: var(--color-text-muted);
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .guide-legal ul {
+            margin: 0.75rem 0 1.25rem 1.25rem;
+            padding: 0;
+        }
+
+        .guide-legal li + li {
+            margin-top: 0.35rem;
+        }
+
+        .guide-legal a {
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+
+        .guide-legal-meta {
+            margin-top: 2rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lang-toggle button {
+            padding: 0.75rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-alt);
+            color: var(--color-text-muted);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-toggle button.active,
+        .lang-toggle button:hover {
+            background: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #fff;
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
         @media (max-width: 768px) {
             .guide-page {
                 padding: 6rem 0 3rem;
+            }
+
+            .guide-legal {
+                padding: 1.75rem;
             }
         }
     </style>
@@ -73,13 +166,548 @@
         <div class="container">
             <a href="/" class="back-link">Back to Home</a>
 
-            <div class="guide-content">
-                <h1>Survival Guide</h1>
-                <p>The Elsewhere 2026 Survival Guide is being prepared and will be published here soon.</p>
-                <p>The guide will cover everything you need to know to prepare for and thrive at Elsewhere &mdash; from what to bring and how to get there, to site rules, safety information, and Leave No Trace guidelines.</p>
+            <div id="legal">
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
 
-                <div class="guide-coming-soon">
-                    <p>In the meantime, join our <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> for the latest updates, or check the <a href="faq.html">FAQ</a> for answers to common questions.</p>
+                <div class="lang-content active" data-lang="en">
+                    <div class="guide-content">
+                        <h1>Survival Guide</h1>
+                        <p>The Elsewhere 2026 Survival Guide is being prepared and will be published here soon.</p>
+                        <p>The guide will cover everything you need to know to prepare for and thrive at Elsewhere &mdash; from what to bring and how to get there, to site rules, safety information, and Leave No Trace guidelines.</p>
+
+                        <div class="guide-coming-soon">
+                            <p>In the meantime, join our <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> for the latest updates, or check the <a href="faq.html">FAQ</a> for answers to common questions.</p>
+                        </div>
+
+                        <section class="guide-legal">
+                            <p class="guide-legal-label">Legal</p>
+                            <h2>Survival Guide Legal Section</h2>
+                            <p><strong>The Fine Print</strong></p>
+                            <p>Elsewhere exists because thousands of people choose to come together and create a temporary community in a remote place. That kind of gathering does not happen by accident. It works because participants share a few basic agreements about how the event functions, how we treat one another, and what responsibilities come with participating.</p>
+                            <p>This section explains those agreements in simple terms and points you to the documents that describe them in detail.</p>
+
+                            <h3>What am I agreeing to when I come to Elsewhere?</h3>
+                            <p>When you buy a ticket or attend Elsewhere, you are agreeing to a small set of policies that define how the event works. These policies form Elsewhere's participation framework. They explain things like:</p>
+                            <ul>
+                                <li>how tickets work</li>
+                                <li>what happens if you cannot attend</li>
+                                <li>how personal data is handled</li>
+                                <li>how photography works</li>
+                                <li>what responsibilities come with participating in the event environment</li>
+                            </ul>
+                            <p>The full framework includes:</p>
+                            <ul>
+                                <li>Ticket Terms &amp; Conditions</li>
+                                <li>Refund Policy</li>
+                                <li>Participant Agreement</li>
+                                <li>Public Health &amp; Safety Policy</li>
+                                <li>Code of Conduct</li>
+                                <li>Ticketing Privacy Notice</li>
+                                <li>Media &amp; Image Policy</li>
+                            </ul>
+                            <p>Together, these documents explain how the event operates and what is expected from everyone who participates. You do not need to memorize them, but they are the agreements that allow the event to exist.</p>
+
+                            <h3>What does personal responsibility mean here?</h3>
+                            <p>Elsewhere is not a traditional festival where everything is provided or controlled. It is a participant-driven event that takes place in a remote environment. That means you are responsible for preparing yourself and looking after your own wellbeing.</p>
+                            <p>Personal responsibility includes things like:</p>
+                            <ul>
+                                <li>bringing the supplies you need</li>
+                                <li>preparing for weather and environmental conditions</li>
+                                <li>staying hydrated and rested</li>
+                                <li>looking out for the people around you</li>
+                                <li>asking for help when you need it</li>
+                            </ul>
+                            <p>You are also responsible for respecting the temporary community that everyone is working together to build.</p>
+
+                            <h3>What risks should I be aware of?</h3>
+                            <p>Elsewhere takes place in an environment that can sometimes be physically demanding and unpredictable. Conditions may include:</p>
+                            <ul>
+                                <li>extreme heat or cold</li>
+                                <li>dust, wind, or sudden weather changes</li>
+                                <li>uneven terrain</li>
+                                <li>large art installations or temporary structures</li>
+                                <li>moving vehicles or mobile art projects</li>
+                                <li>limited access to services compared with a city</li>
+                            </ul>
+                            <p>By choosing to participate in the event, you acknowledge that these conditions are part of the experience. This does not mean you are on your own. It means you are participating in a community where people look out for one another.</p>
+
+                            <h3>Can the organizers refuse entry or remove someone?</h3>
+                            <p>Yes. Elsewhere depends on cooperation and respect between participants. If someone seriously violates the event rules or creates significant risk for others, the organizers may deny entry or ask that person to leave the event site.</p>
+                            <p>These decisions are sometimes necessary to protect the wellbeing of the community.</p>
+
+                            <h3>How do tickets, refunds, and transfers work?</h3>
+                            <p>Elsewhere operates under a no-refund policy. This is common for participant-driven events where most costs are committed long before the event begins.</p>
+                            <p>If you can no longer attend, you may be able to transfer your ticket to someone else according to the Refund Policy. Full details are explained in the Refund Policy and Ticket Terms &amp; Conditions.</p>
+
+                            <h3>What about health and safety measures?</h3>
+                            <p>From time to time, circumstances may require additional health or safety measures at the event. These measures could relate to things like:</p>
+                            <ul>
+                                <li>public health situations</li>
+                                <li>extreme environmental conditions</li>
+                                <li>safety requirements from authorities</li>
+                            </ul>
+                            <p>If such measures become necessary, they will be communicated through official event channels. The Public Health &amp; Safety Policy explains how these situations are handled.</p>
+
+                            <h3>How is my data handled?</h3>
+                            <p>When you purchase a ticket, some personal information is needed to process your registration and operate the event. Your data is handled by Nobodies Collective Association (NCA) and processed through the ticketing platform used for the event.</p>
+                            <p>The Ticketing Privacy Notice explains what information is collected, how it is used, and what rights you have over your data.</p>
+
+                            <h3>What about photography and media?</h3>
+                            <p>Elsewhere is a creative environment where photography and documentation naturally happen. Participants are encouraged to respect consent and the comfort of others when taking photos or videos.</p>
+                            <p>The Media &amp; Image Policy explains how photography works at the event and what is expected from participants. When in doubt, do not take the photo; consent always comes first, even in group or wide shots.</p>
+
+                            <h3>Where can I find the full policies?</h3>
+                            <p>The full legal documents are available on the event website and should be read together. They form the framework that allows the event to operate responsibly while protecting both participants and the organizers.</p>
+                            <p>If you have questions about any of these policies, you can contact <a href="mailto:legal@nobodies.team">legal@nobodies.team</a>.</p>
+
+                            <h3>One more thing about participation</h3>
+                            <p>Elsewhere takes place in a remote environment and is created by the people who attend it. This means that not everything can be controlled or predicted.</p>
+                            <p>By choosing to participate in the event, you acknowledge that you are voluntarily entering an environment where conditions may change and where participation involves personal responsibility. You understand that the organizers and volunteers work to support the event and the community, but they cannot eliminate all risks associated with participating in a temporary community in a remote environment.</p>
+
+                            <h3>A final thought</h3>
+                            <p>Elsewhere exists because thousands of people agree to show up, take responsibility for themselves, and care about the people around them.</p>
+                            <p>The policies described here are not meant to replace that spirit. They exist to support it and to make sure the event can continue to happen year after year.</p>
+                            <p>Take care of yourself.<br>Take care of each other.<br>And help make the temporary community possible.</p>
+
+                            <div class="guide-legal-meta">
+                                <p><strong>Version:</strong> 2.1<br><strong>Date:</strong> 17 March 2026</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="es">
+                    <div class="guide-content">
+                        <h1>Gu&iacute;a de Supervivencia</h1>
+                        <p>La Gu&iacute;a de Supervivencia de Elsewhere 2026 se est&aacute; preparando y se publicar&aacute; aqu&iacute; pr&oacute;ximamente.</p>
+                        <p>La gu&iacute;a cubrir&aacute; todo lo que necesitas saber para prepararte y desenvolverte bien en Elsewhere &mdash; desde qu&eacute; traer y c&oacute;mo llegar, hasta las normas del lugar, la informaci&oacute;n de seguridad y las pautas de Leave No Trace.</p>
+
+                        <div class="guide-coming-soon">
+                            <p>Mientras tanto, &uacute;nete a nuestro <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> para recibir las &uacute;ltimas actualizaciones, o consulta la <a href="faq.html">FAQ</a> para ver respuestas a preguntas frecuentes.</p>
+                        </div>
+
+                        <section class="guide-legal">
+                            <p class="guide-legal-label">Legal</p>
+                            <h2>Secci&oacute;n Legal de la Gu&iacute;a de Supervivencia</h2>
+                            <p><strong>La letra peque&ntilde;a</strong></p>
+                            <p>Elsewhere existe porque miles de personas eligen reunirse y crear una comunidad temporal en un lugar remoto. Ese tipo de encuentro no sucede por accidente. Funciona porque las personas participantes comparten unos cuantos acuerdos b&aacute;sicos sobre c&oacute;mo funciona el evento, c&oacute;mo nos tratamos entre nosotros y qu&eacute; responsabilidades conlleva participar.</p>
+                            <p>Esta secci&oacute;n explica esos acuerdos en t&eacute;rminos sencillos y te dirige a los documentos que los describen con m&aacute;s detalle.</p>
+
+                            <h3>&iquest;A qu&eacute; estoy aceptando cuando voy a Elsewhere?</h3>
+                            <p>Cuando compras una entrada o asistes a Elsewhere, aceptas un peque&ntilde;o conjunto de pol&iacute;ticas que definen c&oacute;mo funciona el evento. Estas pol&iacute;ticas forman el marco de participaci&oacute;n de Elsewhere. Explican cosas como:</p>
+                            <ul>
+                                <li>c&oacute;mo funcionan las entradas</li>
+                                <li>qu&eacute; ocurre si no puedes asistir</li>
+                                <li>c&oacute;mo se gestionan los datos personales</li>
+                                <li>c&oacute;mo funciona la fotograf&iacute;a</li>
+                                <li>qu&eacute; responsabilidades conlleva participar en el entorno del evento</li>
+                            </ul>
+                            <p>El marco completo incluye:</p>
+                            <ul>
+                                <li>Condiciones de las Entradas</li>
+                                <li>Pol&iacute;tica de Reembolsos</li>
+                                <li>Acuerdo de Participaci&oacute;n</li>
+                                <li>Pol&iacute;tica de Salud P&uacute;blica y Seguridad</li>
+                                <li>C&oacute;digo de Conducta</li>
+                                <li>Aviso de Privacidad para Ticketing</li>
+                                <li>Pol&iacute;tica de Medios e Imagen</li>
+                            </ul>
+                            <p>En conjunto, estos documentos explican c&oacute;mo funciona el evento y qu&eacute; se espera de todas las personas que participan. No necesitas memorizarlos, pero son los acuerdos que permiten que el evento exista.</p>
+
+                            <h3>&iquest;Qu&eacute; significa aqu&iacute; la responsabilidad personal?</h3>
+                            <p>Elsewhere no es un festival tradicional en el que todo est&aacute; provisto o controlado. Es un evento impulsado por las personas participantes que tiene lugar en un entorno remoto. Eso significa que eres responsable de prepararte y de cuidar de tu propio bienestar.</p>
+                            <p>La responsabilidad personal incluye cosas como:</p>
+                            <ul>
+                                <li>llevar los suministros que necesitas</li>
+                                <li>prepararte para el clima y las condiciones ambientales</li>
+                                <li>mantenerte hidratado y descansado</li>
+                                <li>cuidar de las personas que tienes alrededor</li>
+                                <li>pedir ayuda cuando la necesites</li>
+                            </ul>
+                            <p>Tambi&eacute;n eres responsable de respetar la comunidad temporal que todo el mundo est&aacute; construyendo en conjunto.</p>
+
+                            <h3>&iquest;Qu&eacute; riesgos debo tener en cuenta?</h3>
+                            <p>Elsewhere tiene lugar en un entorno que a veces puede ser f&iacute;sicamente exigente e impredecible. Las condiciones pueden incluir:</p>
+                            <ul>
+                                <li>calor o fr&iacute;o extremos</li>
+                                <li>polvo, viento o cambios repentinos del tiempo</li>
+                                <li>terreno irregular</li>
+                                <li>grandes instalaciones de arte o estructuras temporales</li>
+                                <li>veh&iacute;culos en movimiento o proyectos de arte m&oacute;viles</li>
+                                <li>acceso limitado a servicios en comparaci&oacute;n con una ciudad</li>
+                            </ul>
+                            <p>Al elegir participar en el evento, reconoces que estas condiciones forman parte de la experiencia. Esto no significa que est&eacute;s solo. Significa que participas en una comunidad en la que las personas cuidan unas de otras.</p>
+
+                            <h3>&iquest;Pueden los organizadores denegar la entrada o expulsar a alguien?</h3>
+                            <p>S&iacute;. Elsewhere depende de la cooperaci&oacute;n y el respeto entre las personas participantes. Si alguien incumple gravemente las normas del evento o crea un riesgo significativo para otras personas, los organizadores pueden denegarle la entrada o pedirle que abandone el recinto.</p>
+                            <p>Estas decisiones a veces son necesarias para proteger el bienestar de la comunidad.</p>
+
+                            <h3>&iquest;C&oacute;mo funcionan las entradas, los reembolsos y las transferencias?</h3>
+                            <p>Elsewhere funciona con una pol&iacute;tica de no reembolso. Esto es habitual en eventos impulsados por participantes, donde la mayor parte de los costes se comprometen mucho antes de que empiece el evento.</p>
+                            <p>Si ya no puedes asistir, es posible que puedas transferir tu entrada a otra persona seg&uacute;n la Pol&iacute;tica de Reembolsos. Los detalles completos se explican en la Pol&iacute;tica de Reembolsos y en las Condiciones de las Entradas.</p>
+
+                            <h3>&iquest;Qu&eacute; pasa con las medidas de salud y seguridad?</h3>
+                            <p>De vez en cuando, las circunstancias pueden requerir medidas adicionales de salud o seguridad en el evento. Estas medidas podr&iacute;an referirse a cosas como:</p>
+                            <ul>
+                                <li>situaciones de salud p&uacute;blica</li>
+                                <li>condiciones ambientales extremas</li>
+                                <li>requisitos de seguridad de las autoridades</li>
+                            </ul>
+                            <p>Si estas medidas llegan a ser necesarias, se comunicar&aacute;n por los canales oficiales del evento. La Pol&iacute;tica de Salud P&uacute;blica y Seguridad explica c&oacute;mo se gestionan estas situaciones.</p>
+
+                            <h3>&iquest;C&oacute;mo se gestionan mis datos?</h3>
+                            <p>Cuando compras una entrada, se necesita cierta informaci&oacute;n personal para procesar tu registro y operar el evento. Tus datos son gestionados por la Asociaci&oacute;n Nobodies Collective (NCA) y tratados a trav&eacute;s de la plataforma de ticketing utilizada para el evento.</p>
+                            <p>El Aviso de Privacidad para Ticketing explica qu&eacute; informaci&oacute;n se recopila, c&oacute;mo se utiliza y qu&eacute; derechos tienes sobre tus datos.</p>
+
+                            <h3>&iquest;Qu&eacute; pasa con la fotograf&iacute;a y los medios?</h3>
+                            <p>Elsewhere es un entorno creativo donde la fotograf&iacute;a y la documentaci&oacute;n surgen de forma natural. Se anima a las personas participantes a respetar el consentimiento y la comodidad de las dem&aacute;s cuando hagan fotos o v&iacute;deos.</p>
+                            <p>La Pol&iacute;tica de Medios e Imagen explica c&oacute;mo funciona la fotograf&iacute;a en el evento y qu&eacute; se espera de las personas participantes. En caso de duda, no hagas la foto; el consentimiento va siempre primero, incluso en fotos de grupo o planos abiertos.</p>
+
+                            <h3>&iquest;D&oacute;nde puedo encontrar las pol&iacute;ticas completas?</h3>
+                            <p>Los documentos legales completos est&aacute;n disponibles en la web del evento y deben leerse conjuntamente. Forman el marco que permite que el evento funcione de forma responsable, protegiendo tanto a las personas participantes como a la organizaci&oacute;n.</p>
+                            <p>Si tienes preguntas sobre cualquiera de estas pol&iacute;ticas, puedes escribir a <a href="mailto:legal@nobodies.team">legal@nobodies.team</a>.</p>
+
+                            <h3>Una cosa m&aacute;s sobre la participaci&oacute;n</h3>
+                            <p>Elsewhere tiene lugar en un entorno remoto y es creado por las personas que asisten. Esto significa que no todo puede controlarse o preverse.</p>
+                            <p>Al elegir participar en el evento, reconoces que entras voluntariamente en un entorno donde las condiciones pueden cambiar y donde la participaci&oacute;n implica responsabilidad personal. Entiendes que la organizaci&oacute;n y las personas voluntarias trabajan para apoyar el evento y la comunidad, pero no pueden eliminar todos los riesgos asociados con participar en una comunidad temporal en un entorno remoto.</p>
+
+                            <h3>Una reflexi&oacute;n final</h3>
+                            <p>Elsewhere existe porque miles de personas aceptan venir, responsabilizarse de s&iacute; mismas y cuidar a quienes las rodean.</p>
+                            <p>Las pol&iacute;ticas descritas aqu&iacute; no pretenden sustituir ese esp&iacute;ritu. Existen para apoyarlo y para asegurarse de que el evento pueda seguir ocurriendo a&ntilde;o tras a&ntilde;o.</p>
+                            <p>Cuida de ti.<br>Cuida de las dem&aacute;s personas.<br>Y ayuda a hacer posible la comunidad temporal.</p>
+
+                            <div class="guide-legal-meta">
+                                <p><strong>Versi&oacute;n:</strong> 2.1<br><strong>Fecha:</strong> 17 de marzo de 2026</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="fr">
+                    <div class="guide-content">
+                        <h1>Guide de Survie</h1>
+                        <p>Le Guide de Survie d'Elsewhere 2026 est en cours de pr&eacute;paration et sera publi&eacute; ici prochainement.</p>
+                        <p>Le guide couvrira tout ce que vous devez savoir pour vous pr&eacute;parer et vous &eacute;panouir &agrave; Elsewhere &mdash; de ce qu'il faut apporter et de la mani&egrave;re d'y arriver, jusqu'aux r&egrave;gles du site, aux informations de s&eacute;curit&eacute; et aux principes de Leave No Trace.</p>
+
+                        <div class="guide-coming-soon">
+                            <p>En attendant, rejoignez notre <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> pour les derni&egrave;res mises &agrave; jour, ou consultez la <a href="faq.html">FAQ</a> pour les r&eacute;ponses aux questions fr&eacute;quentes.</p>
+                        </div>
+
+                        <section class="guide-legal">
+                            <p class="guide-legal-label">Juridique</p>
+                            <h2>Section juridique du Guide de Survie</h2>
+                            <p><strong>Les petites lignes</strong></p>
+                            <p>Elsewhere existe parce que des milliers de personnes choisissent de se r&eacute;unir et de cr&eacute;er une communaut&eacute; temporaire dans un lieu isol&eacute;. Ce type de rassemblement ne se produit pas par hasard. Il fonctionne parce que les participant·e·s partagent quelques accords de base sur le fonctionnement de l'&eacute;v&eacute;nement, la mani&egrave;re dont nous nous traitons les un·e·s les autres et les responsabilit&eacute;s qui accompagnent la participation.</p>
+                            <p>Cette section explique ces accords en termes simples et vous renvoie vers les documents qui les d&eacute;crivent en d&eacute;tail.</p>
+
+                            <h3>&Agrave; quoi est-ce que j'accepte en venant &agrave; Elsewhere ?</h3>
+                            <p>Lorsque vous achetez un billet ou participez &agrave; Elsewhere, vous acceptez un petit ensemble de politiques qui d&eacute;finissent le fonctionnement de l'&eacute;v&eacute;nement. Ces politiques constituent le cadre de participation d'Elsewhere. Elles expliquent notamment :</p>
+                            <ul>
+                                <li>comment fonctionnent les billets</li>
+                                <li>ce qui se passe si vous ne pouvez pas venir</li>
+                                <li>comment les donn&eacute;es personnelles sont trait&eacute;es</li>
+                                <li>comment fonctionne la photographie</li>
+                                <li>quelles responsabilit&eacute;s accompagnent la participation &agrave; l'environnement de l'&eacute;v&eacute;nement</li>
+                            </ul>
+                            <p>Le cadre complet comprend :</p>
+                            <ul>
+                                <li>Conditions g&eacute;n&eacute;rales des billets</li>
+                                <li>Politique de remboursement</li>
+                                <li>Accord de participation</li>
+                                <li>Politique de sant&eacute; publique et de s&eacute;curit&eacute;</li>
+                                <li>Code de conduite</li>
+                                <li>Notice de confidentialit&eacute; pour la billetterie</li>
+                                <li>Politique relative aux m&eacute;dias et &agrave; l'image</li>
+                            </ul>
+                            <p>Ensemble, ces documents expliquent comment l'&eacute;v&eacute;nement fonctionne et ce qui est attendu de chaque personne participante. Vous n'avez pas besoin de les m&eacute;moriser, mais ce sont les accords qui permettent &agrave; l'&eacute;v&eacute;nement d'exister.</p>
+
+                            <h3>Que signifie ici la responsabilit&eacute; personnelle ?</h3>
+                            <p>Elsewhere n'est pas un festival traditionnel o&ugrave; tout est fourni ou contr&ocirc;l&eacute;. C'est un &eacute;v&eacute;nement port&eacute; par les participant·e·s qui se d&eacute;roule dans un environnement isol&eacute;. Cela signifie que vous &ecirc;tes responsable de votre pr&eacute;paration et de votre propre bien-&ecirc;tre.</p>
+                            <p>La responsabilit&eacute; personnelle comprend notamment :</p>
+                            <ul>
+                                <li>apporter les fournitures dont vous avez besoin</li>
+                                <li>vous pr&eacute;parer &agrave; la m&eacute;t&eacute;o et aux conditions environnementales</li>
+                                <li>rester hydrat&eacute;·e et repos&eacute;·e</li>
+                                <li>veiller sur les personnes autour de vous</li>
+                                <li>demander de l'aide lorsque vous en avez besoin</li>
+                            </ul>
+                            <p>Vous &ecirc;tes &eacute;galement responsable du respect de la communaut&eacute; temporaire que tout le monde construit ensemble.</p>
+
+                            <h3>Quels risques dois-je garder &agrave; l'esprit ?</h3>
+                            <p>Elsewhere se d&eacute;roule dans un environnement qui peut parfois &ecirc;tre physiquement exigeant et impr&eacute;visible. Les conditions peuvent inclure :</p>
+                            <ul>
+                                <li>une chaleur ou un froid extr&ecirc;mes</li>
+                                <li>de la poussi&egrave;re, du vent ou des changements soudains de temps</li>
+                                <li>un terrain irr&eacute;gulier</li>
+                                <li>de grandes installations artistiques ou des structures temporaires</li>
+                                <li>des v&eacute;hicules en mouvement ou des projets artistiques mobiles</li>
+                                <li>un acc&egrave;s limit&eacute; aux services par rapport &agrave; une ville</li>
+                            </ul>
+                            <p>En choisissant de participer &agrave; l'&eacute;v&eacute;nement, vous reconnaissez que ces conditions font partie de l'exp&eacute;rience. Cela ne signifie pas que vous &ecirc;tes livr&eacute;·e &agrave; vous-m&ecirc;me. Cela signifie que vous participez &agrave; une communaut&eacute; o&ugrave; les gens prennent soin les un·e·s des autres.</p>
+
+                            <h3>Les organisateurs peuvent-ils refuser l'entr&eacute;e ou demander &agrave; quelqu'un de partir ?</h3>
+                            <p>Oui. Elsewhere repose sur la coop&eacute;ration et le respect entre les participant·e·s. Si une personne enfreint gravement les r&egrave;gles de l'&eacute;v&eacute;nement ou cr&eacute;e un risque important pour les autres, les organisateurs peuvent lui refuser l'entr&eacute;e ou lui demander de quitter le site.</p>
+                            <p>Ces d&eacute;cisions sont parfois n&eacute;cessaires pour prot&eacute;ger le bien-&ecirc;tre de la communaut&eacute;.</p>
+
+                            <h3>Comment fonctionnent les billets, les remboursements et les transferts ?</h3>
+                            <p>Elsewhere fonctionne selon une politique sans remboursement. C'est courant pour les &eacute;v&eacute;nements port&eacute;s par les participant·e·s, o&ugrave; la plupart des co&ucirc;ts sont engag&eacute;s bien avant le d&eacute;but de l'&eacute;v&eacute;nement.</p>
+                            <p>Si vous ne pouvez finalement plus venir, vous pourrez peut-&ecirc;tre transf&eacute;rer votre billet &agrave; une autre personne conform&eacute;ment &agrave; la Politique de remboursement. Tous les d&eacute;tails figurent dans la Politique de remboursement et les Conditions g&eacute;n&eacute;rales des billets.</p>
+
+                            <h3>Qu'en est-il des mesures de sant&eacute; et de s&eacute;curit&eacute; ?</h3>
+                            <p>Parfois, les circonstances peuvent exiger des mesures suppl&eacute;mentaires de sant&eacute; ou de s&eacute;curit&eacute; pour l'&eacute;v&eacute;nement. Ces mesures peuvent concerner des sujets tels que :</p>
+                            <ul>
+                                <li>des situations de sant&eacute; publique</li>
+                                <li>des conditions environnementales extr&ecirc;mes</li>
+                                <li>des exigences de s&eacute;curit&eacute; impos&eacute;es par les autorit&eacute;s</li>
+                            </ul>
+                            <p>Si de telles mesures deviennent n&eacute;cessaires, elles seront communiqu&eacute;es via les canaux officiels de l'&eacute;v&eacute;nement. La Politique de sant&eacute; publique et de s&eacute;curit&eacute; explique comment ces situations sont g&eacute;r&eacute;es.</p>
+
+                            <h3>Comment mes donn&eacute;es sont-elles trait&eacute;es ?</h3>
+                            <p>Lorsque vous achetez un billet, certaines informations personnelles sont n&eacute;cessaires pour traiter votre inscription et faire fonctionner l'&eacute;v&eacute;nement. Vos donn&eacute;es sont g&eacute;r&eacute;es par l'Asociaci&oacute;n Nobodies Collective (NCA) et trait&eacute;es via la plateforme de billetterie utilis&eacute;e pour l'&eacute;v&eacute;nement.</p>
+                            <p>La Notice de confidentialit&eacute; pour la billetterie explique quelles informations sont collect&eacute;es, comment elles sont utilis&eacute;es et quels droits vous avez sur vos donn&eacute;es.</p>
+
+                            <h3>Qu'en est-il de la photographie et des m&eacute;dias ?</h3>
+                            <p>Elsewhere est un environnement cr&eacute;atif o&ugrave; la photographie et la documentation se produisent naturellement. Les participant·e·s sont encourag&eacute;·e·s &agrave; respecter le consentement et le confort des autres lorsqu'ils ou elles prennent des photos ou des vid&eacute;os.</p>
+                            <p>La Politique relative aux m&eacute;dias et &agrave; l'image explique comment fonctionne la photographie pendant l'&eacute;v&eacute;nement et ce qui est attendu des participant·e·s. En cas de doute, ne prenez pas la photo ; le consentement passe toujours avant tout, m&ecirc;me pour les photos de groupe ou les plans larges.</p>
+
+                            <h3>O&ugrave; puis-je trouver l'ensemble des politiques ?</h3>
+                            <p>Les documents juridiques complets sont disponibles sur le site de l'&eacute;v&eacute;nement et doivent &ecirc;tre lus ensemble. Ils forment le cadre qui permet &agrave; l'&eacute;v&eacute;nement de fonctionner de mani&egrave;re responsable tout en prot&eacute;geant les participant·e·s et les organisateurs.</p>
+                            <p>Si vous avez des questions sur l'une de ces politiques, vous pouvez contacter <a href="mailto:legal@nobodies.team">legal@nobodies.team</a>.</p>
+
+                            <h3>Encore une chose &agrave; propos de la participation</h3>
+                            <p>Elsewhere se d&eacute;roule dans un environnement isol&eacute; et est cr&eacute;&eacute; par les personnes qui y participent. Cela signifie que tout ne peut pas &ecirc;tre contr&ocirc;l&eacute; ni pr&eacute;vu.</p>
+                            <p>En choisissant de participer &agrave; l'&eacute;v&eacute;nement, vous reconnaissez que vous entrez volontairement dans un environnement o&ugrave; les conditions peuvent changer et o&ugrave; la participation implique une responsabilit&eacute; personnelle. Vous comprenez que les organisateurs et les b&eacute;n&eacute;voles travaillent pour soutenir l'&eacute;v&eacute;nement et la communaut&eacute;, mais qu'ils ne peuvent pas &eacute;liminer tous les risques associ&eacute;s &agrave; la participation &agrave; une communaut&eacute; temporaire dans un environnement isol&eacute;.</p>
+
+                            <h3>Une derni&egrave;re pens&eacute;e</h3>
+                            <p>Elsewhere existe parce que des milliers de personnes acceptent de venir, de prendre soin d'elles-m&ecirc;mes et de celles qui les entourent.</p>
+                            <p>Les politiques d&eacute;crites ici ne sont pas l&agrave; pour remplacer cet esprit. Elles existent pour le soutenir et pour s'assurer que l'&eacute;v&eacute;nement puisse continuer &agrave; avoir lieu ann&eacute;e apr&egrave;s ann&eacute;e.</p>
+                            <p>Prenez soin de vous.<br>Prenez soin les un·e·s des autres.<br>Et contribuez &agrave; rendre la communaut&eacute; temporaire possible.</p>
+
+                            <div class="guide-legal-meta">
+                                <p><strong>Version :</strong> 2.1<br><strong>Date :</strong> 17 mars 2026</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="it">
+                    <div class="guide-content">
+                        <h1>Guida di Sopravvivenza</h1>
+                        <p>La Guida di Sopravvivenza di Elsewhere 2026 &egrave; in preparazione e sar&agrave; pubblicata qui a breve.</p>
+                        <p>La guida coprir&agrave; tutto ci&ograve; che devi sapere per prepararti e vivere bene Elsewhere &mdash; da cosa portare e come arrivare, fino alle regole del sito, alle informazioni di sicurezza e alle linee guida Leave No Trace.</p>
+
+                        <div class="guide-coming-soon">
+                            <p>Nel frattempo, unisciti al nostro <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> per ricevere gli ultimi aggiornamenti, oppure consulta la <a href="faq.html">FAQ</a> per trovare risposta alle domande pi&ugrave; comuni.</p>
+                        </div>
+
+                        <section class="guide-legal">
+                            <p class="guide-legal-label">Legale</p>
+                            <h2>Sezione Legale della Guida di Sopravvivenza</h2>
+                            <p><strong>Le clausole essenziali</strong></p>
+                            <p>Elsewhere esiste perch&eacute; migliaia di persone scelgono di riunirsi e creare una comunit&agrave; temporanea in un luogo remoto. Un incontro di questo tipo non avviene per caso. Funziona perch&eacute; i partecipanti condividono alcuni accordi di base su come funziona l'evento, su come ci trattiamo a vicenda e su quali responsabilit&agrave; comporta partecipare.</p>
+                            <p>Questa sezione spiega tali accordi in termini semplici e rimanda ai documenti che li descrivono nel dettaglio.</p>
+
+                            <h3>A cosa sto acconsentendo quando vengo a Elsewhere?</h3>
+                            <p>Quando acquisti un biglietto o partecipi a Elsewhere, accetti un piccolo insieme di policy che definiscono il funzionamento dell'evento. Queste policy costituiscono il quadro di partecipazione di Elsewhere. Spiegano, tra le altre cose:</p>
+                            <ul>
+                                <li>come funzionano i biglietti</li>
+                                <li>cosa succede se non puoi partecipare</li>
+                                <li>come vengono trattati i dati personali</li>
+                                <li>come funziona la fotografia</li>
+                                <li>quali responsabilit&agrave; comporta partecipare all'ambiente dell'evento</li>
+                            </ul>
+                            <p>Il quadro completo comprende:</p>
+                            <ul>
+                                <li>Termini e Condizioni dei Biglietti</li>
+                                <li>Politica di Rimborso</li>
+                                <li>Accordo di Partecipazione</li>
+                                <li>Politica di Salute Pubblica e Sicurezza</li>
+                                <li>Codice di Condotta</li>
+                                <li>Informativa Privacy per la Biglietteria</li>
+                                <li>Politica su Media e Diritto all'Immagine</li>
+                            </ul>
+                            <p>Nel loro insieme, questi documenti spiegano come funziona l'evento e cosa ci si aspetta da chi partecipa. Non devi impararli a memoria, ma sono gli accordi che permettono all'evento di esistere.</p>
+
+                            <h3>Cosa significa qui responsabilit&agrave; personale?</h3>
+                            <p>Elsewhere non &egrave; un festival tradizionale in cui tutto &egrave; fornito o controllato. &Egrave; un evento guidato dai partecipanti che si svolge in un ambiente remoto. Ci&ograve; significa che sei responsabile della tua preparazione e del tuo benessere.</p>
+                            <p>La responsabilit&agrave; personale include aspetti come:</p>
+                            <ul>
+                                <li>portare con te le forniture di cui hai bisogno</li>
+                                <li>prepararti al meteo e alle condizioni ambientali</li>
+                                <li>rimanere idratato e ben riposato</li>
+                                <li>prestare attenzione alle persone che ti circondano</li>
+                                <li>chiedere aiuto quando ne hai bisogno</li>
+                            </ul>
+                            <p>Sei inoltre responsabile di rispettare la comunit&agrave; temporanea che tutti stanno costruendo insieme.</p>
+
+                            <h3>Quali rischi devo tenere presenti?</h3>
+                            <p>Elsewhere si svolge in un ambiente che a volte pu&ograve; essere fisicamente impegnativo e imprevedibile. Le condizioni possono includere:</p>
+                            <ul>
+                                <li>caldo o freddo estremi</li>
+                                <li>polvere, vento o cambiamenti improvvisi del tempo</li>
+                                <li>terreno irregolare</li>
+                                <li>grandi installazioni artistiche o strutture temporanee</li>
+                                <li>veicoli in movimento o progetti artistici mobili</li>
+                                <li>accesso limitato ai servizi rispetto a una citt&agrave;</li>
+                            </ul>
+                            <p>Scegliendo di partecipare all'evento, riconosci che queste condizioni fanno parte dell'esperienza. Questo non significa che tu sia lasciato a te stesso. Significa che partecipi a una comunit&agrave; in cui le persone si prendono cura le une delle altre.</p>
+
+                            <h3>Gli organizzatori possono rifiutare l'ingresso o allontanare qualcuno?</h3>
+                            <p>S&igrave;. Elsewhere dipende dalla cooperazione e dal rispetto tra i partecipanti. Se qualcuno viola gravemente le regole dell'evento o crea un rischio significativo per gli altri, gli organizzatori possono negare l'ingresso o chiedere a quella persona di lasciare il sito dell'evento.</p>
+                            <p>Queste decisioni a volte sono necessarie per proteggere il benessere della comunit&agrave;.</p>
+
+                            <h3>Come funzionano biglietti, rimborsi e trasferimenti?</h3>
+                            <p>Elsewhere opera con una politica di non rimborso. Questo &egrave; comune negli eventi guidati dai partecipanti, dove la maggior parte dei costi viene sostenuta molto prima dell'inizio dell'evento.</p>
+                            <p>Se non puoi pi&ugrave; partecipare, potresti poter trasferire il tuo biglietto a un'altra persona secondo la Politica di Rimborso. Tutti i dettagli sono spiegati nella Politica di Rimborso e nei Termini e Condizioni dei Biglietti.</p>
+
+                            <h3>E per quanto riguarda le misure di salute e sicurezza?</h3>
+                            <p>Talvolta le circostanze possono richiedere ulteriori misure di salute o sicurezza durante l'evento. Tali misure potrebbero riguardare aspetti come:</p>
+                            <ul>
+                                <li>situazioni di salute pubblica</li>
+                                <li>condizioni ambientali estreme</li>
+                                <li>requisiti di sicurezza imposti dalle autorit&agrave;</li>
+                            </ul>
+                            <p>Se tali misure dovessero diventare necessarie, saranno comunicate attraverso i canali ufficiali dell'evento. La Politica di Salute Pubblica e Sicurezza spiega come vengono gestite queste situazioni.</p>
+
+                            <h3>Come vengono gestiti i miei dati?</h3>
+                            <p>Quando acquisti un biglietto, alcune informazioni personali sono necessarie per elaborare la tua registrazione e gestire l'evento. I tuoi dati sono gestiti dalla Nobodies Collective Association (NCA) e trattati tramite la piattaforma di biglietteria utilizzata per l'evento.</p>
+                            <p>L'Informativa Privacy per la Biglietteria spiega quali informazioni vengono raccolte, come vengono utilizzate e quali diritti hai sui tuoi dati.</p>
+
+                            <h3>E per quanto riguarda fotografie e media?</h3>
+                            <p>Elsewhere &egrave; un ambiente creativo in cui fotografia e documentazione avvengono naturalmente. I partecipanti sono invitati a rispettare il consenso e il benessere altrui quando scattano foto o registrano video.</p>
+                            <p>La Politica su Media e Diritto all'Immagine spiega come funziona la fotografia durante l'evento e cosa ci si aspetta dai partecipanti. In caso di dubbio, non scattare la foto; il consenso viene sempre prima, anche nelle foto di gruppo o nelle inquadrature ampie.</p>
+
+                            <h3>Dove posso trovare le policy complete?</h3>
+                            <p>I documenti legali completi sono disponibili sul sito dell'evento e dovrebbero essere letti insieme. Costituiscono il quadro che consente all'evento di svolgersi in modo responsabile, proteggendo sia i partecipanti sia gli organizzatori.</p>
+                            <p>Se hai domande su una qualsiasi di queste policy, puoi contattare <a href="mailto:legal@nobodies.team">legal@nobodies.team</a>.</p>
+
+                            <h3>Un'ultima cosa sulla partecipazione</h3>
+                            <p>Elsewhere si svolge in un ambiente remoto ed &egrave; creato dalle persone che vi partecipano. Ci&ograve; significa che non tutto pu&ograve; essere controllato o previsto.</p>
+                            <p>Scegliendo di partecipare all'evento, riconosci di entrare volontariamente in un ambiente in cui le condizioni possono cambiare e in cui la partecipazione comporta responsabilit&agrave; personale. Comprendi che gli organizzatori e i volontari lavorano per sostenere l'evento e la comunit&agrave;, ma non possono eliminare tutti i rischi associati alla partecipazione a una comunit&agrave; temporanea in un ambiente remoto.</p>
+
+                            <h3>Un pensiero finale</h3>
+                            <p>Elsewhere esiste perch&eacute; migliaia di persone accettano di esserci, di prendersi responsabilit&agrave; per se stesse e di avere cura di chi le circonda.</p>
+                            <p>Le policy descritte qui non vogliono sostituire quello spirito. Esistono per sostenerlo e per fare in modo che l'evento possa continuare a esistere anno dopo anno.</p>
+                            <p>Abbi cura di te.<br>Abbi cura degli altri.<br>E aiuta a rendere possibile la comunit&agrave; temporanea.</p>
+
+                            <div class="guide-legal-meta">
+                                <p><strong>Versione:</strong> 2.1<br><strong>Data:</strong> 17 marzo 2026</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="lang-content" data-lang="de">
+                    <div class="guide-content">
+                        <h1>Survival Guide</h1>
+                        <p>Der Elsewhere 2026 Survival Guide wird derzeit vorbereitet und hier in K&uuml;rze ver&ouml;ffentlicht.</p>
+                        <p>Der Guide wird alles abdecken, was Sie wissen m&uuml;ssen, um sich auf Elsewhere vorzubereiten und dort gut zurechtzukommen &mdash; von dem, was Sie mitbringen sollten und wie Sie anreisen, bis hin zu Platzregeln, Sicherheitsinformationen und Leave-No-Trace-Grunds&auml;tzen.</p>
+
+                        <div class="guide-coming-soon">
+                            <p>Bis dahin k&ouml;nnen Sie unserem <a href="https://discord.gg/Xmj6YbFwSM" target="_blank">Discord</a> beitreten, um die neuesten Updates zu erhalten, oder die <a href="faq.html">FAQ</a> f&uuml;r Antworten auf h&auml;ufige Fragen lesen.</p>
+                        </div>
+
+                        <section class="guide-legal">
+                            <p class="guide-legal-label">Rechtliches</p>
+                            <h2>Rechtlicher Abschnitt des Survival Guide</h2>
+                            <p><strong>Das Kleingedruckte</strong></p>
+                            <p>Elsewhere existiert, weil Tausende von Menschen sich bewusst daf&uuml;r entscheiden, zusammenzukommen und an einem abgelegenen Ort eine tempor&auml;re Gemeinschaft zu erschaffen. Eine solche Zusammenkunft entsteht nicht zuf&auml;llig. Sie funktioniert, weil die Teilnehmenden einige grundlegende Vereinbarungen dar&uuml;ber teilen, wie die Veranstaltung funktioniert, wie wir miteinander umgehen und welche Verantwortung mit der Teilnahme verbunden ist.</p>
+                            <p>Dieser Abschnitt erkl&auml;rt diese Vereinbarungen in einfachen Worten und verweist auf die Dokumente, in denen sie genauer beschrieben werden.</p>
+
+                            <h3>Worauf lasse ich mich ein, wenn ich zu Elsewhere komme?</h3>
+                            <p>Wenn Sie ein Ticket kaufen oder an Elsewhere teilnehmen, stimmen Sie einem kleinen Satz von Richtlinien zu, die festlegen, wie die Veranstaltung funktioniert. Diese Richtlinien bilden den Teilnahme-Rahmen von Elsewhere. Sie erkl&auml;ren unter anderem:</p>
+                            <ul>
+                                <li>wie Tickets funktionieren</li>
+                                <li>was passiert, wenn Sie nicht teilnehmen k&ouml;nnen</li>
+                                <li>wie personenbezogene Daten verarbeitet werden</li>
+                                <li>wie Fotografie gehandhabt wird</li>
+                                <li>welche Verantwortung mit der Teilnahme an der Veranstaltungsumgebung verbunden ist</li>
+                            </ul>
+                            <p>Der vollst&auml;ndige Rahmen umfasst:</p>
+                            <ul>
+                                <li>Ticket-Bedingungen</li>
+                                <li>R&uuml;ckerstattungsrichtlinie</li>
+                                <li>Teilnahmevereinbarung</li>
+                                <li>Richtlinie zu &ouml;ffentlicher Gesundheit und Sicherheit</li>
+                                <li>Verhaltenskodex</li>
+                                <li>Datenschutzhinweis f&uuml;r das Ticketing</li>
+                                <li>Medien- und Bildrichtlinie</li>
+                            </ul>
+                            <p>Zusammen erkl&auml;ren diese Dokumente, wie die Veranstaltung funktioniert und was von allen Teilnehmenden erwartet wird. Sie m&uuml;ssen sie nicht auswendig lernen, aber es sind die Vereinbarungen, die die Veranstaltung &uuml;berhaupt m&ouml;glich machen.</p>
+
+                            <h3>Was bedeutet hier pers&ouml;nliche Verantwortung?</h3>
+                            <p>Elsewhere ist kein traditionelles Festival, bei dem alles bereitgestellt oder kontrolliert wird. Es ist eine von Teilnehmenden getragene Veranstaltung in einer abgelegenen Umgebung. Das bedeutet, dass Sie selbst f&uuml;r Ihre Vorbereitung und Ihr eigenes Wohlergehen verantwortlich sind.</p>
+                            <p>Pers&ouml;nliche Verantwortung umfasst unter anderem:</p>
+                            <ul>
+                                <li>die Dinge mitzubringen, die Sie ben&ouml;tigen</li>
+                                <li>sich auf Wetter- und Umweltbedingungen vorzubereiten</li>
+                                <li>ausreichend zu trinken und sich auszuruhen</li>
+                                <li>auf die Menschen um Sie herum zu achten</li>
+                                <li>um Hilfe zu bitten, wenn Sie sie brauchen</li>
+                            </ul>
+                            <p>Au&szlig;erdem sind Sie daf&uuml;r verantwortlich, die tempor&auml;re Gemeinschaft zu respektieren, die alle gemeinsam aufbauen.</p>
+
+                            <h3>Welche Risiken sollte ich beachten?</h3>
+                            <p>Elsewhere findet in einer Umgebung statt, die mitunter k&ouml;rperlich anspruchsvoll und unvorhersehbar sein kann. Zu den Bedingungen k&ouml;nnen geh&ouml;ren:</p>
+                            <ul>
+                                <li>extreme Hitze oder K&auml;lte</li>
+                                <li>Staub, Wind oder pl&ouml;tzliche Wetterumschw&uuml;nge</li>
+                                <li>unebenes Gel&auml;nde</li>
+                                <li>gro&szlig;e Kunstinstallationen oder tempor&auml;re Strukturen</li>
+                                <li>fahrende Fahrzeuge oder mobile Kunstprojekte</li>
+                                <li>eingeschr&auml;nkter Zugang zu Dienstleistungen im Vergleich zu einer Stadt</li>
+                            </ul>
+                            <p>Wenn Sie sich f&uuml;r die Teilnahme entscheiden, erkennen Sie an, dass diese Bedingungen Teil des Erlebnisses sind. Das bedeutet nicht, dass Sie auf sich allein gestellt sind. Es bedeutet, dass Sie an einer Gemeinschaft teilnehmen, in der Menschen aufeinander achten.</p>
+
+                            <h3>K&ouml;nnen die Organisatoren den Zutritt verweigern oder jemanden vom Gel&auml;nde verweisen?</h3>
+                            <p>Ja. Elsewhere h&auml;ngt von Kooperation und Respekt zwischen den Teilnehmenden ab. Wenn jemand die Veranstaltungsregeln schwerwiegend verletzt oder ein erhebliches Risiko f&uuml;r andere schafft, k&ouml;nnen die Organisatoren den Zutritt verweigern oder diese Person auffordern, das Veranstaltungsgel&auml;nde zu verlassen.</p>
+                            <p>Solche Entscheidungen sind manchmal notwendig, um das Wohlergehen der Gemeinschaft zu sch&uuml;tzen.</p>
+
+                            <h3>Wie funktionieren Tickets, R&uuml;ckerstattungen und &Uuml;bertragungen?</h3>
+                            <p>Elsewhere arbeitet mit einer Nicht-Erstattungs-Politik. Das ist bei von Teilnehmenden getragenen Veranstaltungen &uuml;blich, bei denen die meisten Kosten lange vor Beginn der Veranstaltung fest eingeplant werden.</p>
+                            <p>Wenn Sie doch nicht teilnehmen k&ouml;nnen, haben Sie m&ouml;glicherweise die M&ouml;glichkeit, Ihr Ticket gem&auml;&szlig; der R&uuml;ckerstattungsrichtlinie auf eine andere Person zu &uuml;bertragen. Alle Einzelheiten finden Sie in der R&uuml;ckerstattungsrichtlinie und den Ticket-Bedingungen.</p>
+
+                            <h3>Was ist mit Gesundheits- und Sicherheitsma&szlig;nahmen?</h3>
+                            <p>Von Zeit zu Zeit k&ouml;nnen die Umst&auml;nde zus&auml;tzliche Gesundheits- oder Sicherheitsma&szlig;nahmen bei der Veranstaltung erforderlich machen. Solche Ma&szlig;nahmen k&ouml;nnen sich auf Dinge beziehen wie:</p>
+                            <ul>
+                                <li>Situationen im Bereich der &ouml;ffentlichen Gesundheit</li>
+                                <li>extreme Umweltbedingungen</li>
+                                <li>Sicherheitsanforderungen von Beh&ouml;rden</li>
+                            </ul>
+                            <p>Wenn solche Ma&szlig;nahmen erforderlich werden, werden sie &uuml;ber die offiziellen Kan&auml;le der Veranstaltung kommuniziert. Die Richtlinie zu &ouml;ffentlicher Gesundheit und Sicherheit erkl&auml;rt, wie mit diesen Situationen umgegangen wird.</p>
+
+                            <h3>Wie werden meine Daten verarbeitet?</h3>
+                            <p>Beim Ticketkauf werden einige personenbezogene Informationen ben&ouml;tigt, um Ihre Registrierung zu verarbeiten und die Veranstaltung durchzuf&uuml;hren. Ihre Daten werden von der Nobodies Collective Association (NCA) verwaltet und &uuml;ber die f&uuml;r die Veranstaltung genutzte Ticketing-Plattform verarbeitet.</p>
+                            <p>Der Datenschutzhinweis f&uuml;r das Ticketing erkl&auml;rt, welche Informationen erhoben werden, wie sie verwendet werden und welche Rechte Sie in Bezug auf Ihre Daten haben.</p>
+
+                            <h3>Was ist mit Fotografie und Medien?</h3>
+                            <p>Elsewhere ist eine kreative Umgebung, in der Fotografie und Dokumentation ganz nat&uuml;rlich stattfinden. Teilnehmende werden ermutigt, beim Fotografieren oder Filmen den Konsens und das Wohlbefinden anderer zu respektieren.</p>
+                            <p>Die Medien- und Bildrichtlinie erkl&auml;rt, wie Fotografie bei der Veranstaltung gehandhabt wird und was von Teilnehmenden erwartet wird. Im Zweifel machen Sie das Foto nicht; Einverst&auml;ndnis geht immer vor, selbst bei Gruppenfotos oder weiten Aufnahmen.</p>
+
+                            <h3>Wo finde ich die vollst&auml;ndigen Richtlinien?</h3>
+                            <p>Die vollst&auml;ndigen rechtlichen Dokumente sind auf der Website der Veranstaltung verf&uuml;gbar und sollten zusammen gelesen werden. Sie bilden den Rahmen, der es der Veranstaltung erm&ouml;glicht, verantwortungsvoll zu funktionieren und sowohl Teilnehmende als auch Organisatoren zu sch&uuml;tzen.</p>
+                            <p>Wenn Sie Fragen zu einer dieser Richtlinien haben, k&ouml;nnen Sie sich an <a href="mailto:legal@nobodies.team">legal@nobodies.team</a> wenden.</p>
+
+                            <h3>Noch eine Sache zur Teilnahme</h3>
+                            <p>Elsewhere findet in einer abgelegenen Umgebung statt und wird von den Menschen geschaffen, die daran teilnehmen. Das bedeutet, dass nicht alles kontrolliert oder vorhergesehen werden kann.</p>
+                            <p>Mit Ihrer Entscheidung zur Teilnahme erkennen Sie an, dass Sie sich freiwillig in eine Umgebung begeben, in der sich Bedingungen &auml;ndern k&ouml;nnen und in der Teilnahme pers&ouml;nliche Verantwortung bedeutet. Sie verstehen, dass Organisatoren und Freiwillige daran arbeiten, die Veranstaltung und die Gemeinschaft zu unterst&uuml;tzen, aber nicht alle mit der Teilnahme an einer tempor&auml;ren Gemeinschaft in abgelegener Umgebung verbundenen Risiken ausschlie&szlig;en k&ouml;nnen.</p>
+
+                            <h3>Ein letzter Gedanke</h3>
+                            <p>Elsewhere existiert, weil Tausende von Menschen bereit sind zu erscheinen, Verantwortung f&uuml;r sich selbst zu &uuml;bernehmen und auf die Menschen um sie herum zu achten.</p>
+                            <p>Die hier beschriebenen Richtlinien sollen diesen Geist nicht ersetzen. Sie sind da, um ihn zu unterst&uuml;tzen und sicherzustellen, dass die Veranstaltung Jahr f&uuml;r Jahr weiter stattfinden kann.</p>
+                            <p>Passen Sie auf sich auf.<br>Passen Sie aufeinander auf.<br>Und helfen Sie mit, die tempor&auml;re Gemeinschaft m&ouml;glich zu machen.</p>
+
+                            <div class="guide-legal-meta">
+                                <p><strong>Version:</strong> 2.1<br><strong>Datum:</strong> 17. M&auml;rz 2026</p>
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,5 +717,17 @@
     <script src="footer.js"></script>
 
     <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
