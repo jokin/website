@@ -17,7 +17,7 @@
                     '<li><a href="' + prefix + '/faq.html">FAQ</a></li>' +
                     '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +
                     '<li><a href="' + prefix + '/#useful-links">Links</a></li>' +
-                    '<li><a href="' + prefix + '/#join" class="btn btn-primary btn-nav">Get Tickets</a></li>' +
+                    '<li><a href="' + prefix + '/#tickets" class="btn btn-primary btn-nav">Get Tickets</a></li>' +
                 '</ul>' +
             '</nav>' +
         '</header>';
