@@ -1313,6 +1313,7 @@ h4 { font-size: 1.15rem; }
 .activity-source[data-source="Power"] { background: #f6e4c9; color: #8a5d16; }
 .activity-source[data-source="Art"] { background: #f0ddee; color: #7a3a6a; }
 .activity-source[data-source="Welfare"] { background: #f5dde8; color: #7a3a5a; }
+.activity-source[data-source="Press"] { background: #dde4f0; color: #3a4a7a; }
 
 .activity-text {
     color: var(--color-text);
