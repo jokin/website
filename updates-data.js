@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 19 ===
+    {"date": "2026-03-19", "source": "Comms", "text": "Redesigned \u2018What is Elsewhere?\u2019 website section"},
     {"date": "2026-03-19", "source": "Press", "text": "The Some Times publishes its first edition. Find it on <a href=\"https://discord.com/channels/1462886445583962245/1479879473687171142/1483973847920414793\" target=\"_blank\">Discord</a>"},
     {"date": "2026-03-19", "source": "Tech", "text": "Humans app now supports per-team public pages (click on Edit Page in a team)"},
     {"date": "2026-03-19", "source": "Legal", "text": "\u2018Elsewhere\u2019 name fully cleared by NCA lawyers"},
