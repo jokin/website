@@ -148,57 +148,140 @@
         </section>
 
         <section class="principles" id="principles">
-            <div class="container">
-                <h2 class="anim anim-fade-up">The Principles of Elsewhere</h2>
-                <p class="principles-intro anim anim-fade-up" style="transition-delay: 0.1s">Ten values that guide everything we do. Not rules from above, but commitments we hold together.</p>
-
-                <div class="principles-list">
-                    <div class="principle anim anim-slide-left">
-                        <span class="principle-name">Community</span>
-                        <span class="principle-desc">We build together through trust and shared responsibility</span>
+            <div class="principles-header container anim anim-fade-up">
+                <div class="principles-header-inner">
+                    <div class="principles-header-text">
+                        <h2>Principles of Elsewhere</h2>
+                        <p class="principles-intro">Our principles aren't rules imposed from above. They're commitments we hold together. They come from years of building a temporary city in the desert and are inspired by the original Burning Man principles.</p>
                     </div>
-                    <div class="principle anim anim-slide-right">
-                        <span class="principle-name">Cooperation</span>
-                        <span class="principle-desc">Collaboration achieves what none could do alone</span>
-                    </div>
-                    <div class="principle anim anim-slide-left">
-                        <span class="principle-name">Gifting</span>
-                        <span class="principle-desc">We give freely without expectation of return</span>
-                    </div>
-                    <div class="principle anim anim-slide-right">
-                        <span class="principle-name">Immediacy</span>
-                        <span class="principle-desc">Direct experience happens here and now</span>
-                    </div>
-                    <div class="principle anim anim-slide-left">
-                        <span class="principle-name">Inclusion</span>
-                        <span class="principle-desc">Everyone is welcome to participate and belong</span>
-                    </div>
-                    <div class="principle anim anim-slide-right">
-                        <span class="principle-name">Leave No Trace</span>
-                        <span class="principle-desc">We protect the land and leave it cleaner than we found it</span>
-                    </div>
-                    <div class="principle anim anim-slide-left">
-                        <span class="principle-name">No Commerce</span>
-                        <span class="principle-desc">Our space is free from buying, selling, and advertising</span>
-                    </div>
-                    <div class="principle anim anim-slide-right">
-                        <span class="principle-name">Participation</span>
-                        <span class="principle-desc">Everyone contributes, everyone creates</span>
-                    </div>
-                    <div class="principle anim anim-slide-left">
-                        <span class="principle-name">Self-Expression</span>
-                        <span class="principle-desc">Express yourself freely while respecting others</span>
-                    </div>
-                    <div class="principle anim anim-slide-right">
-                        <span class="principle-name">Self-Reliance</span>
-                        <span class="principle-desc">Each person takes responsibility for their own needs</span>
-                    </div>
-                </div>
-
-                <div class="consent-banner anim anim-fade-up">
-                    <strong>Consent</strong> is fundamental to everything we do. We respect the autonomy and boundaries of every participant.
+                    <img src="images/read-this.png" alt="" class="principles-stamp" aria-hidden="true">
                 </div>
             </div>
+
+            <div class="principles-carousel-wrap">
+                <button class="principles-arrow principles-arrow--prev" aria-label="Previous principle">&#8592;</button>
+
+                <div class="principles-track" id="principlesTrack">
+
+                    <!-- Consent — first in sequence -->
+                    <div class="principle-card principle-card--consent">
+                        <h3 class="principle-card-title">Consent</h3>
+                        <p class="principle-card-hook">The principle that holds the rest together.</p>
+                        <p class="principle-card-body">Give only what's appreciated. Take only what's offered.</p>
+                        <p class="principle-card-body">We're free to express, share, and co-create. But when what we do affects someone else, we ask.</p>
+                        <p class="principle-card-body">Clear communication matters. Boundaries matter. Respect always matters.</p>
+                        <div class="principle-example">
+                            <p>Before turning up the music on your boombox, looking around your immediate area and asking the nearest people if the volume would interfere with what they are doing.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Community</h3>
+                        <p class="principle-card-hook">A family of individuals. We look after each other.</p>
+                        <p class="principle-card-body">We're all separate, self-reliant beings, but we come together because we want to be part of something bigger than ourselves. We look out for one another with tolerance, care, and a bit of joy.</p>
+                        <div class="principle-example">
+                            <p>Checking in on a fellow participant who has been quiet and alone for a day, even if you don't know them, and asking if they need water or just a quiet space.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Cooperation</h3>
+                        <p class="principle-card-hook">Together we are stronger.</p>
+                        <p class="principle-card-body">From raising structures to figuring things out on the fly, cooperation is at the heart of Elsewhere. If we can make something easier or better together, we do.</p>
+                        <div class="principle-example">
+                            <p>A group setting up a large, complicated art installation pauses their work to help a solo participant put up their tent because they see them struggling against the wind.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Gifting</h3>
+                        <p class="principle-card-hook">We give our time, effort and gifts freely.</p>
+                        <p class="principle-card-body">A cold drink. A helping hand. A weird little handmade thing. Gifts come from the heart. Nothing is expected back.</p>
+                        <div class="principle-example">
+                            <p>Giving away the last cold beer you brought for yourself to someone who looks overheated, and then actively refusing their offer to trade a handmade necklace for it.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Immediacy</h3>
+                        <p class="principle-card-hook">Make now count.</p>
+                        <p class="principle-card-body">Be here. Fully. This will all disappear sooner than you think, so experience it, participate in it, be in it.</p>
+                        <div class="principle-example">
+                            <p>Putting your phone completely away for the entire event, even to take photos, because you choose to focus on experiencing the moment directly rather than documenting it.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Inclusion</h3>
+                        <p class="principle-card-hook">Everyone is welcome to be a Nobody.</p>
+                        <p class="principle-card-body">People come as they are, and that's the point. Include others the way you'd want to be included. With respect, care, and openness.</p>
+                        <div class="principle-example">
+                            <p>Actively seeking out the most introverted person in your camp who hasn't spoken much, and creating space for them to share their one small, quirky contribution without pressure to be outgoing.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Leave No Trace</h3>
+                        <p class="principle-card-hook">From dust to dust, we leave only footprints.</p>
+                        <p class="principle-card-body">We take care of the land that hosts us. We clean up after ourselves and leave nothing behind. Not even the small stuff.</p>
+                        <div class="principle-example">
+                            <p>Not only packing out all your own trash, but also meticulously sweeping the ground where your tent stood to pick up micro-trash like glitter, broken zip ties, or stray hairs.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">No Commerce</h3>
+                        <p class="principle-card-hook">Forget about money. There's nothing to buy.</p>
+                        <p class="principle-card-body">No brands. No selling. No transactions. Without money in the mix, what's left is cooperation, participation, and what actually matters.</p>
+                        <div class="principle-example">
+                            <p>Realizing you forgot essential sunscreen and asking around to borrow some, rather than defaulting to trying to find someone selling it for cash or barter.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Participation</h3>
+                        <p class="principle-card-hook">Get involved. Elsewhere is what we make it.</p>
+                        <p class="principle-card-body">You don't come here to watch. You come here to do. And the more you put in, the more it becomes yours.</p>
+                        <div class="principle-example">
+                            <p>Taking the initiative to wake up before dawn to sweep the common area of your camp or refill the communal water station without being asked.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Self Expression</h3>
+                        <p class="principle-card-hook">The freedom to be yourself.</p>
+                        <p class="principle-card-body">Be who you are. Or who you want to be. We respect that freedom and expect the same respect in return.</p>
+                        <div class="principle-example">
+                            <p>Wearing an outfit that makes you feel vulnerable or challenging, but consciously ensuring that your expression does not disturb the sleep or comfort of your neighbors.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                    <div class="principle-card">
+                        <h3 class="principle-card-title">Self Reliance</h3>
+                        <p class="principle-card-hook">You are responsible for you, mentally and physically.</p>
+                        <p class="principle-card-body">Bring what you need. Take care of yourself. And when you need help, ask. That's part of it too.</p>
+                        <div class="principle-example">
+                            <p>Bringing enough food and water for the entire trip, plus a small emergency surplus, so that if you fall ill, you do not become a burden on the collective community.</p>
+                        </div>
+                        <button class="principle-example-toggle" aria-expanded="false">Show example</button>
+                    </div>
+
+                </div><!-- /.principles-track -->
+
+                <button class="principles-arrow principles-arrow--next" aria-label="Next principle">&#8594;</button>
+            </div><!-- /.principles-carousel-wrap -->
+
+            <div class="principles-dots" id="principlesDots" aria-hidden="true"></div>
         </section>
 
         <section class="tickets" id="tickets" aria-labelledby="tickets-heading">

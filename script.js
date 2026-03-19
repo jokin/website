@@ -516,6 +516,85 @@
         });
     }
 
+    // Principles Carousel
+    function initPrinciplesCarousel() {
+        var track = document.getElementById('principlesTrack');
+        var dotsContainer = document.getElementById('principlesDots');
+        var prevBtn = document.querySelector('.principles-arrow--prev');
+        var nextBtn = document.querySelector('.principles-arrow--next');
+        if (!track) return;
+
+        var cards = track.querySelectorAll('.principle-card');
+        var currentIndex = 0;
+
+        // Build dots
+        cards.forEach(function(_, i) {
+            var dot = document.createElement('button');
+            dot.className = 'principles-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Go to principle ' + (i + 1));
+            dot.addEventListener('click', function() { scrollToCard(i); });
+            if (dotsContainer) dotsContainer.appendChild(dot);
+        });
+
+        function getDots() {
+            return dotsContainer ? dotsContainer.querySelectorAll('.principles-dot') : [];
+        }
+
+        function updateDots() {
+            var dots = getDots();
+            dots.forEach(function(dot, i) {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function scrollToCard(index) {
+            var card = cards[index];
+            if (!card) return;
+            var cardLeft = card.offsetLeft;
+            var cardWidth = card.offsetWidth;
+            var trackWidth = track.clientWidth;
+            var scrollPos = cardLeft - (trackWidth - cardWidth) / 2;
+            track.scrollTo({ left: scrollPos, behavior: 'smooth' });
+            currentIndex = index;
+            updateDots();
+        }
+
+        function updateIndexFromScroll() {
+            var trackCenter = track.scrollLeft + track.clientWidth / 2;
+            var bestIdx = 0;
+            var bestDist = Infinity;
+            cards.forEach(function(card, i) {
+                var cardCenter = card.offsetLeft + card.offsetWidth / 2;
+                var dist = Math.abs(cardCenter - trackCenter);
+                if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+            });
+            if (bestIdx !== currentIndex) {
+                currentIndex = bestIdx;
+                updateDots();
+            }
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', function() {
+            scrollToCard(Math.max(0, currentIndex - 1));
+        });
+        if (nextBtn) nextBtn.addEventListener('click', function() {
+            scrollToCard(Math.min(cards.length - 1, currentIndex + 1));
+        });
+
+        track.addEventListener('scroll', updateIndexFromScroll, { passive: true });
+
+        // Example toggles
+        track.querySelectorAll('.principle-example-toggle').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var card = btn.closest('.principle-card');
+                if (!card) return;
+                var isOpen = card.classList.toggle('example-open');
+                btn.textContent = isOpen ? 'Hide example' : 'Show example';
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        });
+    }
+
     // Back to Top
     function initBackToTop() {
         var btn = document.querySelector('.back-to-top');
@@ -543,6 +622,7 @@
         initTitleGlitch();
         initPhotoGlitch();
         initBackToTop();
+        initPrinciplesCarousel();
     }
 
     if (document.readyState === 'loading') {

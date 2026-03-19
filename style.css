@@ -1370,71 +1370,258 @@ h4 { font-size: 1.15rem; }
 }
 
 /* Principles */
+/* ========================
+   Principles — Carousel
+   ======================== */
 .principles {
-    padding: 8rem 0;
-    background: var(--color-bg-alt);
+    padding: 7rem 0 5rem;
+    background: #ede6d3;
+    position: relative;
+    overflow: hidden;
 }
 
-.principles h2 {
-    text-align: center;
+/* Grain texture */
+.principles::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.principles > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Left-aligned header — anchors the section to the left */
+.principles-header {
+    padding: 0 2rem 0 max(1.5rem, 5vw);
+    margin-bottom: 2.5rem;
+}
+
+.principles-header-inner {
+    position: relative;
+}
+
+.principles-header-text {
+    max-width: 520px;
+}
+
+.principles-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 1rem;
 }
 
 .principles-intro {
-    text-align: center;
     color: var(--color-text-muted);
-    font-size: 1.15rem;
-    max-width: 600px;
-    margin: 0 auto 3.5rem;
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.8;
 }
 
-.principles-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+.principles-stamp {
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    width: 320px;
+    transform: rotate(10deg);
+    opacity: 0.88;
+    pointer-events: none;
+    user-select: none;
 }
 
-.principle {
+/* Carousel wrap */
+.principles-carousel-wrap {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 1.5rem;
-    background: #fff;
-    border-radius: var(--radius);
-    transition: all 0.3s;
-    border: 1px solid transparent;
-}
-.principle:hover {
-    transform: translateX(8px);
-    border-color: var(--color-accent);
-    box-shadow: 0 4px 20px rgba(194, 112, 62, 0.1);
 }
 
-.principle-name {
-    font-weight: 700;
-    font-size: 1.05rem;
+/* The scrollable track — left-biased, cards start early */
+.principles-track {
+    display: flex;
+    gap: 1.1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: clamp(1rem, 4vw, 2.5rem);
+    padding-right: clamp(4rem, 22vw, 10rem);
+    align-items: flex-start;
+}
+
+.principles-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Base card */
+.principle-card {
+    flex-shrink: 0;
+    width: clamp(255px, 68vw, 302px);
+    background: #fefcf6;
+    border: 1px solid #c5b89e;
+    border-radius: 5px;
+    padding: 1.75rem 1.6rem;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+/* Controlled irregularity — each card sits slightly differently */
+.principle-card:nth-child(2)  { transform: rotate(-0.4deg); }
+.principle-card:nth-child(3)  { transform: rotate(0.35deg) translateY(5px); }
+.principle-card:nth-child(4)  { transform: rotate(-0.25deg) translateY(-3px); }
+.principle-card:nth-child(5)  { transform: rotate(0.5deg); }
+.principle-card:nth-child(6)  { transform: rotate(-0.3deg) translateY(6px); }
+.principle-card:nth-child(7)  { transform: rotate(0.3deg) translateY(-2px); }
+.principle-card:nth-child(8)  { transform: rotate(-0.45deg) translateY(4px); }
+.principle-card:nth-child(9)  { transform: rotate(0.2deg); }
+.principle-card:nth-child(10) { transform: rotate(-0.35deg) translateY(-4px); }
+.principle-card:nth-child(11) { transform: rotate(0.4deg) translateY(3px); }
+
+.principle-card:hover {
+    box-shadow: 0 5px 22px rgba(44, 36, 24, 0.13);
+}
+
+.principle-card-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.principle-card-hook {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    margin: 0;
+    line-height: 1.45;
+}
+
+.principle-card-body {
+    font-size: 0.87rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* Consent — first in sequence, same as the rest */
+.principle-card--consent {
+    background: #fefcf6;
+}
+
+/* Arrow buttons — raw, no chrome */
+.principles-arrow {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    color: #8a7a66;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.4rem 0.85rem;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.principles-arrow:hover {
     color: var(--color-text);
 }
 
-.principle-desc {
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-    text-align: right;
-    max-width: 60%;
+.principles-arrow--prev {
+    margin-left: 0.5rem;
 }
 
-.consent-banner {
-    margin-top: 2.5rem;
-    padding: 2rem 2.5rem;
-    background: #3d4a35;
-    border-radius: var(--radius);
-    text-align: center;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    line-height: 1.7;
+.principles-arrow--next {
+    margin-right: 0.5rem;
 }
-.consent-banner strong {
-    color: #fff;
-    font-size: 1.25rem;
+
+/* Dots — dashes, centered */
+.principles-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding-bottom: 0.75rem;
+    margin-top: -0.5rem;
+}
+
+.principles-dot {
+    width: 16px;
+    height: 2px;
+    border-radius: 1px;
+    background: #bfb09a;
+    cursor: pointer;
+    transition: background 0.2s, width 0.2s;
+    border: none;
+    padding: 0;
+}
+
+.principles-dot.active {
+    background: var(--color-accent);
+    width: 26px;
+}
+
+/* Example toggle & content */
+.principle-example {
+    display: none;
+    margin-top: 0.25rem;
+    padding: 0.75rem 0.9rem;
+    background: rgba(44, 36, 24, 0.03);
+    border-left: 2px solid rgba(194, 112, 62, 0.3);
+}
+
+.principle-card.example-open .principle-example {
+    display: block;
+}
+
+.principle-example p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0;
+}
+
+.principle-example p::before {
+    content: 'eg. ';
+    font-style: normal;
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 0.72rem;
+}
+
+.principle-example-toggle {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    background: none;
+    border: none;
+    color: #9a8878;
+    font-size: 0.74rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0;
+    transition: color 0.2s;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: rgba(154, 136, 120, 0.35);
+}
+
+.principle-example-toggle:hover {
+    color: var(--color-text);
 }
 
 /* Event */
@@ -2379,18 +2566,40 @@ h4 { font-size: 1.15rem; }
         max-width: 320px;
     }
 
-    .principles-list {
-        grid-template-columns: 1fr;
+    .principles-header-inner {
+        display: flex;
+        flex-direction: column;
     }
 
-    .principle {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    .principles-stamp {
+        order: -1;
+        align-self: flex-end;
+        position: static;
+        width: 140px;
+        transform: rotate(10deg);
+        margin-bottom: 0.5rem;
     }
-    .principle-desc {
-        text-align: left;
-        max-width: 100%;
+
+    .principles-arrow {
+        display: none;
+    }
+
+    .principles-track {
+        padding-left: 1rem;
+        padding-right: clamp(3rem, 25vw, 6rem);
+    }
+
+    .principle-card {
+        width: clamp(238px, 76vw, 285px);
+    }
+
+    .principle-card--consent {
+        width: clamp(238px, 76vw, 285px);
+    }
+
+    /* Reset rotations on mobile — readability first */
+    .principle-card:nth-child(n) {
+        transform: none;
     }
 
     .governance-grid {
