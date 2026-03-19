@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 19 ===
+    {"date": "2026-03-19", "source": "Tech", "text": "Humans app now supports per-team public pages (click on Edit Page in a team)"},
     {"date": "2026-03-19", "source": "Legal", "text": "\u2018Elsewhere\u2019 name fully cleared by NCA lawyers"},
 
     // === March 18 ===
