@@ -94,7 +94,7 @@
         checkScroll();
     }
 
-    // Hero Slideshow
+    // Hero Slideshow — lazy-loads each image just before it's shown
     function initSlideshow() {
         var slides = document.querySelectorAll('.hero-slide');
         if (slides.length < 2) return;
@@ -102,11 +102,27 @@
         var current = 0;
         var total = slides.length;
 
-        setInterval(function() {
+        function loadSlide(index) {
+            var slide = slides[index];
+            if (slide.dataset.bg && !slide.style.backgroundImage) {
+                slide.style.backgroundImage = "url('" + slide.dataset.bg + "')";
+            }
+        }
+
+        // Preload the next slide a beat ahead so it's ready when it transitions
+        function advance() {
             slides[current].classList.remove('active');
             current = (current + 1) % total;
+            loadSlide(current);
             slides[current].classList.add('active');
-        }, 5000);
+            // Queue the one after that too
+            loadSlide((current + 1) % total);
+        }
+
+        // Preload slide 2 immediately so it's ready for the first transition
+        loadSlide(1);
+
+        setInterval(advance, 5000);
     }
 
     // Scroll Animations
