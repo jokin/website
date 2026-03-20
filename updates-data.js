@@ -6,7 +6,6 @@ var UPDATES_DATA = [
     {"date": "2026-03-20", "source": "Governance", "text": "<a href=\"estatutos.html\">Statutes page</a> fully updated on the website with all amendments and 5-language support"},
 
     // === March 19 ===
-    {"date": "2026-03-19", "source": "Ticketing", "text": "Ticketing is now ready for marketing push \u2014 tell everyone about Elsewhere!"},
     {"date": "2026-03-19", "source": "Finance", "text": "First half of creativity budget approved"},
     {"date": "2026-03-19", "source": "Governance", "text": "Process for bringing on new asociados is now active"},
     {"date": "2026-03-19", "source": "Governance", "text": "10 amendments to the association statutes passed by the board"},
