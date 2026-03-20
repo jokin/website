@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 20 ===
+    {"date": "2026-03-20", "source": "Governance", "text": "NCA now has 44 asociados officially in the system! More on the way!"},
     {"date": "2026-03-20", "source": "Governance", "text": "March 19 <a href=\"transparency/2026-03-19-board.html\">board meeting</a> and <a href=\"transparency/2026-03-19-community.html\">community meeting</a> minutes published to transparency page"},
     {"date": "2026-03-20", "source": "Comms", "text": "Hero section redesigned with animated film grain, dust particles, and handwritten annotations"},
     {"date": "2026-03-20", "source": "Governance", "text": "<a href=\"estatutos.html\">Statutes page</a> fully updated on the website with all amendments and 5-language support"},
