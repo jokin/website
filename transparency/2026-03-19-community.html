@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meeting - March 19, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .resource-links { background: var(--color-bg-secondary); padding: 1.25rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .resource-links h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+        .resource-links ul { list-style: none; padding: 0; margin: 0; }
+        .resource-links li { margin-bottom: 0.5rem; }
+        .resource-links a { color: var(--color-accent); font-weight: 500; }
+        .resource-links a:hover { text-decoration: underline; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 2rem; border-radius: 8px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px; }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>Community Meeting</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 19 March 2026, 19:55 CET</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ==================== ENGLISH ==================== -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chaired by Chris T O, with board members, leads, and community members</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Full Records</h3>
+                        <ul>
+                            <li><a href="2026-03-19-community-transcript.html">ElevenLabs transcript (English only)</a></li>
+                            <li><a href="2026-03-19-community-chat.html">Chat log</a></li>
+                            <li><a href="https://youtu.be/9FgyYkOQd4o" target="_blank" rel="noopener">YouTube recording</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9FgyYkOQd4o" title="Community Meeting - March 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Ticketing Update</h2>
+                        <p>Aaron R reported that ticket sales have been active for four days with strong uptake, including many generosity tickets at inflated prices. Bus arrangements are confirmed and bus tickets are expected to go on sale next week. The ticketing team is working to respond to all queries within 48&ndash;72 hours.</p>
+
+                        <h2>2. Website Updates Feed</h2>
+                        <p>Daniel T introduced a new activity log on the nobodies.team website, allowing community members to track daily developments. Updates can be submitted via the updates feed channel on Discord.</p>
+
+                        <h2>3. Humans Application</h2>
+                        <p>Peter D provided updates on the Humans application:</p>
+                        <ul>
+                            <li>Camp/barrio registration is now live</li>
+                            <li>Email outbox for marketing campaigns added</li>
+                            <li>Shift management (replacing Fist) integrated</li>
+                            <li>Teams can now have public pages visible without login</li>
+                            <li>Ticket purchase tracking integrated with accounts</li>
+                            <li>Feedback/bug reports can be submitted via the bubble in the lower right corner</li>
+                        </ul>
+                        <p>Fist is being shut down &mdash; all shift management is now handled through Humans.</p>
+
+                        <h2>4. Legal Update</h2>
+                        <p>Daniel T shared an update on behalf of Pepe C:</p>
+                        <ul>
+                            <li>Asset transfer substantive terms largely agreed; remaining blockers are the asset inventory and final language alignment</li>
+                            <li>External IP validation confirms &ldquo;Elsewhere&rdquo; is viable and usable</li>
+                            <li>Ticketing legal infrastructure (privacy policy, media policy, participation agreement) is in place and GDPR compliant</li>
+                            <li>First structured risk assessment completed, being validated with external specialists</li>
+                            <li>External Spanish labor lawyer engaged to build a framework for year-round operations and event-specific volunteers</li>
+                        </ul>
+
+                        <h2>5. Recruitment Needs</h2>
+                        <p>Frank F announced departments can now set up their own shifts in Humans. Key recruitment needs:</p>
+                        <ul>
+                            <li><strong>Cantina Lead</strong> during build (especially early build) &mdash; urgent</li>
+                            <li><strong>Strike Lead</strong> &mdash; still open</li>
+                        </ul>
+
+                        <h2>6. Budget</h2>
+                        <p>Peter D reported positive cash flow from ticket sales, exceeding immediate expenses. Bank account remains a priority. A granular cash flow statement is being developed for next week.</p>
+
+                        <h2>7. Website Process</h2>
+                        <p>Daniel T explained the process for updating the nobodies.team website: either submit a GitHub pull request, or send content directly to Daniel T or Laura from Comms. Teams can create public pages on the Humans app and request links from the main website.</p>
+
+                        <h2>8. Q&amp;A</h2>
+                        <ul>
+                            <li><strong>Ticket numbers:</strong> Not being publicly released as they change rapidly. Voucher codes should not be mentioned in public announcements to avoid support overhead and revenue impact.</li>
+                            <li><strong>Container access:</strong> Close to resolution, pending asset inventory and one remaining liability point.</li>
+                            <li><strong>Shift approvals:</strong> Shifts can be configured to require approval rather than open sign-up.</li>
+                            <li><strong>Africa Burn outreach:</strong> Sakolo S proposed an ambassador effort at Africa Burn and other festivals. An &ldquo;Ambassadors&rdquo; channel will be created on Discord.</li>
+                            <li><strong>Facebook page:</strong> No confirmed plans; question directed to the Comms channel on Discord.</li>
+                        </ul>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Create agenda items for community call when notified during the week</td></tr>
+                                <tr><td>Daniel T / Laura</td><td>Handle website update requests</td></tr>
+                                <tr><td>Daniel T</td><td>Add public Humans app page links to website when requested</td></tr>
+                                <tr><td>Chris T O</td><td>Create ambassadors channel on Discord</td></tr>
+                                <tr><td>Sakolo S</td><td>Post Africa Burn coordination message in ambassadors channel</td></tr>
+                                <tr><td>Chris T O</td><td>Ask about Facebook page plan on Comms Discord channel</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated by Gemini and sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== SPANISH ==================== -->
+                <div class="lang-content" data-lang="es">
+
+                    <div class="attendees">
+                        <strong>Presidida por Chris T O, con miembros de la junta, responsables de &aacute;rea y miembros de la comunidad</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Registros completos</h3>
+                        <ul>
+                            <li><a href="2026-03-19-community-transcript.html">Transcripci&oacute;n ElevenLabs (solo en ingl&eacute;s)</a></li>
+                            <li><a href="2026-03-19-community-chat.html">Registro del chat</a></li>
+                            <li><a href="https://youtu.be/9FgyYkOQd4o" target="_blank" rel="noopener">Grabaci&oacute;n en YouTube</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9FgyYkOQd4o" title="Community Meeting - March 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Actualizaci&oacute;n de Entradas</h2>
+                        <p>Aaron R inform&oacute; que la venta de entradas lleva cuatro d&iacute;as activa con una fuerte aceptaci&oacute;n, incluyendo muchas entradas de generosidad a precios elevados. Los autobuses est&aacute;n confirmados y se espera que los billetes de autob&uacute;s salgan a la venta la pr&oacute;xima semana. El equipo de entradas est&aacute; trabajando para responder a todas las consultas en un plazo de 48 a 72 horas.</p>
+
+                        <h2>2. Feed de Actualizaciones del Sitio Web</h2>
+                        <p>Daniel T present&oacute; un nuevo registro de actividad en el sitio web nobodies.team, que permite a los miembros de la comunidad seguir los avances diarios. Las actualizaciones se pueden enviar a trav&eacute;s del canal de actualizaciones en Discord.</p>
+
+                        <h2>3. Aplicaci&oacute;n Humans</h2>
+                        <p>Peter D proporcion&oacute; actualizaciones sobre la aplicaci&oacute;n Humans:</p>
+                        <ul>
+                            <li>El registro de campamentos/barrios ya est&aacute; activo</li>
+                            <li>Se a&ntilde;adi&oacute; la bandeja de salida de correo para campa&ntilde;as de marketing</li>
+                            <li>Gesti&oacute;n de turnos (reemplazando a Fist) integrada</li>
+                            <li>Los equipos ahora pueden tener p&aacute;ginas p&uacute;blicas visibles sin iniciar sesi&oacute;n</li>
+                            <li>Seguimiento de compra de entradas integrado con cuentas</li>
+                            <li>Los comentarios y reportes de errores se pueden enviar a trav&eacute;s del bot&oacute;n en la esquina inferior derecha</li>
+                        </ul>
+                        <p>Fist se est&aacute; cerrando &mdash; toda la gesti&oacute;n de turnos se realiza ahora a trav&eacute;s de Humans.</p>
+
+                        <h2>4. Actualizaci&oacute;n Legal</h2>
+                        <p>Daniel T comparti&oacute; una actualizaci&oacute;n en nombre de Pepe C:</p>
+                        <ul>
+                            <li>Los t&eacute;rminos sustantivos de la transferencia de activos est&aacute;n en gran medida acordados; los bloqueos restantes son el inventario de activos y la alineaci&oacute;n final del lenguaje</li>
+                            <li>La validaci&oacute;n externa de propiedad intelectual confirma que &laquo;Elsewhere&raquo; es viable y utilizable</li>
+                            <li>La infraestructura legal de entradas (pol&iacute;tica de privacidad, pol&iacute;tica de medios, acuerdo de participaci&oacute;n) est&aacute; en vigor y cumple con el RGPD</li>
+                            <li>Primera evaluaci&oacute;n estructurada de riesgos completada, siendo validada con especialistas externos</li>
+                            <li>Abogado laboral espa&ntilde;ol externo contratado para construir un marco para operaciones anuales y voluntarios espec&iacute;ficos del evento</li>
+                        </ul>
+
+                        <h2>5. Necesidades de Reclutamiento</h2>
+                        <p>Frank F anunci&oacute; que los departamentos ahora pueden configurar sus propios turnos en Humans. Necesidades clave de reclutamiento:</p>
+                        <ul>
+                            <li><strong>L&iacute;der de Cantina</strong> durante la construcci&oacute;n (especialmente la construcci&oacute;n temprana) &mdash; urgente</li>
+                            <li><strong>L&iacute;der de Desmontaje</strong> &mdash; a&uacute;n vacante</li>
+                        </ul>
+
+                        <h2>6. Presupuesto</h2>
+                        <p>Peter D inform&oacute; de un flujo de caja positivo por la venta de entradas, superando los gastos inmediatos. La cuenta bancaria sigue siendo una prioridad. Se est&aacute; desarrollando un estado de flujo de caja detallado para la pr&oacute;xima semana.</p>
+
+                        <h2>7. Proceso del Sitio Web</h2>
+                        <p>Daniel T explic&oacute; el proceso para actualizar el sitio web nobodies.team: enviar un pull request en GitHub, o enviar contenido directamente a Daniel T o Laura de Comunicaciones. Los equipos pueden crear p&aacute;ginas p&uacute;blicas en la app Humans y solicitar enlaces desde el sitio web principal.</p>
+
+                        <h2>8. Preguntas y Respuestas</h2>
+                        <ul>
+                            <li><strong>N&uacute;meros de entradas:</strong> No se publican ya que cambian r&aacute;pidamente. Los c&oacute;digos de descuento no deben mencionarse en anuncios p&uacute;blicos para evitar sobrecarga de soporte e impacto en los ingresos.</li>
+                            <li><strong>Acceso a contenedores:</strong> Cerca de resoluci&oacute;n, pendiente del inventario de activos y un punto de responsabilidad restante.</li>
+                            <li><strong>Aprobaci&oacute;n de turnos:</strong> Los turnos pueden configurarse para requerir aprobaci&oacute;n en lugar de inscripci&oacute;n libre.</li>
+                            <li><strong>Difusi&oacute;n en Africa Burn:</strong> Sakolo S propuso un esfuerzo de embajadores en Africa Burn y otros festivales. Se crear&aacute; un canal de &laquo;Embajadores&raquo; en Discord.</li>
+                            <li><strong>P&aacute;gina de Facebook:</strong> Sin planes confirmados; pregunta dirigida al canal de Comunicaciones en Discord.</li>
+                        </ul>
+
+                        <h2>Acciones a Realizar</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Crear puntos de agenda para la llamada comunitaria cuando se le notifique durante la semana</td></tr>
+                                <tr><td>Daniel T / Laura</td><td>Gestionar solicitudes de actualizaci&oacute;n del sitio web</td></tr>
+                                <tr><td>Daniel T</td><td>A&ntilde;adir enlaces de p&aacute;ginas p&uacute;blicas de la app Humans al sitio web cuando se solicite</td></tr>
+                                <tr><td>Chris T O</td><td>Crear canal de embajadores en Discord</td></tr>
+                                <tr><td>Sakolo S</td><td>Publicar mensaje de coordinaci&oacute;n de Africa Burn en el canal de embajadores</td></tr>
+                                <tr><td>Chris T O</td><td>Preguntar sobre el plan de p&aacute;gina de Facebook en el canal de Comunicaciones de Discord</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente por Gemini y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== FRENCH ==================== -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sid&eacute;e par Chris T O, avec les membres du conseil, les responsables et des membres de la communaut&eacute;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archives compl&egrave;tes</h3>
+                        <ul>
+                            <li><a href="2026-03-19-community-transcript.html">Transcription ElevenLabs (en anglais uniquement)</a></li>
+                            <li><a href="2026-03-19-community-chat.html">Journal du chat</a></li>
+                            <li><a href="https://youtu.be/9FgyYkOQd4o" target="_blank" rel="noopener">Enregistrement YouTube</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9FgyYkOQd4o" title="Community Meeting - March 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Mise &agrave; jour Billetterie</h2>
+                        <p>Aaron R a rapport&eacute; que la vente de billets est active depuis quatre jours avec une forte adh&eacute;sion, incluant de nombreux billets de g&eacute;n&eacute;rosit&eacute; &agrave; des prix major&eacute;s. Les bus sont confirm&eacute;s et les billets de bus devraient &ecirc;tre mis en vente la semaine prochaine. L&rsquo;&eacute;quipe billetterie s&rsquo;efforce de r&eacute;pondre &agrave; toutes les demandes dans un d&eacute;lai de 48 &agrave; 72 heures.</p>
+
+                        <h2>2. Fil d&rsquo;Actualit&eacute;s du Site Web</h2>
+                        <p>Daniel T a pr&eacute;sent&eacute; un nouveau journal d&rsquo;activit&eacute; sur le site nobodies.team, permettant aux membres de la communaut&eacute; de suivre les d&eacute;veloppements quotidiens. Les mises &agrave; jour peuvent &ecirc;tre soumises via le canal de mises &agrave; jour sur Discord.</p>
+
+                        <h2>3. Application Humans</h2>
+                        <p>Peter D a fourni des mises &agrave; jour sur l&rsquo;application Humans :</p>
+                        <ul>
+                            <li>L&rsquo;inscription des camps/barrios est d&eacute;sormais active</li>
+                            <li>Bo&icirc;te d&rsquo;envoi d&rsquo;e-mails pour les campagnes marketing ajout&eacute;e</li>
+                            <li>Gestion des cr&eacute;neaux (rempla&ccedil;ant Fist) int&eacute;gr&eacute;e</li>
+                            <li>Les &eacute;quipes peuvent d&eacute;sormais avoir des pages publiques visibles sans connexion</li>
+                            <li>Suivi des achats de billets int&eacute;gr&eacute; aux comptes</li>
+                            <li>Les retours et signalements de bugs peuvent &ecirc;tre soumis via la bulle en bas &agrave; droite</li>
+                        </ul>
+                        <p>Fist est en cours de fermeture &mdash; toute la gestion des cr&eacute;neaux est d&eacute;sormais g&eacute;r&eacute;e via Humans.</p>
+
+                        <h2>4. Mise &agrave; jour Juridique</h2>
+                        <p>Daniel T a partag&eacute; une mise &agrave; jour au nom de Pepe C :</p>
+                        <ul>
+                            <li>Les termes substantiels du transfert d&rsquo;actifs sont en grande partie convenus ; les blocages restants sont l&rsquo;inventaire des actifs et l&rsquo;alignement final du langage</li>
+                            <li>La validation externe de propri&eacute;t&eacute; intellectuelle confirme que &laquo; Elsewhere &raquo; est viable et utilisable</li>
+                            <li>L&rsquo;infrastructure juridique de la billetterie (politique de confidentialit&eacute;, politique m&eacute;dia, accord de participation) est en place et conforme au RGPD</li>
+                            <li>Premi&egrave;re &eacute;valuation structur&eacute;e des risques termin&eacute;e, en cours de validation avec des sp&eacute;cialistes externes</li>
+                            <li>Avocat espagnol du travail externe engag&eacute; pour &eacute;laborer un cadre pour les op&eacute;rations annuelles et les b&eacute;n&eacute;voles sp&eacute;cifiques &agrave; l&rsquo;&eacute;v&eacute;nement</li>
+                        </ul>
+
+                        <h2>5. Besoins en Recrutement</h2>
+                        <p>Frank F a annonc&eacute; que les d&eacute;partements peuvent d&eacute;sormais configurer leurs propres cr&eacute;neaux dans Humans. Besoins cl&eacute;s en recrutement :</p>
+                        <ul>
+                            <li><strong>Responsable Cantina</strong> pendant la construction (surtout la construction pr&eacute;coce) &mdash; urgent</li>
+                            <li><strong>Responsable D&eacute;montage</strong> &mdash; toujours vacant</li>
+                        </ul>
+
+                        <h2>6. Budget</h2>
+                        <p>Peter D a rapport&eacute; un flux de tr&eacute;sorerie positif gr&acirc;ce aux ventes de billets, d&eacute;passant les d&eacute;penses imm&eacute;diates. Le compte bancaire reste une priorit&eacute;. Un &eacute;tat d&eacute;taill&eacute; des flux de tr&eacute;sorerie est en cours de d&eacute;veloppement pour la semaine prochaine.</p>
+
+                        <h2>7. Processus du Site Web</h2>
+                        <p>Daniel T a expliqu&eacute; le processus de mise &agrave; jour du site nobodies.team : soumettre un pull request sur GitHub, ou envoyer le contenu directement &agrave; Daniel T ou Laura des Communications. Les &eacute;quipes peuvent cr&eacute;er des pages publiques sur l&rsquo;app Humans et demander des liens depuis le site principal.</p>
+
+                        <h2>8. Questions-R&eacute;ponses</h2>
+                        <ul>
+                            <li><strong>Nombres de billets :</strong> Non publi&eacute;s car ils changent rapidement. Les codes promo ne doivent pas &ecirc;tre mentionn&eacute;s dans les annonces publiques pour &eacute;viter les surcharges de support et l&rsquo;impact sur les revenus.</li>
+                            <li><strong>Acc&egrave;s aux conteneurs :</strong> Proche de la r&eacute;solution, en attente de l&rsquo;inventaire des actifs et d&rsquo;un point de responsabilit&eacute; restant.</li>
+                            <li><strong>Approbation des cr&eacute;neaux :</strong> Les cr&eacute;neaux peuvent &ecirc;tre configur&eacute;s pour n&eacute;cessiter une approbation plut&ocirc;t qu&rsquo;une inscription libre.</li>
+                            <li><strong>Diffusion &agrave; Africa Burn :</strong> Sakolo S a propos&eacute; un effort d&rsquo;ambassadeurs &agrave; Africa Burn et d&rsquo;autres festivals. Un canal &laquo; Ambassadeurs &raquo; sera cr&eacute;&eacute; sur Discord.</li>
+                            <li><strong>Page Facebook :</strong> Pas de plans confirm&eacute;s ; question dirig&eacute;e vers le canal Communications sur Discord.</li>
+                        </ul>
+
+                        <h2>Actions &agrave; R&eacute;aliser</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Cr&eacute;er des points d&rsquo;agenda pour l&rsquo;appel communautaire lorsqu&rsquo;il est notifi&eacute; pendant la semaine</td></tr>
+                                <tr><td>Daniel T / Laura</td><td>G&eacute;rer les demandes de mise &agrave; jour du site web</td></tr>
+                                <tr><td>Daniel T</td><td>Ajouter les liens des pages publiques de l&rsquo;app Humans au site web sur demande</td></tr>
+                                <tr><td>Chris T O</td><td>Cr&eacute;er le canal ambassadeurs sur Discord</td></tr>
+                                <tr><td>Sakolo S</td><td>Publier un message de coordination Africa Burn dans le canal ambassadeurs</td></tr>
+                                <tr><td>Chris T O</td><td>Se renseigner sur le plan de page Facebook sur le canal Comms de Discord</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; automatiquement par Gemini et d&eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== ITALIAN ==================== -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presieduta da Chris T O, con i membri del consiglio, i responsabili e membri della comunit&agrave;</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Archivi completi</h3>
+                        <ul>
+                            <li><a href="2026-03-19-community-transcript.html">Trascrizione ElevenLabs (solo in inglese)</a></li>
+                            <li><a href="2026-03-19-community-chat.html">Registro della chat</a></li>
+                            <li><a href="https://youtu.be/9FgyYkOQd4o" target="_blank" rel="noopener">Registrazione YouTube</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9FgyYkOQd4o" title="Community Meeting - March 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Aggiornamento Biglietteria</h2>
+                        <p>Aaron R ha riferito che la vendita dei biglietti &egrave; attiva da quattro giorni con un forte riscontro, inclusi molti biglietti di generosit&agrave; a prezzi maggiorati. I bus sono confermati e i biglietti del bus dovrebbero essere messi in vendita la prossima settimana. Il team della biglietteria sta lavorando per rispondere a tutte le richieste entro 48&ndash;72 ore.</p>
+
+                        <h2>2. Feed degli Aggiornamenti del Sito Web</h2>
+                        <p>Daniel T ha presentato un nuovo registro di attivit&agrave; sul sito nobodies.team, che permette ai membri della comunit&agrave; di seguire gli sviluppi quotidiani. Gli aggiornamenti possono essere inviati tramite il canale aggiornamenti su Discord.</p>
+
+                        <h2>3. Applicazione Humans</h2>
+                        <p>Peter D ha fornito aggiornamenti sull&rsquo;applicazione Humans:</p>
+                        <ul>
+                            <li>La registrazione dei campi/barrios &egrave; ora attiva</li>
+                            <li>Aggiunta la casella di posta in uscita per le campagne di marketing</li>
+                            <li>Gestione turni (che sostituisce Fist) integrata</li>
+                            <li>I team possono ora avere pagine pubbliche visibili senza login</li>
+                            <li>Tracciamento degli acquisti di biglietti integrato con gli account</li>
+                            <li>Feedback e segnalazioni di bug possono essere inviati tramite il pulsante nell&rsquo;angolo in basso a destra</li>
+                        </ul>
+                        <p>Fist viene chiuso &mdash; tutta la gestione dei turni &egrave; ora gestita tramite Humans.</p>
+
+                        <h2>4. Aggiornamento Legale</h2>
+                        <p>Daniel T ha condiviso un aggiornamento per conto di Pepe C:</p>
+                        <ul>
+                            <li>I termini sostanziali del trasferimento di beni sono in gran parte concordati; i blocchi rimanenti sono l&rsquo;inventario dei beni e l&rsquo;allineamento finale del linguaggio</li>
+                            <li>La validazione esterna della propriet&agrave; intellettuale conferma che &laquo;Elsewhere&raquo; &egrave; utilizzabile e praticabile</li>
+                            <li>L&rsquo;infrastruttura legale della biglietteria (informativa sulla privacy, policy sui media, accordo di partecipazione) &egrave; in vigore e conforme al GDPR</li>
+                            <li>Prima valutazione strutturata dei rischi completata, in fase di validazione con specialisti esterni</li>
+                            <li>Avvocato del lavoro spagnolo esterno ingaggiato per costruire un quadro per le operazioni annuali e i volontari specifici dell&rsquo;evento</li>
+                        </ul>
+
+                        <h2>5. Esigenze di Reclutamento</h2>
+                        <p>Frank F ha annunciato che i dipartimenti possono ora configurare i propri turni in Humans. Esigenze chiave di reclutamento:</p>
+                        <ul>
+                            <li><strong>Responsabile Cantina</strong> durante la costruzione (specialmente la costruzione iniziale) &mdash; urgente</li>
+                            <li><strong>Responsabile Smontaggio</strong> &mdash; ancora vacante</li>
+                        </ul>
+
+                        <h2>6. Bilancio</h2>
+                        <p>Peter D ha riferito un flusso di cassa positivo dalle vendite dei biglietti, superiore alle spese immediate. Il conto bancario rimane una priorit&agrave;. Un prospetto dettagliato dei flussi di cassa &egrave; in fase di sviluppo per la prossima settimana.</p>
+
+                        <h2>7. Processo del Sito Web</h2>
+                        <p>Daniel T ha spiegato il processo per aggiornare il sito nobodies.team: inviare un pull request su GitHub, o inviare il contenuto direttamente a Daniel T o Laura delle Comunicazioni. I team possono creare pagine pubbliche sull&rsquo;app Humans e richiedere link dal sito web principale.</p>
+
+                        <h2>8. Domande e Risposte</h2>
+                        <ul>
+                            <li><strong>Numeri dei biglietti:</strong> Non vengono pubblicati poich&eacute; cambiano rapidamente. I codici sconto non devono essere menzionati negli annunci pubblici per evitare sovraccarico del supporto e impatto sui ricavi.</li>
+                            <li><strong>Accesso ai container:</strong> Vicino alla risoluzione, in attesa dell&rsquo;inventario dei beni e di un ultimo punto di responsabilit&agrave;.</li>
+                            <li><strong>Approvazione turni:</strong> I turni possono essere configurati per richiedere l&rsquo;approvazione anzich&eacute; l&rsquo;iscrizione libera.</li>
+                            <li><strong>Diffusione ad Africa Burn:</strong> Sakolo S ha proposto un&rsquo;iniziativa di ambasciatori ad Africa Burn e altri festival. Un canale &laquo;Ambasciatori&raquo; verr&agrave; creato su Discord.</li>
+                            <li><strong>Pagina Facebook:</strong> Nessun piano confermato; domanda indirizzata al canale Comunicazioni su Discord.</li>
+                        </ul>
+
+                        <h2>Azioni da Intraprendere</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Creare punti dell&rsquo;ordine del giorno per la chiamata comunitaria quando notificato durante la settimana</td></tr>
+                                <tr><td>Daniel T / Laura</td><td>Gestire le richieste di aggiornamento del sito web</td></tr>
+                                <tr><td>Daniel T</td><td>Aggiungere link delle pagine pubbliche dell&rsquo;app Humans al sito web su richiesta</td></tr>
+                                <tr><td>Chris T O</td><td>Creare il canale ambasciatori su Discord</td></tr>
+                                <tr><td>Sakolo S</td><td>Pubblicare il messaggio di coordinamento Africa Burn nel canale ambasciatori</td></tr>
+                                <tr><td>Chris T O</td><td>Chiedere informazioni sul piano della pagina Facebook sul canale Comms di Discord</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato automaticamente da Gemini e depurato per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- ==================== GERMAN ==================== -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Geleitet von Chris T O, mit Vorstandsmitgliedern, Bereichsverantwortlichen und Community-Mitgliedern</strong>
+                    </div>
+
+                    <div class="resource-links">
+                        <h3>Vollst&auml;ndige Aufzeichnungen</h3>
+                        <ul>
+                            <li><a href="2026-03-19-community-transcript.html">ElevenLabs-Transkript (nur auf Englisch)</a></li>
+                            <li><a href="2026-03-19-community-chat.html">Chat-Protokoll</a></li>
+                            <li><a href="https://youtu.be/9FgyYkOQd4o" target="_blank" rel="noopener">YouTube-Aufzeichnung</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9FgyYkOQd4o" title="Community Meeting - March 19, 2026" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="meeting-content">
+                        <h2>1. Ticketing-Update</h2>
+                        <p>Aaron R berichtete, dass der Ticketverkauf seit vier Tagen aktiv ist und starken Zuspruch findet, einschlie&szlig;lich vieler Gro&szlig;z&uuml;gigkeitstickets zu erh&ouml;hten Preisen. Die Busse sind best&auml;tigt und Bustickets sollen n&auml;chste Woche in den Verkauf gehen. Das Ticketing-Team arbeitet daran, alle Anfragen innerhalb von 48&ndash;72 Stunden zu beantworten.</p>
+
+                        <h2>2. Website-Aktualisierungsfeed</h2>
+                        <p>Daniel T stellte ein neues Aktivit&auml;tsprotokoll auf der Website nobodies.team vor, das Community-Mitgliedern erm&ouml;glicht, die t&auml;glichen Entwicklungen zu verfolgen. Aktualisierungen k&ouml;nnen &uuml;ber den Updates-Kanal auf Discord eingereicht werden.</p>
+
+                        <h2>3. Humans-Anwendung</h2>
+                        <p>Peter D gab Aktualisierungen zur Humans-Anwendung:</p>
+                        <ul>
+                            <li>Camp-/Barrio-Registrierung ist jetzt aktiv</li>
+                            <li>E-Mail-Postausgang f&uuml;r Marketingkampagnen hinzugef&uuml;gt</li>
+                            <li>Schichtmanagement (ersetzt Fist) integriert</li>
+                            <li>Teams k&ouml;nnen jetzt &ouml;ffentliche Seiten haben, die ohne Anmeldung sichtbar sind</li>
+                            <li>Ticketkauf-Tracking mit Konten integriert</li>
+                            <li>Feedback/Fehlermeldungen k&ouml;nnen &uuml;ber die Sprechblase unten rechts eingereicht werden</li>
+                        </ul>
+                        <p>Fist wird abgeschaltet &mdash; das gesamte Schichtmanagement wird jetzt &uuml;ber Humans abgewickelt.</p>
+
+                        <h2>4. Rechtliches Update</h2>
+                        <p>Daniel T teilte ein Update im Namen von Pepe C:</p>
+                        <ul>
+                            <li>Die wesentlichen Bedingungen f&uuml;r die Verm&ouml;gens&uuml;bertragung sind weitgehend vereinbart; verbleibende Hindernisse sind das Inventar der Verm&ouml;genswerte und die endg&uuml;ltige Sprachabstimmung</li>
+                            <li>Externe IP-Validierung best&auml;tigt, dass &bdquo;Elsewhere&ldquo; nutzbar und tragf&auml;hig ist</li>
+                            <li>Die rechtliche Infrastruktur f&uuml;r den Ticketverkauf (Datenschutzerkl&auml;rung, Medienrichtlinie, Teilnahmevereinbarung) ist eingerichtet und DSGVO-konform</li>
+                            <li>Erste strukturierte Risikobewertung abgeschlossen, wird mit externen Spezialisten validiert</li>
+                            <li>Externer spanischer Arbeitsrechtsanwalt beauftragt, einen Rahmen f&uuml;r den ganzj&auml;hrigen Betrieb und veranstaltungsspezifische Freiwillige aufzubauen</li>
+                        </ul>
+
+                        <h2>5. Rekrutierungsbedarf</h2>
+                        <p>Frank F gab bekannt, dass Abteilungen jetzt ihre eigenen Schichten in Humans einrichten k&ouml;nnen. Wichtiger Rekrutierungsbedarf:</p>
+                        <ul>
+                            <li><strong>Kantinen-Leitung</strong> w&auml;hrend des Aufbaus (besonders fr&uuml;her Aufbau) &mdash; dringend</li>
+                            <li><strong>Abbau-Leitung</strong> &mdash; weiterhin offen</li>
+                        </ul>
+
+                        <h2>6. Budget</h2>
+                        <p>Peter D berichtete &uuml;ber einen positiven Cashflow aus Ticketverk&auml;ufen, der die unmittelbaren Ausgaben &uuml;bersteigt. Das Bankkonto bleibt Priorit&auml;t. Ein detaillierter Cashflow-Bericht wird f&uuml;r n&auml;chste Woche erstellt.</p>
+
+                        <h2>7. Website-Prozess</h2>
+                        <p>Daniel T erkl&auml;rte den Prozess zur Aktualisierung der Website nobodies.team: entweder einen GitHub-Pull-Request einreichen oder Inhalte direkt an Daniel T oder Laura vom Kommunikationsteam senden. Teams k&ouml;nnen &ouml;ffentliche Seiten in der Humans-App erstellen und Links von der Hauptwebsite anfordern.</p>
+
+                        <h2>8. Fragen und Antworten</h2>
+                        <ul>
+                            <li><strong>Ticketzahlen:</strong> Werden nicht ver&ouml;ffentlicht, da sie sich schnell &auml;ndern. Gutscheincodes sollten in &ouml;ffentlichen Ank&uuml;ndigungen nicht erw&auml;hnt werden, um Supportaufwand und Umsatzeinbu&szlig;en zu vermeiden.</li>
+                            <li><strong>Containerzugang:</strong> Nahe an der L&ouml;sung, ausstehend sind das Inventar der Verm&ouml;genswerte und ein letzter Haftungspunkt.</li>
+                            <li><strong>Schichtgenehmigungen:</strong> Schichten k&ouml;nnen so konfiguriert werden, dass sie eine Genehmigung erfordern statt offener Anmeldung.</li>
+                            <li><strong>Africa Burn Outreach:</strong> Sakolo S schlug eine Botschafter-Initiative bei Africa Burn und anderen Festivals vor. Ein &bdquo;Botschafter&ldquo;-Kanal wird auf Discord erstellt.</li>
+                            <li><strong>Facebook-Seite:</strong> Keine best&auml;tigten Pl&auml;ne; Frage an den Kommunikationskanal auf Discord gerichtet.</li>
+                        </ul>
+
+                        <h2>Aufgaben</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Daniel T</td><td>Tagesordnungspunkte f&uuml;r den Community-Call erstellen, wenn w&auml;hrend der Woche benachrichtigt</td></tr>
+                                <tr><td>Daniel T / Laura</td><td>Website-Aktualisierungsanfragen bearbeiten</td></tr>
+                                <tr><td>Daniel T</td><td>&Ouml;ffentliche Humans-App-Seitenlinks auf Anfrage zur Website hinzuf&uuml;gen</td></tr>
+                                <tr><td>Chris T O</td><td>Botschafter-Kanal auf Discord erstellen</td></tr>
+                                <tr><td>Sakolo S</td><td>Africa Burn Koordinierungsnachricht im Botschafter-Kanal ver&ouml;ffentlichen</td></tr>
+                                <tr><td>Chris T O</td><td>Auf dem Comms-Discord-Kanal nach dem Facebook-Seitenplan fragen</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch von Gemini erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script>
+document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        var lang = this.dataset.lang;
+        document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+        var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+        if (target) target.classList.add('active');
+    });
+});
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>

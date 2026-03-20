@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCA Board Meeting Minutes - March 19, 2026 | Nobodies Collective</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .meeting-page { padding: 8rem 0 4rem; }
+        .meeting-header { margin-bottom: 2rem; }
+        .meeting-header h1 { margin-bottom: 0.5rem; }
+        .meeting-meta { color: var(--color-text-muted); margin-bottom: 1rem; }
+        .meeting-meta span { margin-right: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: var(--color-primary); text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .meeting-content { max-width: 800px; }
+        .meeting-content h2 { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; }
+        .meeting-content h3 { margin-top: 2rem; margin-bottom: 0.75rem; font-size: 1.2rem; }
+        .meeting-content h4 { margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .meeting-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .meeting-content ul, .meeting-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        .meeting-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .meeting-content blockquote {
+            margin: 1.25rem 0;
+            padding: 0.75rem 1rem;
+            border-left: 4px solid var(--color-border);
+            background: var(--color-bg-secondary);
+            color: var(--color-text);
+        }
+        .attendees { background: var(--color-bg-secondary); padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .attendees strong { display: block; margin-bottom: 0.5rem; }
+        .note-box {
+            margin: 1.25rem 0 2rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+        .action-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .action-table th, .action-table td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+        .action-table th { font-weight: 600; }
+        .lang-toggle { display: flex; justify-content: center; gap: 0.5rem; margin: 0 0 2rem; flex-wrap: wrap; }
+        .lang-toggle button { padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; border: 1px solid var(--color-border); background: var(--color-bg-alt); color: var(--color-text-muted); border-radius: var(--radius); cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active, .lang-toggle button:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .lang-note { font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); border-radius: var(--radius); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div id="shared-header" data-prefix=".."></div>
+    <script src="../header.js"></script>
+
+    <main>
+        <section class="meeting-page">
+            <div class="container">
+                <a href="../transparency.html" class="back-link">&larr; Back to Transparency</a>
+
+                <div class="meeting-header">
+                    <h1>NCA Board Meeting Minutes</h1>
+                    <div class="meeting-meta">
+                        <span><strong>Date:</strong> Wednesday 19 March 2026, 19:12 CET</span>
+                    </div>
+                </div>
+
+                <div class="lang-toggle">
+                    <button class="active" data-lang="en">English</button>
+                    <button data-lang="es">Espa&ntilde;ol</button>
+                    <button data-lang="fr">Fran&ccedil;ais</button>
+                    <button data-lang="it">Italiano</button>
+                    <button data-lang="de">Deutsch</button>
+                </div>
+
+                <!-- ENGLISH -->
+                <div class="lang-content active" data-lang="en">
+                    <div class="lang-note">In the event of any discrepancy between this version and the Spanish version, the Spanish version shall prevail.</div>
+
+                    <div class="attendees">
+                        <strong>Chair:</strong> Chris T O<br>
+                        <strong>Board present:</strong> Daniel T, Chris T O, Peter D, Ben D (remotely), Ward D<br>
+                        <strong>Also present:</strong> Daniela M S<br>
+                        <strong>Absent:</strong> Pablo V, Michelle, Pepe C
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Full quorum with five board members present.</p>
+
+                        <h2>1. Board Agenda Format</h2>
+                        <p><strong>Agreement reached:</strong> All agenda items submitted to the board must specify what the submitter needs from the discussion (e.g. a decision, information, alignment). Items requiring a formal decision must include a proposed decision in writing. This aims to make meetings more focused and efficient.</p>
+                        <p>Ben D will update the agenda submission form to include these instructions. Daniel T will collaborate on the wording.</p>
+
+                        <h2>2. Formal Vote Format</h2>
+                        <p><strong>Agreement reached:</strong> Formal votes, particularly statute changes, should focus on one item at a time rather than bundling multiple changes into a single proposal. This is a learning from recent difficulties with large bundled proposals. Peter D noted this should be applied with common sense rather than as a rigid rule.</p>
+
+                        <h2>3. Board Meeting Remit</h2>
+                        <p>Daniel T raised the topic of distinguishing between governance matters (appropriate for board meetings) and operational matters (better handled by operational teams). Discussion was deferred to a future meeting when Pablo V is present, as he had strong views on this topic in previous discussions.</p>
+
+                        <h2>4. Bus Tickets</h2>
+                        <p>Peter D confirmed bus ticket sales are ready to launch, with Aaron aligned on messaging. Daniela M S noted vendors are including contingency percentages due to rising fuel prices, though amounts remain ambiguous.</p>
+
+                        <h2>5. Insurance Update</h2>
+                        <p>Daniela M S reported:</p>
+                        <ul>
+                            <li>Three D&amp;O insurance options currently available, ranging from approximately 600 to 900 euros</li>
+                            <li>Most insurers are using Hiscox</li>
+                            <li>Recommendation to bundle all policies (D&amp;O + event liability) with one company via a broker</li>
+                            <li>The board expressed preference for using a broker for interface and support</li>
+                            <li>Two additional insurance types needed: group accidents and volunteer insurance</li>
+                        </ul>
+                        <p><strong>Action:</strong> Daniela M S will email the board with insurance options and quotes for a vote.</p>
+
+                        <h2>6. Art Grants</h2>
+                        <p><strong>Approved:</strong> 25,000 euro expenditure for art grants (half of the estimated 50K budget). The remainder is contingent on ticket sales. This is a commitment to refund invoices, likely in September, not an immediate cash outflow. Approved by the board.</p>
+
+                        <h2>7. Approval of Collaborators and Members</h2>
+                        <p><strong>Agreement reached:</strong> Ben D has the authority to approve collaborators and members on an expedited basis, provided:</p>
+                        <ul>
+                            <li>There is a majority of &ldquo;yes&rdquo; votes on the Humans app</li>
+                            <li>There are no &ldquo;no&rdquo; or &ldquo;maybe&rdquo; votes against the person</li>
+                            <li>The person has passed consent review</li>
+                        </ul>
+                        <p>This clears the current backlog and establishes a standing process.</p>
+
+                        <h2>8. Budget Update</h2>
+                        <p>Daniela M S reported the budget update was delayed due to a manual process. An update is expected next week, with Aaron providing a ticketing-specific update.</p>
+
+                        <h2>9. Ticket Launch Confirmation</h2>
+                        <p>Daniela M S confirmed that the main ticket sales can proceed, as coordinators have been consulted and are aligned. This was noted as an operational decision, not a board matter.</p>
+
+                        <h2>10. Event Liability Briefing</h2>
+                        <p>Chris T O is scheduling a briefing with a former lead to discuss on-site liability roles and how they interact with board responsibilities. Available dates: 30 March or 6 April. Daniela M S will share recent notes from a call with Michael (aka Nurse) regarding site health matters to complement the briefing.</p>
+
+                        <h2>Action Items</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Action</th><th>Due</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Approve PRs in the repo</td><td>ASAP</td></tr>
+                                <tr><td>Chris T O</td><td>Send Michael (Nurse) call notes to former lead for liability briefing</td><td>Before briefing</td></tr>
+                                <tr><td>Daniela M S</td><td>Email insurance options and quotes to board for vote</td><td>This week</td></tr>
+                                <tr><td>Daniel T + Ben D</td><td>Collaborate on agenda submission form instructions</td><td>This week</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Minutes auto-generated by Gemini and sanitised for publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- SPANISH -->
+                <div class="lang-content" data-lang="es">
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Chris T O<br>
+                        <strong>Junta presente:</strong> Daniel T, Chris T O, Peter D, Ben D (en remoto), Ward D<br>
+                        <strong>Tambi&eacute;n presente:</strong> Daniela M S<br>
+                        <strong>Ausentes:</strong> Pablo V, Michelle, Pepe C
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Qu&oacute;rum completo con cinco miembros de la junta presentes.</p>
+
+                        <h2>1. Formato de la Agenda de la Junta</h2>
+                        <p><strong>Acuerdo alcanzado:</strong> Todos los puntos de la agenda presentados a la junta deben especificar lo que el solicitante necesita de la discusi&oacute;n (p. ej., una decisi&oacute;n, informaci&oacute;n, alineaci&oacute;n). Los puntos que requieran una decisi&oacute;n formal deben incluir una propuesta de decisi&oacute;n por escrito. Esto busca hacer las reuniones m&aacute;s enfocadas y eficientes.</p>
+                        <p>Ben D actualizar&aacute; el formulario de presentaci&oacute;n de la agenda para incluir estas instrucciones. Daniel T colaborar&aacute; en la redacci&oacute;n.</p>
+
+                        <h2>2. Formato de Votaci&oacute;n Formal</h2>
+                        <p><strong>Acuerdo alcanzado:</strong> Las votaciones formales, particularmente los cambios de estatutos, deben centrarse en un punto a la vez en lugar de agrupar m&uacute;ltiples cambios en una sola propuesta. Esta es una lecci&oacute;n aprendida de las dificultades recientes con propuestas agrupadas grandes. Peter D se&ntilde;al&oacute; que esto deber&iacute;a aplicarse con sentido com&uacute;n en lugar de como una regla r&iacute;gida.</p>
+
+                        <h2>3. &Aacute;mbito de las Reuniones de la Junta</h2>
+                        <p>Daniel T plante&oacute; el tema de distinguir entre asuntos de gobernanza (apropiados para reuniones de la junta) y asuntos operativos (mejor gestionados por los equipos operativos). La discusi&oacute;n se aplaz&oacute; para una futura reuni&oacute;n cuando Pablo V est&eacute; presente, ya que ten&iacute;a opiniones firmes sobre este tema en discusiones anteriores.</p>
+
+                        <h2>4. Billetes de Autob&uacute;s</h2>
+                        <p>Peter D confirm&oacute; que la venta de billetes de autob&uacute;s est&aacute; lista para lanzarse, con Aaron alineado en la comunicaci&oacute;n. Daniela M S not&oacute; que los proveedores est&aacute;n incluyendo porcentajes de contingencia debido al aumento de los precios del combustible, aunque las cantidades siguen siendo ambiguas.</p>
+
+                        <h2>5. Actualizaci&oacute;n de Seguros</h2>
+                        <p>Daniela M S inform&oacute;:</p>
+                        <ul>
+                            <li>Tres opciones de seguro de responsabilidad de directivos disponibles actualmente, con un rango de aproximadamente 600 a 900 euros</li>
+                            <li>La mayor&iacute;a de las aseguradoras utilizan Hiscox</li>
+                            <li>Recomendaci&oacute;n de agrupar todas las p&oacute;lizas (responsabilidad de directivos + responsabilidad del evento) con una empresa a trav&eacute;s de un corredor</li>
+                            <li>La junta expres&oacute; preferencia por utilizar un corredor como intermediario y apoyo</li>
+                            <li>Se necesitan dos tipos adicionales de seguro: accidentes colectivos y seguro de voluntarios</li>
+                        </ul>
+                        <p><strong>Acci&oacute;n:</strong> Daniela M S enviar&aacute; por correo electr&oacute;nico a la junta las opciones y presupuestos de seguros para votaci&oacute;n.</p>
+
+                        <h2>6. Subvenciones de Arte</h2>
+                        <p><strong>Aprobado:</strong> Gasto de 25.000 euros para subvenciones de arte (la mitad del presupuesto estimado de 50.000). El resto depende de la venta de entradas. Se trata de un compromiso de reembolso de facturas, probablemente en septiembre, no de un desembolso inmediato de efectivo. Aprobado por la junta.</p>
+
+                        <h2>7. Aprobaci&oacute;n de Colaboradores y Miembros</h2>
+                        <p><strong>Acuerdo alcanzado:</strong> Ben D tiene la autoridad para aprobar colaboradores y miembros de forma acelerada, siempre que:</p>
+                        <ul>
+                            <li>Haya una mayor&iacute;a de votos &laquo;s&iacute;&raquo; en la app Humans</li>
+                            <li>No haya votos &laquo;no&raquo; o &laquo;quiz&aacute;s&raquo; en contra de la persona</li>
+                            <li>La persona haya pasado la revisi&oacute;n de consentimiento</li>
+                        </ul>
+                        <p>Esto resuelve la acumulaci&oacute;n actual y establece un proceso permanente.</p>
+
+                        <h2>8. Actualizaci&oacute;n del Presupuesto</h2>
+                        <p>Daniela M S inform&oacute; que la actualizaci&oacute;n del presupuesto se retras&oacute; debido a un proceso manual. Se espera una actualizaci&oacute;n la pr&oacute;xima semana, con Aaron proporcionando una actualizaci&oacute;n espec&iacute;fica de la venta de entradas.</p>
+
+                        <h2>9. Confirmaci&oacute;n del Lanzamiento de Entradas</h2>
+                        <p>Daniela M S confirm&oacute; que la venta principal de entradas puede proceder, ya que los coordinadores han sido consultados y est&aacute;n alineados. Se not&oacute; que se trata de una decisi&oacute;n operativa, no de un asunto de la junta.</p>
+
+                        <h2>10. Informe sobre Responsabilidad del Evento</h2>
+                        <p>Chris T O est&aacute; programando una sesi&oacute;n informativa con un exresponsable para discutir los roles de responsabilidad en el sitio y c&oacute;mo interact&uacute;an con las responsabilidades de la junta. Fechas disponibles: 30 de marzo o 6 de abril. Daniela M S compartir&aacute; notas recientes de una llamada con Michael (alias Nurse) sobre asuntos de salud del sitio para complementar la sesi&oacute;n informativa.</p>
+
+                        <h2>Puntos de Acci&oacute;n</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Acci&oacute;n</th><th>Plazo</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Aprobar PRs en el repositorio</td><td>Lo antes posible</td></tr>
+                                <tr><td>Chris T O</td><td>Enviar notas de la llamada con Michael (Nurse) al exresponsable para la sesi&oacute;n de responsabilidad</td><td>Antes de la sesi&oacute;n</td></tr>
+                                <tr><td>Daniela M S</td><td>Enviar opciones y presupuestos de seguros a la junta por correo para votaci&oacute;n</td><td>Esta semana</td></tr>
+                                <tr><td>Daniel T + Ben D</td><td>Colaborar en las instrucciones del formulario de presentaci&oacute;n de la agenda</td><td>Esta semana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Actas generadas autom&aacute;ticamente por Gemini y depuradas para publicaci&oacute;n.</em></p>
+                    </div>
+                </div>
+
+                <!-- FRENCH -->
+                <div class="lang-content" data-lang="fr">
+                    <div class="lang-note">En cas de divergence entre cette version et la version espagnole, la version espagnole pr&eacute;vaudra.</div>
+
+                    <div class="attendees">
+                        <strong>Pr&eacute;sident :</strong> Chris T O<br>
+                        <strong>Conseil pr&eacute;sent :</strong> Daniel T, Chris T O, Peter D, Ben D (&agrave; distance), Ward D<br>
+                        <strong>&Eacute;galement pr&eacute;sent :</strong> Daniela M S<br>
+                        <strong>Absents :</strong> Pablo V, Michelle, Pepe C
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Quorum complet avec cinq membres du conseil pr&eacute;sents.</p>
+
+                        <h2>1. Format de l&rsquo;Ordre du Jour du Conseil</h2>
+                        <p><strong>Accord atteint :</strong> Tous les points de l&rsquo;ordre du jour soumis au conseil doivent pr&eacute;ciser ce que le demandeur attend de la discussion (p. ex. une d&eacute;cision, une information, un alignement). Les points n&eacute;cessitant une d&eacute;cision formelle doivent inclure une proposition de d&eacute;cision par &eacute;crit. L&rsquo;objectif est de rendre les r&eacute;unions plus cibl&eacute;es et efficaces.</p>
+                        <p>Ben D mettra &agrave; jour le formulaire de soumission de l&rsquo;ordre du jour pour inclure ces instructions. Daniel T collaborera &agrave; la r&eacute;daction.</p>
+
+                        <h2>2. Format de Vote Formel</h2>
+                        <p><strong>Accord atteint :</strong> Les votes formels, en particulier les modifications de statuts, doivent porter sur un seul point &agrave; la fois plut&ocirc;t que de regrouper plusieurs changements dans une seule proposition. C&rsquo;est un enseignement tir&eacute; des difficult&eacute;s r&eacute;centes avec de grandes propositions group&eacute;es. Peter D a not&eacute; que cela devrait &ecirc;tre appliqu&eacute; avec bon sens plut&ocirc;t que comme une r&egrave;gle rigide.</p>
+
+                        <h2>3. P&eacute;rim&egrave;tre des R&eacute;unions du Conseil</h2>
+                        <p>Daniel T a soulev&eacute; le sujet de la distinction entre les questions de gouvernance (adapt&eacute;es aux r&eacute;unions du conseil) et les questions op&eacute;rationnelles (mieux g&eacute;r&eacute;es par les &eacute;quipes op&eacute;rationnelles). La discussion a &eacute;t&eacute; report&eacute;e &agrave; une prochaine r&eacute;union lorsque Pablo V sera pr&eacute;sent, car il avait des opinions fortes sur ce sujet lors de discussions pr&eacute;c&eacute;dentes.</p>
+
+                        <h2>4. Billets de Bus</h2>
+                        <p>Peter D a confirm&eacute; que la vente de billets de bus est pr&ecirc;te &agrave; &ecirc;tre lanc&eacute;e, Aaron &eacute;tant align&eacute; sur la communication. Daniela M S a not&eacute; que les fournisseurs incluent des pourcentages de contingence en raison de la hausse des prix du carburant, bien que les montants restent impr&eacute;cis.</p>
+
+                        <h2>5. Mise &agrave; jour sur les Assurances</h2>
+                        <p>Daniela M S a rapport&eacute; :</p>
+                        <ul>
+                            <li>Trois options d&rsquo;assurance responsabilit&eacute; des dirigeants actuellement disponibles, allant d&rsquo;environ 600 &agrave; 900 euros</li>
+                            <li>La plupart des assureurs utilisent Hiscox</li>
+                            <li>Recommandation de regrouper toutes les polices (responsabilit&eacute; des dirigeants + responsabilit&eacute; &eacute;v&eacute;nementielle) aupr&egrave;s d&rsquo;une seule compagnie via un courtier</li>
+                            <li>Le conseil a exprim&eacute; sa pr&eacute;f&eacute;rence pour l&rsquo;utilisation d&rsquo;un courtier comme interface et support</li>
+                            <li>Deux types d&rsquo;assurance suppl&eacute;mentaires n&eacute;cessaires : accidents collectifs et assurance des b&eacute;n&eacute;voles</li>
+                        </ul>
+                        <p><strong>Action :</strong> Daniela M S enverra par e-mail au conseil les options et devis d&rsquo;assurance pour un vote.</p>
+
+                        <h2>6. Subventions Artistiques</h2>
+                        <p><strong>Approuv&eacute; :</strong> D&eacute;pense de 25 000 euros pour les subventions artistiques (la moiti&eacute; du budget estim&eacute; de 50 000). Le reste d&eacute;pend des ventes de billets. Il s&rsquo;agit d&rsquo;un engagement de remboursement de factures, probablement en septembre, et non d&rsquo;un d&eacute;caissement imm&eacute;diat. Approuv&eacute; par le conseil.</p>
+
+                        <h2>7. Approbation des Collaborateurs et Membres</h2>
+                        <p><strong>Accord atteint :</strong> Ben D a l&rsquo;autorit&eacute; pour approuver les collaborateurs et les membres de mani&egrave;re acc&eacute;l&eacute;r&eacute;e, &agrave; condition que :</p>
+                        <ul>
+                            <li>Il y ait une majorit&eacute; de votes &laquo; oui &raquo; sur l&rsquo;app Humans</li>
+                            <li>Il n&rsquo;y ait aucun vote &laquo; non &raquo; ou &laquo; peut-&ecirc;tre &raquo; contre la personne</li>
+                            <li>La personne ait pass&eacute; la v&eacute;rification de consentement</li>
+                        </ul>
+                        <p>Cela r&eacute;sorbe l&rsquo;arri&eacute;r&eacute; actuel et &eacute;tablit un processus permanent.</p>
+
+                        <h2>8. Mise &agrave; jour du Budget</h2>
+                        <p>Daniela M S a rapport&eacute; que la mise &agrave; jour du budget a &eacute;t&eacute; retard&eacute;e en raison d&rsquo;un processus manuel. Une mise &agrave; jour est attendue la semaine prochaine, Aaron fournissant une mise &agrave; jour sp&eacute;cifique &agrave; la billetterie.</p>
+
+                        <h2>9. Confirmation du Lancement de la Billetterie</h2>
+                        <p>Daniela M S a confirm&eacute; que la vente principale de billets peut avoir lieu, les coordinateurs ayant &eacute;t&eacute; consult&eacute;s et &eacute;tant align&eacute;s. Il a &eacute;t&eacute; not&eacute; qu&rsquo;il s&rsquo;agit d&rsquo;une d&eacute;cision op&eacute;rationnelle, et non d&rsquo;une question du conseil.</p>
+
+                        <h2>10. Briefing sur la Responsabilit&eacute; de l&rsquo;&Eacute;v&eacute;nement</h2>
+                        <p>Chris T O programme un briefing avec un ancien responsable pour discuter des r&ocirc;les de responsabilit&eacute; sur site et de leur interaction avec les responsabilit&eacute;s du conseil. Dates disponibles : 30 mars ou 6 avril. Daniela M S partagera les notes r&eacute;centes d&rsquo;un appel avec Michael (alias Nurse) concernant les questions de sant&eacute; sur site pour compl&eacute;ter le briefing.</p>
+
+                        <h2>Points d&rsquo;Action</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Personne</th><th>Action</th><th>&Eacute;ch&eacute;ance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Approuver les PRs dans le d&eacute;p&ocirc;t</td><td>D&egrave;s que possible</td></tr>
+                                <tr><td>Chris T O</td><td>Envoyer les notes de l&rsquo;appel avec Michael (Nurse) &agrave; l&rsquo;ancien responsable pour le briefing responsabilit&eacute;</td><td>Avant le briefing</td></tr>
+                                <tr><td>Daniela M S</td><td>Envoyer les options et devis d&rsquo;assurance au conseil par e-mail pour un vote</td><td>Cette semaine</td></tr>
+                                <tr><td>Daniel T + Ben D</td><td>Collaborer sur les instructions du formulaire de soumission de l&rsquo;ordre du jour</td><td>Cette semaine</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Proc&egrave;s-verbal g&eacute;n&eacute;r&eacute; automatiquement par Gemini et d&eacute;pur&eacute; pour publication.</em></p>
+                    </div>
+                </div>
+
+                <!-- ITALIAN -->
+                <div class="lang-content" data-lang="it">
+                    <div class="lang-note">In caso di discrepanza tra questa versione e la versione spagnola, prevarr&agrave; la versione spagnola.</div>
+
+                    <div class="attendees">
+                        <strong>Presidente:</strong> Chris T O<br>
+                        <strong>Consiglio presente:</strong> Daniel T, Chris T O, Peter D, Ben D (da remoto), Ward D<br>
+                        <strong>Anche presente:</strong> Daniela M S<br>
+                        <strong>Assenti:</strong> Pablo V, Michelle, Pepe C
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Quorum completo con cinque membri del consiglio presenti.</p>
+
+                        <h2>1. Formato dell&rsquo;Ordine del Giorno del Consiglio</h2>
+                        <p><strong>Accordo raggiunto:</strong> Tutti i punti dell&rsquo;ordine del giorno presentati al consiglio devono specificare ci&ograve; che il proponente necessita dalla discussione (es. una decisione, informazioni, allineamento). I punti che richiedono una decisione formale devono includere una proposta di decisione scritta. L&rsquo;obiettivo &egrave; rendere le riunioni pi&ugrave; mirate ed efficienti.</p>
+                        <p>Ben D aggiorner&agrave; il modulo di presentazione dell&rsquo;ordine del giorno per includere queste istruzioni. Daniel T collaborer&agrave; alla stesura.</p>
+
+                        <h2>2. Formato di Voto Formale</h2>
+                        <p><strong>Accordo raggiunto:</strong> Le votazioni formali, in particolare le modifiche statutarie, dovrebbero concentrarsi su un punto alla volta anzich&eacute; raggruppare pi&ugrave; modifiche in un&rsquo;unica proposta. Questa &egrave; una lezione appresa dalle recenti difficolt&agrave; con proposte raggruppate di grandi dimensioni. Peter D ha osservato che questa regola dovrebbe essere applicata con buon senso piuttosto che in modo rigido.</p>
+
+                        <h2>3. Competenza delle Riunioni del Consiglio</h2>
+                        <p>Daniel T ha sollevato il tema della distinzione tra questioni di governance (appropriate per le riunioni del consiglio) e questioni operative (meglio gestite dai team operativi). La discussione &egrave; stata rinviata a una futura riunione quando Pablo V sar&agrave; presente, poich&eacute; aveva opinioni forti su questo tema in discussioni precedenti.</p>
+
+                        <h2>4. Biglietti del Bus</h2>
+                        <p>Peter D ha confermato che la vendita dei biglietti del bus &egrave; pronta per il lancio, con Aaron allineato sulla comunicazione. Daniela M S ha notato che i fornitori stanno includendo percentuali di contingenza a causa dell&rsquo;aumento dei prezzi del carburante, sebbene gli importi rimangano ambigui.</p>
+
+                        <h2>5. Aggiornamento sulle Assicurazioni</h2>
+                        <p>Daniela M S ha riferito:</p>
+                        <ul>
+                            <li>Tre opzioni di assicurazione di responsabilit&agrave; dei dirigenti attualmente disponibili, con un range da circa 600 a 900 euro</li>
+                            <li>La maggior parte degli assicuratori utilizza Hiscox</li>
+                            <li>Raccomandazione di raggruppare tutte le polizze (responsabilit&agrave; dirigenti + responsabilit&agrave; evento) con una sola compagnia tramite un broker</li>
+                            <li>Il consiglio ha espresso preferenza per l&rsquo;utilizzo di un broker come interfaccia e supporto</li>
+                            <li>Due tipi di assicurazione aggiuntivi necessari: infortuni collettivi e assicurazione volontari</li>
+                        </ul>
+                        <p><strong>Azione:</strong> Daniela M S invier&agrave; per email al consiglio le opzioni e i preventivi assicurativi per una votazione.</p>
+
+                        <h2>6. Sovvenzioni Artistiche</h2>
+                        <p><strong>Approvato:</strong> Spesa di 25.000 euro per sovvenzioni artistiche (met&agrave; del budget stimato di 50.000). Il resto &egrave; subordinato alle vendite dei biglietti. Si tratta di un impegno a rimborsare fatture, probabilmente a settembre, non di un esborso immediato di cassa. Approvato dal consiglio.</p>
+
+                        <h2>7. Approvazione di Collaboratori e Membri</h2>
+                        <p><strong>Accordo raggiunto:</strong> Ben D ha l&rsquo;autorit&agrave; di approvare collaboratori e membri in modo accelerato, a condizione che:</p>
+                        <ul>
+                            <li>Ci sia una maggioranza di voti &laquo;s&igrave;&raquo; sull&rsquo;app Humans</li>
+                            <li>Non ci siano voti &laquo;no&raquo; o &laquo;forse&raquo; contro la persona</li>
+                            <li>La persona abbia superato la verifica di consenso</li>
+                        </ul>
+                        <p>Questo risolve l&rsquo;arretrato attuale e stabilisce un processo permanente.</p>
+
+                        <h2>8. Aggiornamento del Bilancio</h2>
+                        <p>Daniela M S ha riferito che l&rsquo;aggiornamento del bilancio &egrave; stato ritardato a causa di un processo manuale. Un aggiornamento &egrave; previsto per la prossima settimana, con Aaron che fornir&agrave; un aggiornamento specifico sulla biglietteria.</p>
+
+                        <h2>9. Conferma del Lancio della Biglietteria</h2>
+                        <p>Daniela M S ha confermato che la vendita principale dei biglietti pu&ograve; procedere, poich&eacute; i coordinatori sono stati consultati e sono allineati. &Egrave; stato notato che si tratta di una decisione operativa, non di una questione del consiglio.</p>
+
+                        <h2>10. Briefing sulla Responsabilit&agrave; dell&rsquo;Evento</h2>
+                        <p>Chris T O sta programmando un briefing con un ex responsabile per discutere i ruoli di responsabilit&agrave; in loco e come interagiscono con le responsabilit&agrave; del consiglio. Date disponibili: 30 marzo o 6 aprile. Daniela M S condivider&agrave; le note recenti di una chiamata con Michael (alias Nurse) riguardanti le questioni sanitarie del sito per completare il briefing.</p>
+
+                        <h2>Punti d&rsquo;Azione</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Persona</th><th>Azione</th><th>Scadenza</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>Approvare le PR nel repository</td><td>Al pi&ugrave; presto</td></tr>
+                                <tr><td>Chris T O</td><td>Inviare le note della chiamata con Michael (Nurse) all&rsquo;ex responsabile per il briefing sulla responsabilit&agrave;</td><td>Prima del briefing</td></tr>
+                                <tr><td>Daniela M S</td><td>Inviare per email al consiglio le opzioni e i preventivi assicurativi per votazione</td><td>Questa settimana</td></tr>
+                                <tr><td>Daniel T + Ben D</td><td>Collaborare sulle istruzioni del modulo di presentazione dell&rsquo;ordine del giorno</td><td>Questa settimana</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Verbale generato automaticamente da Gemini e depurato per la pubblicazione.</em></p>
+                    </div>
+                </div>
+
+                <!-- GERMAN -->
+                <div class="lang-content" data-lang="de">
+                    <div class="lang-note">Im Falle von Abweichungen zwischen dieser Version und der spanischen Version hat die spanische Version Vorrang.</div>
+
+                    <div class="attendees">
+                        <strong>Vorsitz:</strong> Chris T O<br>
+                        <strong>Vorstand anwesend:</strong> Daniel T, Chris T O, Peter D, Ben D (per Fernzugang), Ward D<br>
+                        <strong>Ebenfalls anwesend:</strong> Daniela M S<br>
+                        <strong>Abwesend:</strong> Pablo V, Michelle, Pepe C
+                    </div>
+
+                    <div class="meeting-content">
+                        <p>Vollst&auml;ndiges Quorum mit f&uuml;nf anwesenden Vorstandsmitgliedern.</p>
+
+                        <h2>1. Format der Vorstandsagenda</h2>
+                        <p><strong>Einigung erzielt:</strong> Alle dem Vorstand vorgelegten Tagesordnungspunkte m&uuml;ssen angeben, was der Einreicher von der Diskussion erwartet (z.&nbsp;B. eine Entscheidung, Information, Abstimmung). Punkte, die eine formelle Entscheidung erfordern, m&uuml;ssen einen schriftlichen Entscheidungsvorschlag enthalten. Ziel ist es, die Sitzungen fokussierter und effizienter zu gestalten.</p>
+                        <p>Ben D wird das Formular f&uuml;r die Einreichung der Tagesordnung aktualisieren, um diese Anweisungen aufzunehmen. Daniel T wird bei der Formulierung mitarbeiten.</p>
+
+                        <h2>2. Format f&uuml;r formelle Abstimmungen</h2>
+                        <p><strong>Einigung erzielt:</strong> Formelle Abstimmungen, insbesondere Satzungs&auml;nderungen, sollten sich auf einen Punkt konzentrieren, anstatt mehrere &Auml;nderungen in einem Vorschlag zu b&uuml;ndeln. Dies ist eine Erkenntnis aus den j&uuml;ngsten Schwierigkeiten mit umfangreichen geb&uuml;ndelten Vorschl&auml;gen. Peter D bemerkte, dass dies mit gesundem Menschenverstand und nicht als starre Regel angewendet werden sollte.</p>
+
+                        <h2>3. Zust&auml;ndigkeit der Vorstandssitzungen</h2>
+                        <p>Daniel T brachte das Thema der Unterscheidung zwischen Governance-Angelegenheiten (geeignet f&uuml;r Vorstandssitzungen) und operativen Angelegenheiten (besser von operativen Teams bearbeitet) zur Sprache. Die Diskussion wurde auf eine zuk&uuml;nftige Sitzung verschoben, wenn Pablo V anwesend ist, da er in fr&uuml;heren Diskussionen starke Meinungen zu diesem Thema hatte.</p>
+
+                        <h2>4. Bustickets</h2>
+                        <p>Peter D best&auml;tigte, dass der Busticketverkauf startbereit ist und Aaron bei der Kommunikation abgestimmt ist. Daniela M S wies darauf hin, dass Anbieter aufgrund steigender Kraftstoffpreise Kontingentprozente einbeziehen, obwohl die Betr&auml;ge noch unklar sind.</p>
+
+                        <h2>5. Versicherungsupdate</h2>
+                        <p>Daniela M S berichtete:</p>
+                        <ul>
+                            <li>Drei Optionen f&uuml;r eine Direktoren-Haftpflichtversicherung derzeit verf&uuml;gbar, im Bereich von etwa 600 bis 900 Euro</li>
+                            <li>Die meisten Versicherer nutzen Hiscox</li>
+                            <li>Empfehlung, alle Policen (Direktoren-Haftpflicht + Veranstaltungshaftpflicht) &uuml;ber einen Makler bei einer Firma zu b&uuml;ndeln</li>
+                            <li>Der Vorstand bevorzugt die Nutzung eines Maklers als Schnittstelle und Unterst&uuml;tzung</li>
+                            <li>Zwei zus&auml;tzliche Versicherungsarten ben&ouml;tigt: Gruppenunfallversicherung und Freiwilligenversicherung</li>
+                        </ul>
+                        <p><strong>Aktion:</strong> Daniela M S wird dem Vorstand die Versicherungsoptionen und Angebote per E-Mail zur Abstimmung senden.</p>
+
+                        <h2>6. Kunstf&ouml;rderung</h2>
+                        <p><strong>Genehmigt:</strong> 25.000 Euro Ausgaben f&uuml;r Kunstf&ouml;rderung (die H&auml;lfte des gesch&auml;tzten 50.000-Euro-Budgets). Der Rest h&auml;ngt von den Ticketverk&auml;ufen ab. Es handelt sich um eine Zusage zur Erstattung von Rechnungen, voraussichtlich im September, nicht um einen sofortigen Mittelabfluss. Vom Vorstand genehmigt.</p>
+
+                        <h2>7. Genehmigung von Mitarbeitern und Mitgliedern</h2>
+                        <p><strong>Einigung erzielt:</strong> Ben D hat die Befugnis, Mitarbeiter und Mitglieder im beschleunigten Verfahren zu genehmigen, vorausgesetzt:</p>
+                        <ul>
+                            <li>Es gibt eine Mehrheit von &bdquo;Ja&ldquo;-Stimmen in der Humans-App</li>
+                            <li>Es gibt keine &bdquo;Nein&ldquo;- oder &bdquo;Vielleicht&ldquo;-Stimmen gegen die Person</li>
+                            <li>Die Person hat die Einwilligungspr&uuml;fung bestanden</li>
+                        </ul>
+                        <p>Dies l&ouml;st den aktuellen R&uuml;ckstau und etabliert einen dauerhaften Prozess.</p>
+
+                        <h2>8. Budgetaktualisierung</h2>
+                        <p>Daniela M S berichtete, dass die Budgetaktualisierung aufgrund eines manuellen Prozesses verz&ouml;gert wurde. Eine Aktualisierung wird n&auml;chste Woche erwartet, wobei Aaron ein spezifisches Ticketing-Update liefert.</p>
+
+                        <h2>9. Best&auml;tigung des Ticketverkaufsstarts</h2>
+                        <p>Daniela M S best&auml;tigte, dass der Hauptticketverkauf stattfinden kann, da die Koordinatoren konsultiert wurden und abgestimmt sind. Es wurde festgestellt, dass es sich um eine operative Entscheidung handelt, nicht um eine Vorstandsangelegenheit.</p>
+
+                        <h2>10. Briefing zur Veranstaltungshaftung</h2>
+                        <p>Chris T O plant ein Briefing mit einem ehemaligen Verantwortlichen, um die Haftungsrollen vor Ort und deren Zusammenspiel mit den Vorstandsverantwortlichkeiten zu besprechen. Verf&uuml;gbare Termine: 30. M&auml;rz oder 6. April. Daniela M S wird aktuelle Notizen eines Gespr&auml;chs mit Michael (alias Nurse) zu Gesundheitsfragen am Veranstaltungsort teilen, um das Briefing zu erg&auml;nzen.</p>
+
+                        <h2>Aktionspunkte</h2>
+                        <table class="action-table">
+                            <thead>
+                                <tr><th>Person</th><th>Aktion</th><th>F&auml;llig</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Peter D</td><td>PRs im Repository genehmigen</td><td>Schnellstm&ouml;glich</td></tr>
+                                <tr><td>Chris T O</td><td>Notizen des Gespr&auml;chs mit Michael (Nurse) an den ehemaligen Verantwortlichen f&uuml;r das Haftungsbriefing senden</td><td>Vor dem Briefing</td></tr>
+                                <tr><td>Daniela M S</td><td>Versicherungsoptionen und Angebote per E-Mail an den Vorstand zur Abstimmung senden</td><td>Diese Woche</td></tr>
+                                <tr><td>Daniel T + Ben D</td><td>An den Anweisungen f&uuml;r das Formular zur Einreichung der Tagesordnung mitarbeiten</td><td>Diese Woche</td></tr>
+                            </tbody>
+                        </table>
+
+                        <p><em>Protokoll automatisch von Gemini erstellt und f&uuml;r die Ver&ouml;ffentlichung bereinigt.</em></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="shared-footer" data-prefix=".."></div>
+    <script src="../footer.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script>
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.dataset.lang;
+            document.querySelectorAll('.lang-toggle button').forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+            var target = document.querySelector('.lang-content[data-lang="' + lang + '"]');
+            if (target) target.classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
