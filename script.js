@@ -94,7 +94,7 @@
         checkScroll();
     }
 
-    // Hero Slideshow
+    // Hero Slideshow — lazy-loads each image just before it's shown
     function initSlideshow() {
         var slides = document.querySelectorAll('.hero-slide');
         if (slides.length < 2) return;
@@ -102,11 +102,27 @@
         var current = 0;
         var total = slides.length;
 
-        setInterval(function() {
+        function loadSlide(index) {
+            var slide = slides[index];
+            if (slide.dataset.bg && !slide.style.backgroundImage) {
+                slide.style.backgroundImage = "url('" + slide.dataset.bg + "')";
+            }
+        }
+
+        // Preload the next slide a beat ahead so it's ready when it transitions
+        function advance() {
             slides[current].classList.remove('active');
             current = (current + 1) % total;
+            loadSlide(current);
             slides[current].classList.add('active');
-        }, 5000);
+            // Queue the one after that too
+            loadSlide((current + 1) % total);
+        }
+
+        // Preload slide 2 immediately so it's ready for the first transition
+        loadSlide(1);
+
+        setInterval(advance, 5000);
     }
 
     // Scroll Animations
@@ -609,6 +625,83 @@
         }, { passive: true });
     }
 
+    // Hero Dust Particles — low-opacity warm motes drifting upward
+    function initHeroDust() {
+        var canvas = document.getElementById('hero-dust-canvas');
+        if (!canvas) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var ctx = canvas.getContext('2d');
+        var particles = [];
+        var COUNT = 45;
+        var raf;
+
+        function resize() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+
+        for (var i = 0; i < COUNT; i++) {
+            particles.push({
+                x: Math.random(),          // 0–1 normalised
+                y: Math.random(),
+                r: 0.4 + Math.random() * 1.6,
+                vx: (Math.random() - 0.45) * 0.0003,
+                vy: -(0.00015 + Math.random() * 0.00025),
+                opacity: 0.018 + Math.random() * 0.055,
+                pulse: Math.random() * Math.PI * 2  // phase offset for subtle breathe
+            });
+        }
+
+        var tick = 0;
+        function draw() {
+            tick++;
+            var w = canvas.width;
+            var h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+
+            particles.forEach(function(p) {
+                var breathe = 1 + 0.15 * Math.sin(tick * 0.018 + p.pulse);
+                var op = p.opacity * breathe;
+                ctx.beginPath();
+                ctx.arc(p.x * w, p.y * h, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(215, 155, 65, ' + op + ')';
+                ctx.fill();
+
+                p.x += p.vx;
+                p.y += p.vy;
+
+                // wrap
+                if (p.y < -0.02) { p.y = 1.02; p.x = Math.random(); }
+                if (p.x > 1.02)  { p.x = -0.02; }
+                if (p.x < -0.02) { p.x = 1.02; }
+            });
+
+            raf = requestAnimationFrame(draw);
+        }
+
+        draw();
+
+        // Stop animating when hero is off-screen to save CPU
+        var hero = document.querySelector('.hero');
+        if (hero && 'IntersectionObserver' in window) {
+            var obs = new IntersectionObserver(function(entries) {
+                entries.forEach(function(e) {
+                    if (e.isIntersecting) {
+                        if (!raf) draw();
+                    } else {
+                        cancelAnimationFrame(raf);
+                        raf = null;
+                    }
+                });
+            }, { threshold: 0 });
+            obs.observe(hero);
+        }
+    }
+
     // Init
     function init() {
         initMobileNav();
@@ -623,6 +716,7 @@
         initPhotoGlitch();
         initBackToTop();
         initPrinciplesCarousel();
+        initHeroDust();
     }
 
     if (document.readyState === 'loading') {
