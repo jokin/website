@@ -2,7 +2,14 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 20 ===
+    {"date": "2026-03-20", "source": "Governance", "text": "<a href=\"estatutos.html\">Statutes page</a> fully updated on the website with all amendments and 5-language support"},
+
     // === March 19 ===
+    {"date": "2026-03-19", "source": "Ticketing", "text": "Ticketing is now ready for marketing push \u2014 tell everyone about Elsewhere!"},
+    {"date": "2026-03-19", "source": "Finance", "text": "First half of creativity budget approved"},
+    {"date": "2026-03-19", "source": "Governance", "text": "Process for bringing on new asociados is now active"},
+    {"date": "2026-03-19", "source": "Governance", "text": "10 amendments to the association statutes passed by the board"},
     {"date": "2026-03-19", "source": "Comms", "text": "New <a href=\"/#principles\">Elsewhere Principles</a> section with examples"},
     {"date": "2026-03-19", "source": "Welfare", "text": "New <a href=\"consent.html\">Consent page</a> published (EN/ES/FR/IT/DE)"},
     {"date": "2026-03-19", "source": "Comms", "text": "Redesigned \u2018What is Elsewhere?\u2019 website section"},
