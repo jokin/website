@@ -2,6 +2,9 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 21 ===
+    {"date": "2026-03-21", "source": "Ticketing", "text": "<a href=\"local-residents-discount.html\">Local residents discount</a> policy page published (ES/EN/FR)"},
+
     // === March 20 ===
     {"date": "2026-03-20", "source": "Art", "text": "<a href=\"art-grants.html\">Art grants page</a> has been launched!"},
     {"date": "2026-03-20", "source": "Governance", "text": "NCA now has 44 asociados officially in the system! More on the way!"},
