@@ -3,6 +3,7 @@
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
     // === March 23 ===
+    {"date": "2026-03-23", "source": "Comms", "text": "New outreach plan created"},
     {"date": "2026-03-23", "source": "Tech", "text": "Humans app updates focused on conversations and shift management (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1485835709456580748\" target=\"_blank\">details</a>)"},
 
     // === March 22 ===
