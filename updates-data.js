@@ -2,6 +2,12 @@
 // Each entry: { date: "YYYY-MM-DD", source: "Team", text: "Update text" }
 // Sorted chronologically, newest first for display
 var UPDATES_DATA = [
+    // === March 23 ===
+    {"date": "2026-03-23", "source": "Tech", "text": "Humans app updates focused on conversations and shift management (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1485835709456580748\" target=\"_blank\">details</a>)"},
+
+    // === March 22 ===
+    {"date": "2026-03-22", "source": "Tech", "text": "Many Humans app updates focused on volunteer management (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1485437717109280919\" target=\"_blank\">details</a>)"},
+
     // === March 21 ===
     {"date": "2026-03-21", "source": "Ticketing", "text": "<a href=\"local-residents-discount.html\">Local residents discount</a> policy page published (ES/EN/FR)"},
 
@@ -13,6 +19,7 @@ var UPDATES_DATA = [
     {"date": "2026-03-20", "source": "Governance", "text": "<a href=\"estatutos.html\">Statutes page</a> fully updated on the website with all amendments and 5-language support"},
 
     // === March 19 ===
+    {"date": "2026-03-19", "source": "Tech", "text": "Humans app updates around camp contacts and profile dropdown (<a href=\"https://discord.com/channels/1462886445583962245/1482356543549739018/1484343776460673214\" target=\"_blank\">details</a>)"},
     {"date": "2026-03-19", "source": "Finance", "text": "First half of creativity budget approved"},
     {"date": "2026-03-19", "source": "Governance", "text": "Process for bringing on new asociados is now active"},
     {"date": "2026-03-19", "source": "Governance", "text": "10 amendments to the association statutes passed by the board"},
