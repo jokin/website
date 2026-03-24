@@ -24,7 +24,7 @@
                     '<li><a href="' + prefix + '/faq.html">FAQ</a></li>' +
                     '<li><a href="' + prefix + '/transparency.html">Transparency</a></li>' +
                     '<li><a href="' + prefix + '/#useful-links">Links</a></li>' +
-                    '<li><a href="' + prefix + '/#tickets" class="btn btn-primary btn-nav">Get Tickets</a></li>' +
+                    '<li><a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary btn-nav" target="_blank" rel="noopener noreferrer">Tickets</a></li>' +
                 '</ul>' +
             '</nav>' +
         '</header>';

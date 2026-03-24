@@ -18,33 +18,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/hero-1.jpg" fetchpriority="high">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="shared-header"></div>
-    <script src="header.js"></script>
+    <script src="header.js" defer></script>
 
     <main>
         <section class="hero">
             <div class="hero-slideshow">
                 <div class="hero-slide active" style="background-image: url('images/hero-1.jpg')"></div>
                 <div class="hero-slide" data-bg="images/hero-2.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-3.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-4.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-5.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-6.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-7.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-8.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-9.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-10.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-11.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-12.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-13.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-14.jpg"></div>
+                <div class="hero-slide" data-bg="images/hero-3.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-4.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-5.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-6.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-7.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-8.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-9.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-10.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-11.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-12.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-13.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-14.webp"></div>
                 <div class="hero-slide" data-bg="images/hero-15.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-16.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-17.jpg"></div>
-                <div class="hero-slide" data-bg="images/hero-18.jpg"></div>
+                <div class="hero-slide" data-bg="images/hero-16.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-17.webp"></div>
+                <div class="hero-slide" data-bg="images/hero-18.webp"></div>
                 <div class="hero-slide" data-bg="images/hero-19.jpg"></div>
                 <div class="hero-slide" data-bg="images/hero-20.jpg"></div>
             </div>
@@ -60,22 +61,11 @@
             <div class="hero-content container">
                 <p class="hero-tag">7-12th July, in Monegros Desert, Spain</p>
                 <h1>
-                    <img src="images/title.png" alt="Elsewhere — a participatory arts gathering in the Spanish desert" class="hero-title-img">
+                    <img src="images/title.png" alt="Elsewhere — a participatory arts gathering in the Spanish desert" class="hero-title-img" fetchpriority="high">
                 </h1>
-                <p class="hero-wave-tag">Wave 1 price until 14th April</p>
-                <div class="hero-newsletter" id="mlb2-hero">
-                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2058732/forms/177407017744336669/subscribe" data-code="" method="post">
-                        <div class="hero-newsletter-row">
-                            <input aria-label="email" aria-required="true" required type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email">
-                            <input type="hidden" name="ml-submit" value="1">
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </div>
-                        <div class="hero-annotation hero-annotation--cta" aria-hidden="true">Don't wanna miss anything?</div>
-                        <input type="hidden" name="anticsrf" value="true">
-                    </form>
-                    <div class="hero-newsletter-success" style="display: none">
-                        <p>Thanks for subscribing!</p>
-                    </div>
+                <div class="hero-cta-row">
+                    <p class="hero-wave-tag">Wave 1 price until 14th April</p>
+                    <a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary hero-cta-btn" target="_blank" rel="noopener noreferrer">Get your ticket</a>
                 </div>
                 <p class="hero-social-label"><span class="hero-annotation hero-annotation--social" aria-hidden="true">We also announce everything here</span></p>
                 <div class="hero-social">
@@ -336,7 +326,7 @@
                     </div>
                     <p class="ticket-pricing-note">Same ticket, same experience &mdash; just different timing. The earlier you jump in, the cheaper it is and the more you help turn plans into something real.</p>
                     <div class="ticket-cta-block">
-                        <a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary ticket-buy-btn" target="_blank" rel="noopener noreferrer">Buy Your Ticket</a>
+                        <a href="https://tickets.nobodies.team/events/nobodiescollective/2089167" class="btn btn-primary ticket-buy-btn" target="_blank" rel="noopener noreferrer">Get your ticket</a>
                     </div>
                 </div>
 
